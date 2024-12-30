@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Security;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -60,11 +61,13 @@ public class CharacterController : MonoBehaviour
             originalSpeed = agent.speed;
             agent.speed *= runningSpeedRate;
         }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
+        else if (Input.GetKeyUp(KeyCode.LeftShift))
         {
             running = false;
             agent.speed = originalSpeed;
         }
+        if (horizontal == 0 && vertical == 0)
+            running = false;
     }
 
     void SetAnimationState()
