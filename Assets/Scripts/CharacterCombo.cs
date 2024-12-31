@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class CharacterCombo : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class CharacterCombo : MonoBehaviour
     float lastClickTime = 0;
 
     float maxComboDelay = 0.3f;
+
+    [Header("VFX Slash Settings")]
+    public VisualEffect vfx_slash_blue_left;
+    public VisualEffect vfx_slash_red_right;
 
     void Awake()
     {
@@ -55,5 +60,14 @@ public class CharacterCombo : MonoBehaviour
             animator.SetBool("attack2", false);
             animator.SetBool("attack3", true);
         }
+    }
+
+    public void PlayVfxAnimationEvent_left()
+    {
+        vfx_slash_blue_left.Play();
+    }
+    public void PlayVfxAnimationEvent_right()
+    {
+        vfx_slash_red_right.Play();
     }
 }
