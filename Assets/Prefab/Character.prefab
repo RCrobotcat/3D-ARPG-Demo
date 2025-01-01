@@ -1204,6 +1204,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: babda21802118c94a98e65e68d73c0c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxComboDelay: 0.3
+  slashStaminaChange: -0.7
   vfx_slash_blue_left: {fileID: 3363336965261852430}
   vfx_slash_red_right: {fileID: 5313616489596463374}
 --- !u!114 &5349746111869739553
@@ -1223,6 +1225,9 @@ MonoBehaviour:
   runningSpeedRate: 1.5
   rollRange: 5
   rollTime: 0.2
+  rollStaminaChange: -1
+  isRolling: 0
+  running: 0
 --- !u!1 &6602945297176457165
 GameObject:
   m_ObjectHideFlags: 0
