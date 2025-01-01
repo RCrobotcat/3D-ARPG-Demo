@@ -19,6 +19,9 @@ public class CharacterCombo : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+
+        vfx_slash_blue_left.Stop();
+        vfx_slash_red_right.Stop();
     }
 
     void Update()

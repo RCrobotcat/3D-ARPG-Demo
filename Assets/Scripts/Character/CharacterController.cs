@@ -27,10 +27,15 @@ public class CharacterController : Singleton<CharacterController>
 
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
+
+        Cursor.visible = false;
     }
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
+
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
         animator.SetFloat("Speed", agent.velocity.magnitude);
