@@ -30,7 +30,7 @@ public class StandingState : State
         input = InputManager.Instance.inputMove;
         inputDirection = new Vector3(input.x, 0, input.y);
 
-        if (InputManager.Instance.inputSprint)
+        if (InputManager.Instance.inputSprint && character.agent.velocity.magnitude > 0.1f)
         {
             sprint = true;
         }
