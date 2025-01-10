@@ -20,6 +20,7 @@ public class CharacterController : Singleton<CharacterController>
 
     [HideInInspector] public bool running = false;
     float originalSpeed;
+    public bool restoringStamina; // 是否正在恢复精力(用尽精力之后)
 
     protected override void Awake()
     {
@@ -29,6 +30,16 @@ public class CharacterController : Singleton<CharacterController>
         animator = GetComponent<Animator>();
 
         Cursor.visible = false;
+
+        InputManager.Instance.onRoll += () =>
+        {
+            if (CharacterNumController.Instance.mModel.PlayerStamina.Value < 1.8f)
+                return;
+            if (!isRolling && agent.velocity.magnitude > 0.1f)
+            {
+                StartCoroutine(Roll());
+            }
+        };
     }
 
     void Update()
@@ -36,8 +47,10 @@ public class CharacterController : Singleton<CharacterController>
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
 
-        horizontal = Input.GetAxis("Horizontal");
-        vertical = Input.GetAxis("Vertical");
+        /* horizontal = Input.GetAxis("Horizontal");
+         vertical = Input.GetAxis("Vertical");*/
+        horizontal = InputManager.Instance.inputMove.x;
+        vertical = InputManager.Instance.inputMove.y;
         animator.SetFloat("Speed", agent.velocity.magnitude);
 
         SetAnimationState();
@@ -45,8 +58,13 @@ public class CharacterController : Singleton<CharacterController>
         if (!isRolling)
         {
             Vector3 inputDirection = new Vector3(horizontal, 0, vertical);
-            if (inputDirection != Vector3.zero)
+            if (inputDirection == Vector3.zero)
             {
+                agent.isStopped = true;
+            }
+            else
+            {
+                agent.isStopped = false;
                 Vector3 CamRelativeMove = ConvertToCameraSpace(inputDirection);
                 MovePlayer(CamRelativeMove);
             }
@@ -54,7 +72,7 @@ public class CharacterController : Singleton<CharacterController>
             Running();
         }
 
-        Rolling();
+        // Rolling();
     }
 
     /// <summary>
@@ -62,29 +80,41 @@ public class CharacterController : Singleton<CharacterController>
     /// </summary>
     void Running()
     {
-        if (CharacterNumController.Instance.mModel.PlayerStamina.Value > 0)
+        if (horizontal == 0 && vertical == 0)
         {
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (running)
             {
-                running = true;
-                originalSpeed = agent.speed;
-                agent.speed *= runningSpeedRate;
-            }
-            else if (Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                running = false;
                 agent.speed = originalSpeed;
+                running = false;
             }
+            return;
+        }
+
+        if (CharacterNumController.Instance.mModel.PlayerStamina.Value <= 0)
+        {
+            agent.speed = originalSpeed;
+            running = false;
+            restoringStamina = true;
         }
         else
         {
-            running = false;
-            agent.speed = originalSpeed;
+            if (!restoringStamina)
+            {
+                if (InputManager.Instance.inputSprint && !running)
+                {
+                    originalSpeed = agent.speed;
+                    agent.speed *= runningSpeedRate;
+                    running = true;
+                }
+                else if (!InputManager.Instance.inputSprint && running)
+                {
+                    agent.speed = originalSpeed;
+                    running = false;
+                }
+            }
         }
-
-        if (horizontal == 0 && vertical == 0)
-            running = false;
     }
+
 
     void SetAnimationState()
     {
@@ -124,7 +154,7 @@ public class CharacterController : Singleton<CharacterController>
     /// <summary>
     /// 翻滚
     /// </summary>
-    void Rolling()
+    /*void Rolling()
     {
         if (CharacterNumController.Instance.mModel.PlayerStamina.Value < 1.8f)
             return;
@@ -133,7 +163,7 @@ public class CharacterController : Singleton<CharacterController>
         {
             StartCoroutine(Roll());
         }
-    }
+    }*/
     IEnumerator Roll()
     {
         isRolling = true;
@@ -149,6 +179,7 @@ public class CharacterController : Singleton<CharacterController>
         }
 
         agent.isStopped = false;
+        agent.speed = originalSpeed;
         isRolling = false;
         running = false;
     }

@@ -22,6 +22,15 @@ public class CharacterCombo : MonoBehaviour
 
         vfx_slash_blue_left.Stop();
         vfx_slash_red_right.Stop();
+
+        InputManager.Instance.onSlash += () =>
+        {
+            if (CharacterNumController.Instance.mModel.PlayerStamina.Value >= 1f)
+            {
+                lastClickTime = Time.time;
+                OnClick();
+            }
+        };
     }
 
     void Update()
@@ -34,14 +43,14 @@ public class CharacterCombo : MonoBehaviour
             animator.SetBool("attack3", false);
         }
 
-        if (CharacterNumController.Instance.mModel.PlayerStamina.Value >= 1.5f)
+        /*if (CharacterNumController.Instance.mModel.PlayerStamina.Value >= 1.5f)
         {
             if (Input.GetMouseButtonDown(0))
             {
                 lastClickTime = Time.time;
                 OnClick();
             }
-        }
+        }*/
 
         // Debug.Log(numberOfClicks);
     }

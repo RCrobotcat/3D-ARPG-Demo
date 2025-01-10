@@ -119,7 +119,7 @@ Transform:
   m_GameObject: {fileID: 489928356723647233}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.63, z: -0.66}
+  m_LocalPosition: {x: 0, y: 0.1, z: -0.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1180,7 +1180,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.35
-  m_Speed: 4.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 600
@@ -1205,7 +1205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxComboDelay: 0.3
-  slashStaminaChange: -0.7
+  slashStaminaChange: -0.5
   vfx_slash_blue_left: {fileID: 3363336965261852430}
   vfx_slash_red_right: {fileID: 5313616489596463374}
 --- !u!114 &5349746111869739553
@@ -1221,7 +1221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
-  stopDistance: 0.5
+  stopDistance: 0.2
   runningSpeedRate: 1.5
   rollRange: 5
   rollTime: 0.2
