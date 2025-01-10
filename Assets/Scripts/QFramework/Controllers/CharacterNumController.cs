@@ -45,7 +45,7 @@ public class CharacterNumController : Singleton<CharacterNumController>, IContro
 
     void Update()
     {
-        if (CharacterController.Instance != null)
+        if (Character.Instance != null)
         {
             HandleStaminaChangeWhenRunning();
         }
@@ -60,7 +60,7 @@ public class CharacterNumController : Singleton<CharacterNumController>, IContro
     }
     void HandleStaminaChangeWhenRunning()
     {
-        if (CharacterController.Instance.running && CharacterController.Instance.agent.velocity.magnitude > 0.1f)
+        if (Character.Instance.isSprint && Character.Instance.agent.velocity.magnitude > 0.1f)
         {
             float cost = RunStaminaCost * Time.deltaTime * -1f;
             this.SendCommand(new PlayerStaminaChangeCommand(cost));

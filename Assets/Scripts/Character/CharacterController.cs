@@ -18,7 +18,7 @@ public class CharacterController : Singleton<CharacterController>
     Animator animator;
     float horizontal, vertical;
 
-    [HideInInspector] public bool running = false;
+    [HideInInspector] public bool isSprint = false;
     float originalSpeed;
     public bool restoringStamina; // 是否正在恢复精力(用尽精力之后)
 
@@ -82,10 +82,10 @@ public class CharacterController : Singleton<CharacterController>
     {
         if (horizontal == 0 && vertical == 0)
         {
-            if (running)
+            if (isSprint)
             {
                 agent.speed = originalSpeed;
-                running = false;
+                isSprint = false;
             }
             return;
         }
@@ -93,23 +93,23 @@ public class CharacterController : Singleton<CharacterController>
         if (CharacterNumController.Instance.mModel.PlayerStamina.Value <= 0)
         {
             agent.speed = originalSpeed;
-            running = false;
+            isSprint = false;
             restoringStamina = true;
         }
         else
         {
             if (!restoringStamina)
             {
-                if (InputManager.Instance.inputSprint && !running)
+                if (InputManager.Instance.inputSprint && !isSprint)
                 {
                     originalSpeed = agent.speed;
                     agent.speed *= runningSpeedRate;
-                    running = true;
+                    isSprint = true;
                 }
-                else if (!InputManager.Instance.inputSprint && running)
+                else if (!InputManager.Instance.inputSprint && isSprint)
                 {
                     agent.speed = originalSpeed;
-                    running = false;
+                    isSprint = false;
                 }
             }
         }
@@ -118,7 +118,7 @@ public class CharacterController : Singleton<CharacterController>
 
     void SetAnimationState()
     {
-        animator.SetBool("Running", running);
+        animator.SetBool("Running", isSprint);
     }
 
     public void MovePlayer(Vector3 inputDirection)
@@ -181,7 +181,7 @@ public class CharacterController : Singleton<CharacterController>
         agent.isStopped = false;
         agent.speed = originalSpeed;
         isRolling = false;
-        running = false;
+        isSprint = false;
     }
     public void RollingStaminaChangeAnimationEvent()
     {

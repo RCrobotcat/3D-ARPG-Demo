@@ -10,11 +10,11 @@ public class CharacterNumSystem : AbstractSystem, ICharacterNumSystem
 
         mModel.PlayerStamina.Register(stamina =>
         {
-            if (CharacterController.Instance != null)
+            if (Character.Instance != null)
             {
-                if (CharacterController.Instance.restoringStamina && stamina >= 1.5f)
+                if (Character.Instance.restoringStamina && stamina >= 1.5f)
                 {
-                    CharacterController.Instance.restoringStamina = false;
+                    Character.Instance.restoringStamina = false;
                 }
             }
         });
