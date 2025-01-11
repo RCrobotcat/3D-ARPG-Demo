@@ -35,7 +35,6 @@ public class ComboState : State
 
         if (inputLeftKey)
         {
-            InputManager.Instance.inputSlash = false;
             Attack();
         }
 
@@ -58,15 +57,16 @@ public class ComboState : State
 
     #region Tool Functions
     /// <summary>
-    /// 攻击协程
+    /// 攻击
     /// </summary>
     void Attack()
     {
         if (Time.time - lastComboEnd > 0.5f && comboCounter < character.combo.Count)
         {
+            InputManager.Instance.inputSlash = false;
             character.CancelInvoke("EndCombo");
 
-            if (Time.time - lastClickedTime >= 0.5f)
+            if (Time.time - lastClickedTime >= 0.55f)
             {
                 // 设置当前使用的动画控制器
                 character.animator.runtimeAnimatorController = character.combo[comboCounter].animatorOV;
@@ -92,7 +92,7 @@ public class ComboState : State
     /// </summary>
     void ExitAttack()
     {
-        if (character.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.9f
+        if (character.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f
             && character.animator.GetCurrentAnimatorStateInfo(0).IsTag("NormalAttack"))
         {
             character.Invoke("EndCombo", 0.8f);
