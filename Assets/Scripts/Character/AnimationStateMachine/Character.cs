@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -20,10 +21,14 @@ public class Character : Singleton<Character>
     [HideInInspector] public bool isSprint = false;
     [HideInInspector] public bool restoringStamina; // 是否正在恢复精力(用尽精力之后)
 
+    [Header("Attack")]
+    public List<AttackSO> combo; // 攻击组合
+
     public StateMachine movementSM; // 玩家动作状态机
     public StandingState standingState; // 站立状态
     public SprintState sprintState; // 冲刺状态
     public RollState rollState; // 翻滚状态
+    public ComboState comboState; // 攻击状态
 
     private void Start()
     {
@@ -34,6 +39,7 @@ public class Character : Singleton<Character>
         standingState = new StandingState(this, movementSM);
         sprintState = new SprintState(this, movementSM);
         rollState = new RollState(this, movementSM);
+        comboState = new ComboState(this, movementSM);
 
         movementSM.Initialize(standingState);
     }

@@ -4,6 +4,7 @@ public class StandingState : State
 {
     bool sprint;
     bool rolling;
+    bool slash;
 
     public StandingState(Character _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
@@ -39,6 +40,8 @@ public class StandingState : State
         {
             rolling = true;
         }
+
+        slash = InputManager.Instance.inputSlash;
     }
 
     public override void LogicUpdate()
@@ -53,7 +56,14 @@ public class StandingState : State
         }
         if (rolling)
         {
+            slash = false;
             stateMachine.ChangeState(character.rollState);
+        }
+
+        if (slash && !rolling)
+        {
+            character.agent.isStopped = true;
+            stateMachine.ChangeState(character.comboState);
         }
     }
 
@@ -76,11 +86,16 @@ public class StandingState : State
     public override void Exit()
     {
         base.Exit();
+        slash = false;
     }
 
     #region Tool Functions
     public void MovePlayer(Vector3 inputDirection)
     {
+        if (character.agent.isStopped)
+        {
+            character.agent.isStopped = false;
+        }
         Vector3 targetPosition = character.transform.position + inputDirection;
         MoveToTarget(targetPosition);
     }

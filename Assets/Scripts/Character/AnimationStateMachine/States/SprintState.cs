@@ -3,7 +3,10 @@ using UnityEngine;
 public class SprintState : State
 {
     bool sprint;
+    public bool Sprint { get => sprint; set => sprint = value; }
     bool rolling;
+
+    bool slash;
 
     public SprintState(Character _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
@@ -56,6 +59,8 @@ public class SprintState : State
                 }
             }
         }
+
+        slash = InputManager.Instance.inputSlash;
     }
 
     public override void LogicUpdate()
@@ -80,7 +85,14 @@ public class SprintState : State
 
         if (rolling)
         {
+            slash = false;
             stateMachine.ChangeState(character.rollState);
+        }
+
+        if (slash && !rolling)
+        {
+            character.agent.isStopped = true;
+            stateMachine.ChangeState(character.comboState);
         }
     }
 
@@ -114,6 +126,7 @@ public class SprintState : State
         base.Exit();
         sprint = false;
         character.isSprint = false;
+        slash = false;
     }
 
     #region Tool Functions

@@ -1,8 +1,6 @@
 using System;
 using UnityEngine;
-#if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
-#endif
 
 public class InputManager : Singleton<InputManager>
 {
@@ -16,25 +14,23 @@ public class InputManager : Singleton<InputManager>
     public bool inputRoll = false;
     public Action onRoll;
 
-    public bool inputSlash = false;
+    public bool inputSlash;
     public Action onSlash;
+
 
 #if ENABLE_INPUT_SYSTEM
     public void OnMove(InputAction.CallbackContext value)
     {
-        // 存储输入的值(这里为WASD输入的值)
         MoveInput(value.ReadValue<Vector2>());
     }
 
-    public void OnSrpint(InputAction.CallbackContext value)
+    public void OnSprint(InputAction.CallbackContext value)
     {
-        // 这里是检测左shift是否按下
         SprintInput(value.performed);
     }
 
     public void OnRoll(InputAction.CallbackContext value)
     {
-        // 这里是检测space是否按下
         if (value.performed)
         {
             RollInput(true);
@@ -48,15 +44,14 @@ public class InputManager : Singleton<InputManager>
 
     public void OnSlash(InputAction.CallbackContext value)
     {
-        // 这里是检测鼠标左键是否按下
         if (value.performed)
         {
-            SlashInput(true);
+            inputSlash = true;
             onSlash?.Invoke();
         }
-        else if (value.canceled)
+        else
         {
-            SlashInput(false);
+            inputSlash = false;
         }
     }
 #endif
@@ -73,11 +68,7 @@ public class InputManager : Singleton<InputManager>
 
     public void RollInput(bool newRoll)
     {
+        inputSlash = false;
         inputRoll = newRoll;
-    }
-
-    public void SlashInput(bool newSlash)
-    {
-        inputSlash = newSlash;
     }
 }

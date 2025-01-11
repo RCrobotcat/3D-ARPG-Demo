@@ -33,7 +33,7 @@ public class RollState : State
     {
         base.LogicUpdate();
 
-        if (!rolling)
+        if (!rolling && !InputManager.Instance.inputSlash)
         {
             stateMachine.ChangeState(character.standingState);
         }

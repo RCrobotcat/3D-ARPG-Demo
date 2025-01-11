@@ -23,14 +23,14 @@ public class CharacterCombo : MonoBehaviour
         vfx_slash_blue_left.Stop();
         vfx_slash_red_right.Stop();
 
-        InputManager.Instance.onSlash += () =>
+        /*InputManager.Instance.onSlash += () =>
         {
             if (CharacterNumController.Instance.mModel.PlayerStamina.Value >= 1f)
             {
                 lastClickTime = Time.time;
                 OnClick();
             }
-        };
+        };*/
     }
 
     void Update()
