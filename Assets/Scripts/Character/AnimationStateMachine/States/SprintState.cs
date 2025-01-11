@@ -72,6 +72,12 @@ public class SprintState : State
             stateMachine.ChangeState(character.standingState);
         }
 
+        if (input == Vector2.zero)
+        {
+            character.animator.SetBool("Running", false);
+            stateMachine.ChangeState(character.standingState);
+        }
+
         if (rolling)
         {
             stateMachine.ChangeState(character.rollState);
