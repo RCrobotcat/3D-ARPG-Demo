@@ -13,7 +13,7 @@ public class Character : Singleton<Character>
     [Header("Roll")]
     public float rollRange = 5f;
     public float rollTime = 0.3f;
-    public float rollStaminaChange = -1.8f;
+    public float rollStaminaChange = -1.5f;
     [HideInInspector] public bool isRolling = false;
 
     [Header("Sprint")]
@@ -23,6 +23,7 @@ public class Character : Singleton<Character>
 
     [Header("Attack")]
     public List<AttackSO> combo; // 攻击组合
+    public float attackStaminaChange = -1.0f;
 
     public StateMachine movementSM; // 玩家动作状态机
     public StandingState standingState; // 站立状态
@@ -61,6 +62,14 @@ public class Character : Singleton<Character>
     public void RollingStaminaChangeAnimationEvent()
     {
         CharacterNumController.Instance.StaminaChange(rollStaminaChange);
+    }
+
+    public void SlashingStaminaChangeAnimationEvent()
+    {
+        if (CharacterNumController.Instance.mModel.PlayerStamina.Value < 1.0f)
+            return;
+
+        CharacterNumController.Instance.StaminaChange(attackStaminaChange);
     }
     #endregion
 }

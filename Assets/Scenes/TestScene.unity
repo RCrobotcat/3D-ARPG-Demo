@@ -254,7 +254,7 @@ Transform:
   m_GameObject: {fileID: 61380142}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6448005, y: 2.6, z: -3.0800009}
+  m_LocalPosition: {x: 1.6992226, y: 2.6, z: -3.0393124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1297,8 +1297,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14586897, y: -0.25345844, z: 0.038693514, w: 0.9555019}
-  m_LocalPosition: {x: 1.6448005, y: 2.6, z: -3.0800009}
+  m_LocalRotation: {x: 0.14582051, y: -0.26247984, z: 0.04016218, w: 0.95300984}
+  m_LocalPosition: {x: 1.6992226, y: 2.6, z: -3.0393124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1445,7 +1445,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143285871}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12851079, y: -0.25411874, z: 0.034089047, w: 0.95799094}
+  m_LocalRotation: {x: 0.12850754, y: -0.26316524, z: 0.0353938, w: 0.9554984}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1951,7 +1951,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796293779}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14586897, y: -0.25345847, z: 0.038693514, w: 0.9555019}
+  m_LocalRotation: {x: 0.14582053, y: -0.26247984, z: 0.04016218, w: 0.95300984}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2125,7 +2125,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081128018}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16322492, y: -0.25271273, z: 0.04329738, w: 0.95269054}
+  m_LocalRotation: {x: 0.16313116, y: -0.26170588, z: 0.044929903, w: 0.9501998}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3914,6 +3914,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 723157fae515afb4b851b9dc5e6de072, type: 2}
   - {fileID: 11400000, guid: 83c3c38b3ba28c44b8db070b33a2b158, type: 2}
   - {fileID: 11400000, guid: 58719db6751462742a4c7d0f5612a836, type: 2}
+  attackStaminaChange: -1
 --- !u!4 &8700092762867955665
 Transform:
   m_ObjectHideFlags: 0

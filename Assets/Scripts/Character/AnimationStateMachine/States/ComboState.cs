@@ -61,7 +61,7 @@ public class ComboState : State
     /// </summary>
     void Attack()
     {
-        if (Time.time - lastComboEnd > 0.5f && comboCounter < character.combo.Count)
+        if (Time.time - lastComboEnd > 0.5f && comboCounter < character.combo.Count && CharacterNumController.Instance.mModel.PlayerStamina.Value >= 1f)
         {
             InputManager.Instance.inputSlash = false;
             character.CancelInvoke("EndCombo");
@@ -83,6 +83,12 @@ public class ComboState : State
                     comboCounter = 0;
                 }
             }
+        }
+
+        if (CharacterNumController.Instance.mModel.PlayerStamina.Value < 1f)
+        {
+            character.Invoke("EndCombo", 0.8f);
+            stateMachine.ChangeState(character.standingState);
         }
     }
 
