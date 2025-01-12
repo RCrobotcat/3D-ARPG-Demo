@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Net.Sockets;
 
-namespace IOCPNet
+namespace RC_IOCPNet
 {
     public enum TokenState
     {

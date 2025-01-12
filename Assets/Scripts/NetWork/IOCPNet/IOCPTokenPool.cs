@@ -3,7 +3,7 @@
 // IOCP会话连接Token缓存池
 // IOCP Token Pool
 
-namespace IOCPNet
+namespace RC_IOCPNet
 {
     public class IOCPTokenPool<T, K>
         where T : IOCPToken<K>, new()

@@ -7,7 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
-namespace IOCPNet
+namespace RC_IOCPNet
 {
     public class IOCPNet<T, K>
         where T : IOCPToken<K>, new()
