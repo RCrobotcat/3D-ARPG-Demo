@@ -87,7 +87,8 @@ public class ComboState : State
 
         if (CharacterNumController.Instance.mModel.PlayerStamina.Value < 1f)
         {
-            character.Invoke("EndCombo", 0.8f);
+            // character.Invoke("EndCombo", 0.8f);
+            EndCombo();
             stateMachine.ChangeState(character.standingState);
         }
     }
@@ -101,7 +102,8 @@ public class ComboState : State
         if (character.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1f
             && character.animator.GetCurrentAnimatorStateInfo(0).IsTag("NormalAttack"))
         {
-            character.Invoke("EndCombo", 0.8f);
+            // character.Invoke("EndCombo", 0.8f);
+            EndCombo();
             stateMachine.ChangeState(character.standingState);
         }
     }

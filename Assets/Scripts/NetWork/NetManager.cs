@@ -40,6 +40,8 @@ public class NetManager : Singleton<NetManager>
 
         // this.Log("Init NetManager Done.");
 
+        DontDestroyOnLoad(this);
+
         base.Awake();
     }
 
@@ -65,6 +67,11 @@ public class NetManager : Singleton<NetManager>
                 }
             }
         }
+    }
+
+    void OnDestroy()
+    {
+        ActiveCloseLoginConnection();
     }
 
     public void OnClient2LoginConnected(NetMsg msg)

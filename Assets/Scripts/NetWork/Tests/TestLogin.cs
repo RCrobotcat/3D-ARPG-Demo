@@ -14,11 +14,6 @@ public class TestLogin : MonoBehaviour
         btnLogin.onClick.AddListener(Login);
     }
 
-    private void OnApplicationQuit()
-    {
-        NetManager.Instance.ActiveCloseLoginConnection();
-    }
-
     void Login()
     {
         NetMsg loginMsg = new NetMsg()
@@ -33,13 +28,23 @@ public class TestLogin : MonoBehaviour
 
         NetManager.Instance.SendMsg(loginMsg, (response) =>
         {
-            if (response.errorCode == ErrorCode.None)
+            switch (response.errorCode)
             {
-                this.LogGreen("Login Success!");
-            }
-            else
-            {
-                this.Warn("Response: " + response.errorCode);
+                case ErrorCode.None:
+                    this.LogGreen($"Login Successful.");
+                    break;
+                case ErrorCode.acct_online_login:
+                    this.LogYellow($"账号已登录Login");
+                    break;
+                case ErrorCode.acct_online_data:
+                    this.LogYellow($"账号已登录Data");
+                    break;
+                case ErrorCode.acct_l2d_offline:
+                    this.LogYellow($"当前区服离线(Offline)，请选择其大区。");
+                    break;
+                default:
+                    this.Error($"errorCode:{response.errorCode} 未处理。");
+                    break;
             }
         });
     }
