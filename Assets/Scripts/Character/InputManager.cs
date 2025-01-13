@@ -17,6 +17,13 @@ public class InputManager : Singleton<InputManager>
     public bool inputSlash;
     public Action onSlash;
 
+    protected override void Awake()
+    {
+        base.Awake();
+
+        DontDestroyOnLoad(this);
+    }
+
 
 #if ENABLE_INPUT_SYSTEM
     public void OnMove(InputAction.CallbackContext value)

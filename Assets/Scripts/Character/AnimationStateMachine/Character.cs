@@ -9,6 +9,8 @@ public class Character : Singleton<Character>
     [HideInInspector] public Animator animator;
     public float stopDistance = 0.5f;
     public float moveSpeed = 5f;
+    public Transform lookAtPoint;
+    public Transform followPoint;
 
     [Header("Roll")]
     public float rollRange = 5f;
