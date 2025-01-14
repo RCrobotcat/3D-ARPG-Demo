@@ -35,6 +35,8 @@ public class StageManager : Singleton<StageManager>
         {
             Vector3 pos = new Vector3(msg.instantiateRole.PosX, 0, msg.instantiateRole.PosZ);
             Instantiate(rolePrefab, pos, Quaternion.identity);
+            if (!NetManager.Instance.isGameConnected())
+                NetManager.Instance.StartConnectToGame();
         }
         else
         {
@@ -47,6 +49,8 @@ public class StageManager : Singleton<StageManager>
         {
             Vector3 pos = new Vector3(msg.instantiateRole.PosX, 0, msg.instantiateRole.PosZ);
             Instantiate(rolePrefab, pos, Quaternion.identity);
+            if (!NetManager.Instance.isGameConnected())
+                NetManager.Instance.StartConnectToGame();
         }
         pendingInstantiateMsgs.Clear();
     }

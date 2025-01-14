@@ -17,6 +17,7 @@ public class CharacterNumController : Singleton<CharacterNumController>, IContro
     Image StaminaSlider;
     public Text healthTxt;
     public Text staminaTxt;
+    public Text accountTxt;
 
     public ICharacterNumModel mModel;
 
@@ -41,6 +42,8 @@ public class CharacterNumController : Singleton<CharacterNumController>, IContro
         {
             UpdateStaminaBar();
         }).UnRegisterWhenGameObjectDestroyed(gameObject);
+
+        accountTxt.text = NetManager.Instance?.account;
     }
 
     void Update()

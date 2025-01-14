@@ -8,6 +8,9 @@ using System.Collections.Generic;
 public class NetManager : Singleton<NetManager>
 {
     IOCPNet<LoginToken, NetMsg> loginNet;
+    IOCPNet<GameToken, NetMsg> gameNet;
+
+    public string account;
 
     readonly ConcurrentQueue<NetMsg> netMsgQueue = new();
     readonly Dictionary<CMD, Action<NetMsg>> ntfHandlers = new(); // Notification Handlers (通知消息的处理器)
@@ -37,6 +40,9 @@ public class NetManager : Singleton<NetManager>
 
         RegisterNtfHandler(CMD.OnClient2LoginConnected, OnClient2LoginConnected);
         RegisterNtfHandler(CMD.OnClient2LoginDisConnected, OnClient2LoginDisConnected);
+
+        RegisterNtfHandler(CMD.OnClient2GameConnected, OnClient2GameConnected);
+        RegisterNtfHandler(CMD.OnClient2GameDisConnected, OnClient2GameDisConnected);
 
         // this.Log("Init NetManager Done.");
 
@@ -83,6 +89,15 @@ public class NetManager : Singleton<NetManager>
         this.LogYellow("Disconnected from Login Server.");
     }
 
+    void OnClient2GameConnected(NetMsg msg)
+    {
+        this.LogGreen("Connected to Game Server.");
+    }
+    void OnClient2GameDisConnected(NetMsg msg)
+    {
+        this.LogYellow("Disconnected from Game Server.");
+    }
+
     /// <summary>
     /// Connect to Login Server.(连接登录服务器)
     /// </summary>
@@ -90,6 +105,19 @@ public class NetManager : Singleton<NetManager>
     {
         loginNet = new IOCPNet<LoginToken, NetMsg>();
         loginNet.StartAsClient("127.0.0.1", 18000);
+    }
+
+    /// <summary>
+    /// Connect to Game Server.(连接游戏同步服务器)
+    /// </summary>
+    public void StartConnectToGame()
+    {
+        gameNet = new IOCPNet<GameToken, NetMsg>();
+        gameNet.StartAsClient("127.0.0.1", 19000);
+    }
+    public bool isGameConnected()
+    {
+        return gameNet != null && gameNet.token != null && gameNet.token.IsConnected;
     }
 
     /// <summary>

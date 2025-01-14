@@ -32,6 +32,7 @@ public class TestLogin : MonoBehaviour
             {
                 case ErrorCode.None:
                     this.LogGreen($"Login Successful.");
+                    NetManager.Instance.account = loginMsg.reqAccountLogin.account;
                     break;
                 case ErrorCode.acct_online_login:
                     this.LogYellow($"ÕËºÅÒÑµÇÂ¼Login");
