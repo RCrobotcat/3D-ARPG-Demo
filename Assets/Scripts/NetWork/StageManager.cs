@@ -12,6 +12,8 @@ public class StageManager : Singleton<StageManager>
 
     protected override void Awake()
     {
+        NetManager.Instance.StartConnectToGame();
+
         NetManager.Instance.RegisterNtfHandler(CMD.NtfEnterStage, ntfEnterStage);
         NetManager.Instance.RegisterNtfHandler(CMD.InstantiateRole, InstantiateRole);
 
@@ -20,6 +22,15 @@ public class StageManager : Singleton<StageManager>
         base.Awake();
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
+    }
+
+    /// <summary>
+    /// 进入场景
+    /// </summary>
     void ntfEnterStage(NetMsg msg)
     {
         ao = SceneManager.LoadSceneAsync(msg.ntfEnterStage.stageName);
@@ -31,17 +42,7 @@ public class StageManager : Singleton<StageManager>
     /// </summary>
     void InstantiateRole(NetMsg msg)
     {
-        if (ao != null && ao.isDone)
-        {
-            Vector3 pos = new Vector3(msg.instantiateRole.PosX, 0, msg.instantiateRole.PosZ);
-            Instantiate(rolePrefab, pos, Quaternion.identity);
-            if (!NetManager.Instance.isGameConnected())
-                NetManager.Instance.StartConnectToGame();
-        }
-        else
-        {
-            pendingInstantiateMsgs.Add(msg);
-        }
+        pendingInstantiateMsgs.Add(msg);
     }
     void OnSceneLoaded(AsyncOperation obj)
     {
@@ -49,10 +50,39 @@ public class StageManager : Singleton<StageManager>
         {
             Vector3 pos = new Vector3(msg.instantiateRole.PosX, 0, msg.instantiateRole.PosZ);
             Instantiate(rolePrefab, pos, Quaternion.identity);
-            if (!NetManager.Instance.isGameConnected())
-                NetManager.Instance.StartConnectToGame();
+            NetManager.Instance.roldID = msg.instantiateRole.roleID;
+            if (NetManager.Instance.isGameConnected())
+            {
+                SendAffirmEnterStage(msg);
+            }
         }
         pendingInstantiateMsgs.Clear();
     }
 
+    /// <summary>
+    /// 发送确认进入场景消息
+    /// </summary>
+    /// <param name="msg"></param>
+    void SendAffirmEnterStage(NetMsg msg)
+    {
+        // 发送确认进入场景消息
+        NetMsg netMsg = new NetMsg
+        {
+            cmd = CMD.AffirmEnterStage,
+            affirmEnterStage = new AffirmEnterStage
+            {
+                mode = EnterStageMode.Login,
+                stageName = SceneManager.GetActiveScene().name,
+                roleID = msg.instantiateRole.roleID,
+                account = msg.instantiateRole.account,
+
+                playerState = PlayerStateEnum.Online,
+                driverEnum = EntityDriverEnum.Client,
+
+                PosX = msg.instantiateRole.PosX,
+                PosZ = msg.instantiateRole.PosZ
+            }
+        };
+        NetManager.Instance.SendMsg(netMsg);
+    }
 }

@@ -10,6 +10,7 @@ public class NetManager : Singleton<NetManager>
     IOCPNet<LoginToken, NetMsg> loginNet;
     IOCPNet<GameToken, NetMsg> gameNet;
 
+    public int roldID;
     public string account;
 
     readonly ConcurrentQueue<NetMsg> netMsgQueue = new();
@@ -77,7 +78,24 @@ public class NetManager : Singleton<NetManager>
 
     void OnDestroy()
     {
+        SendExitMsg();
+
         ActiveCloseLoginConnection();
+        ActiveCloseGameConnection();
+    }
+
+    void SendExitMsg()
+    {
+        NetMsg netMsg = new NetMsg
+        {
+            cmd = CMD.ExitGame,
+            exitGame = new ExitGame
+            {
+                roleID = roldID,
+                account = account
+            }
+        };
+        SendMsg(netMsg);
     }
 
     public void OnClient2LoginConnected(NetMsg msg)
@@ -106,7 +124,6 @@ public class NetManager : Singleton<NetManager>
         loginNet = new IOCPNet<LoginToken, NetMsg>();
         loginNet.StartAsClient("127.0.0.1", 18000);
     }
-
     /// <summary>
     /// Connect to Game Server.(连接游戏同步服务器)
     /// </summary>
@@ -125,7 +142,14 @@ public class NetManager : Singleton<NetManager>
     /// </summary>
     public void ActiveCloseLoginConnection()
     {
-        loginNet.ClosetClient();
+        loginNet?.ClosetClient();
+    }
+    /// <summary>
+    /// Active Close Game Connection.(主动关闭游戏连接)
+    /// </summary>
+    public void ActiveCloseGameConnection()
+    {
+        gameNet?.ClosetClient();
     }
 
     public void AddMsgPacks(NetMsg msg)
@@ -168,6 +192,12 @@ public class NetManager : Singleton<NetManager>
                 break;
             case CMD.ReqAccountLogin:
                 loginNet?.token?.SendMsg(msg);
+                break;
+            case CMD.AffirmEnterStage:
+                gameNet?.token?.SendMsg(msg);
+                break;
+            case CMD.ExitGame:
+                gameNet?.token?.SendMsg(msg);
                 break;
             default:
                 // battleNet?.token?.SendMsg(msg);
