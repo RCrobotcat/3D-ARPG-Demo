@@ -33,6 +33,8 @@ public class Character : Singleton<Character>
     public RollState rollState; // ·­¹ö×´Ì¬
     public ComboState comboState; // ¹¥»÷×´Ì¬
 
+    [HideInInspector] public int roleID; // ½ÇÉ«ID
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -49,6 +51,8 @@ public class Character : Singleton<Character>
 
     private void Update()
     {
+        if (roleID != NetManager.Instance.roldID)
+            return;
         movementSM.currentState.HandleInput();
 
         movementSM.currentState.LogicUpdate();
@@ -56,6 +60,8 @@ public class Character : Singleton<Character>
 
     private void FixedUpdate()
     {
+        if (roleID != NetManager.Instance.roldID)
+            return;
         movementSM.currentState.PhysicsUpdate();
     }
 
@@ -63,11 +69,16 @@ public class Character : Singleton<Character>
 
     public void RollingStaminaChangeAnimationEvent()
     {
+        if (roleID != NetManager.Instance.roldID)
+            return;
         CharacterNumController.Instance.StaminaChange(rollStaminaChange);
     }
 
     public void SlashingStaminaChangeAnimationEvent()
     {
+        if (roleID != NetManager.Instance.roldID)
+            return;
+
         if (CharacterNumController.Instance.mModel.PlayerStamina.Value < 1.0f)
             return;
 

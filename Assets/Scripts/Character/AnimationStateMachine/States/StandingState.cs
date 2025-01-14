@@ -105,6 +105,7 @@ public class StandingState : State
         character.agent.stoppingDistance = character.stopDistance;
         character.agent.isStopped = false;
         character.agent.destination = target;
+        StageManager.Instance?.SendSyncMovePos(target);
     }
     private Vector3 ConvertToCameraSpace(Vector3 vectorToRotate)
     {

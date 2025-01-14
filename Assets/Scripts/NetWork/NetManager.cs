@@ -10,8 +10,8 @@ public class NetManager : Singleton<NetManager>
     IOCPNet<LoginToken, NetMsg> loginNet;
     IOCPNet<GameToken, NetMsg> gameNet;
 
-    public int roldID;
-    public string account;
+    public int roldID; // 当前玩家的角色ID
+    public string account; // 当前账号
 
     readonly ConcurrentQueue<NetMsg> netMsgQueue = new();
     readonly Dictionary<CMD, Action<NetMsg>> ntfHandlers = new(); // Notification Handlers (通知消息的处理器)
@@ -58,7 +58,7 @@ public class NetManager : Singleton<NetManager>
         {
             if (netMsgQueue.TryDequeue(out NetMsg msg))
             {
-                this.Log($"[Token] => Received netMsg's Command: {msg.cmd}");
+                // this.Log($"[Token] => Received netMsg's Command: {msg.cmd}");
                 // 若是有回应的消息
                 if (respHandlers.TryGetValue(msg.cmd, out Action<NetMsg> respHandler))
                 {
@@ -194,6 +194,9 @@ public class NetManager : Singleton<NetManager>
                 loginNet?.token?.SendMsg(msg);
                 break;
             case CMD.AffirmEnterStage:
+                gameNet?.token?.SendMsg(msg);
+                break;
+            case CMD.SyncMovePos:
                 gameNet?.token?.SendMsg(msg);
                 break;
             case CMD.ExitGame:
