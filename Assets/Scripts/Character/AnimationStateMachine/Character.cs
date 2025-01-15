@@ -51,7 +51,7 @@ public class Character : Singleton<Character>
 
     private void Update()
     {
-        if (roleID != NetManager.Instance.roldID)
+        if (roleID != NetManager.Instance.roleID)
             return;
         movementSM.currentState.HandleInput();
 
@@ -60,7 +60,7 @@ public class Character : Singleton<Character>
 
     private void FixedUpdate()
     {
-        if (roleID != NetManager.Instance.roldID)
+        if (roleID != NetManager.Instance.roleID)
             return;
         movementSM.currentState.PhysicsUpdate();
 
@@ -71,14 +71,14 @@ public class Character : Singleton<Character>
 
     public void RollingStaminaChangeAnimationEvent()
     {
-        if (roleID != NetManager.Instance.roldID)
+        if (roleID != NetManager.Instance.roleID)
             return;
         CharacterNumController.Instance.StaminaChange(rollStaminaChange);
     }
 
     public void SlashingStaminaChangeAnimationEvent()
     {
-        if (roleID != NetManager.Instance.roldID)
+        if (roleID != NetManager.Instance.roleID)
             return;
 
         if (CharacterNumController.Instance.mModel.PlayerStamina.Value < 1.0f)

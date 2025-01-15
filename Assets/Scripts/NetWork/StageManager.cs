@@ -1,4 +1,5 @@
 using RCProtocol;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,7 +11,7 @@ public class StageManager : Singleton<StageManager>
     AsyncOperation ao;
     private List<NetMsg> pendingInstantiateMsgs = new List<NetMsg>();
 
-    readonly Dictionary<int, GameObject> roleID2Entities = new Dictionary<int, GameObject>(); // 所有游戏实体
+    private Dictionary<int, RemotePlayer> remotePlayers = new Dictionary<int, RemotePlayer>(); // 其他玩家实体
 
     protected override void Awake()
     {
@@ -30,6 +31,14 @@ public class StageManager : Singleton<StageManager>
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             Application.Quit();
+
+        float deltaTime = Time.deltaTime;
+        foreach (var player in remotePlayers.Values)
+        {
+            player.Interpolate(deltaTime);
+            // 更新实体的显示
+            UpdatePlayerEntity(player);
+        }
     }
 
     /// <summary>
@@ -40,7 +49,6 @@ public class StageManager : Singleton<StageManager>
         ao = SceneManager.LoadSceneAsync(msg.ntfEnterStage.stageName);
         ao.completed += OnSceneLoaded;
     }
-
     /// <summary>
     /// 生成玩家角色
     /// </summary>
@@ -54,8 +62,12 @@ public class StageManager : Singleton<StageManager>
         {
             Vector3 pos = new Vector3(msg.instantiateRole.PosX, 0, msg.instantiateRole.PosZ);
             GameObject go = Instantiate(rolePrefab, pos, Quaternion.identity);
-            NetManager.Instance.roldID = msg.instantiateRole.roleID;
-            go.GetComponent<Character>().roleID = msg.instantiateRole.roleID;
+            Character character = go.GetComponent<Character>();
+            character.roleID = msg.instantiateRole.roleID;
+
+            // 设置本地玩家的角色ID
+            NetManager.Instance.roleID = msg.instantiateRole.roleID;
+
             if (NetManager.Instance.isGameConnected())
             {
                 SendAffirmEnterStage(msg);
@@ -63,7 +75,6 @@ public class StageManager : Singleton<StageManager>
         }
         pendingInstantiateMsgs.Clear();
     }
-
     /// <summary>
     /// 发送确认进入场景消息
     /// </summary>
@@ -96,22 +107,62 @@ public class StageManager : Singleton<StageManager>
     /// </summary>
     void SyncMovePos(NetMsg msg)
     {
-        if (msg.syncMovePos.roleID != NetManager.Instance.roldID)
+        if (msg.syncMovePos.roleID == NetManager.Instance.roleID)
+            return;
+
+        // 处理其他玩家的位置同步
+        OnReceiveSyncMovePos(msg.syncMovePos);
+    }
+
+    /// <summary>
+    /// 接收服务器同步消息
+    /// </summary>
+    public void OnReceiveSyncMovePos(SyncMovePos syncMovePos)
+    {
+        if (syncMovePos.roleID == NetManager.Instance.roleID)
+            return;
+
+        if (!remotePlayers.ContainsKey(syncMovePos.roleID))
         {
-            if (!roleID2Entities.ContainsKey(msg.syncMovePos.roleID))
-            {
-                Vector3 pos = new Vector3(msg.syncMovePos.PosX, 0, msg.syncMovePos.PosZ);
-                GameObject go = Instantiate(rolePrefab, pos, Quaternion.identity);
-                go.GetComponent<Character>().roleID = msg.syncMovePos.roleID;
-                roleID2Entities.Add(msg.syncMovePos.roleID, go);
-            }
-            else
-            {
-                roleID2Entities[msg.syncMovePos.roleID].transform.position = new Vector3(msg.syncMovePos.PosX, 0, msg.syncMovePos.PosZ);
-                roleID2Entities[msg.syncMovePos.roleID].transform.forward = new Vector3(msg.syncMovePos.dirX, msg.syncMovePos.dirY, msg.syncMovePos.dirZ);
-            }
+            // 创建新的远程玩家实体
+            GameObject go = Instantiate(rolePrefab, new Vector3(syncMovePos.PosX, 0, syncMovePos.PosZ), Quaternion.identity);
+            Character character = go.GetComponent<Character>();
+            character.roleID = syncMovePos.roleID;
+
+            RemotePlayer newPlayer = new RemotePlayer(
+                syncMovePos.roleID,
+                syncMovePos.account,
+                new Vector3(syncMovePos.PosX, 0, syncMovePos.PosZ),
+                new Vector3(syncMovePos.dirX, syncMovePos.dirY, syncMovePos.dirZ),
+                syncMovePos.timestamp,
+                go
+            );
+            remotePlayers.Add(syncMovePos.roleID, newPlayer);
+        }
+        else
+        {
+            // 更新现有玩家的状态
+            RemotePlayer existingPlayer = remotePlayers[syncMovePos.roleID];
+            existingPlayer.UpdateState(
+                new Vector3(syncMovePos.PosX, existingPlayer.CurrentPos.y, syncMovePos.PosZ),
+                new Vector3(syncMovePos.dirX, syncMovePos.dirY, syncMovePos.dirZ),
+                syncMovePos.timestamp
+            );
         }
     }
+
+    /// <summary>
+    /// 更新实体的显示
+    /// </summary>
+    private void UpdatePlayerEntity(RemotePlayer player)
+    {
+        if (player.GameObject != null)
+        {
+            player.GameObject.transform.position = player.CurrentPos;
+            player.GameObject.transform.forward = player.CurrentDir;
+        }
+    }
+
     /// <summary>
     /// 发送同步移动位置消息
     /// </summary>
@@ -122,13 +173,14 @@ public class StageManager : Singleton<StageManager>
             cmd = CMD.SyncMovePos,
             syncMovePos = new SyncMovePos
             {
-                roleID = NetManager.Instance.roldID,
+                roleID = NetManager.Instance.roleID,
                 account = NetManager.Instance.account,
                 PosX = targetPos.x,
                 PosZ = targetPos.z,
                 dirX = targetDir.x,
                 dirY = targetDir.y,
-                dirZ = targetDir.z
+                dirZ = targetDir.z,
+                timestamp = DateTime.UtcNow.Ticks
             }
         };
         NetManager.Instance.SendMsg(netMsg);
@@ -139,10 +191,14 @@ public class StageManager : Singleton<StageManager>
     /// </summary>
     void RemoveEntity(NetMsg msg)
     {
-        if (roleID2Entities.ContainsKey(msg.removeEntity.roleID))
+        if (remotePlayers.ContainsKey(msg.removeEntity.roleID))
         {
-            Destroy(roleID2Entities[msg.removeEntity.roleID]);
-            roleID2Entities.Remove(msg.removeEntity.roleID);
+            RemotePlayer player = remotePlayers[msg.removeEntity.roleID];
+            remotePlayers.Remove(msg.removeEntity.roleID);
+            if (player.GameObject != null)
+            {
+                Destroy(player.GameObject);
+            }
         }
     }
 }

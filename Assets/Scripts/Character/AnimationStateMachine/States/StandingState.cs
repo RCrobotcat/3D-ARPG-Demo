@@ -96,6 +96,10 @@ public class StandingState : State
             character.agent.isStopped = false;
         }
         Vector3 targetPosition = character.transform.position + inputDirection;
+
+        Vector3 direction = (targetPosition - character.transform.position).normalized;
+        StageManager.Instance.SendSyncMovePos(character.transform.position, direction);
+
         MoveToTarget(targetPosition);
     }
     public void MoveToTarget(Vector3 target)
@@ -104,9 +108,6 @@ public class StandingState : State
         character.agent.stoppingDistance = character.stopDistance;
         character.agent.isStopped = false;
         character.agent.destination = target;
-
-        Vector3 direction = (target - character.transform.position).normalized;
-        StageManager.Instance.SendSyncMovePos(character.transform.position, direction);
     }
     private Vector3 ConvertToCameraSpace(Vector3 vectorToRotate)
     {

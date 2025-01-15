@@ -10,7 +10,7 @@ public class NetManager : Singleton<NetManager>
     IOCPNet<LoginToken, NetMsg> loginNet;
     IOCPNet<GameToken, NetMsg> gameNet;
 
-    public int roldID; // 当前玩家的角色ID
+    public int roleID; // 当前玩家的角色ID
     public string account; // 当前账号
 
     readonly ConcurrentQueue<NetMsg> netMsgQueue = new();
@@ -91,7 +91,7 @@ public class NetManager : Singleton<NetManager>
             cmd = CMD.ExitGame,
             exitGame = new ExitGame
             {
-                roleID = roldID,
+                roleID = roleID,
                 account = account
             }
         };

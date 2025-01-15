@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3790c35d0deb9da4ea1a3cc5c4fc4dfa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roleID: 0
   account: 
 --- !u!4 &271734602
 Transform:
@@ -2577,7 +2578,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081128018}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16326661, y: -0.24854194, z: 0.042543516, w: 0.9538139}
+  m_LocalRotation: {x: 0.16326663, y: -0.24854192, z: 0.042543516, w: 0.95381397}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
