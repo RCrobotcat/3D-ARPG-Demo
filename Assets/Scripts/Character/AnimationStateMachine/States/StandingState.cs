@@ -81,7 +81,6 @@ public class StandingState : State
             Vector3 CamRelativeMove = ConvertToCameraSpace(inputDirection);
             MovePlayer(CamRelativeMove);
         }
-
     }
     public override void Exit()
     {
@@ -105,7 +104,9 @@ public class StandingState : State
         character.agent.stoppingDistance = character.stopDistance;
         character.agent.isStopped = false;
         character.agent.destination = target;
-        StageManager.Instance?.SendSyncMovePos(target);
+
+        Vector3 direction = (target - character.transform.position).normalized;
+        StageManager.Instance.SendSyncMovePos(character.transform.position, direction);
     }
     private Vector3 ConvertToCameraSpace(Vector3 vectorToRotate)
     {

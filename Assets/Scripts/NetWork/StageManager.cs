@@ -108,13 +108,14 @@ public class StageManager : Singleton<StageManager>
             else
             {
                 roleID2Entities[msg.syncMovePos.roleID].transform.position = new Vector3(msg.syncMovePos.PosX, 0, msg.syncMovePos.PosZ);
+                roleID2Entities[msg.syncMovePos.roleID].transform.forward = new Vector3(msg.syncMovePos.dirX, msg.syncMovePos.dirY, msg.syncMovePos.dirZ);
             }
         }
     }
     /// <summary>
     /// 发送同步移动位置消息
     /// </summary>
-    public void SendSyncMovePos(Vector3 targetPos)
+    public void SendSyncMovePos(Vector3 targetPos, Vector3 targetDir)
     {
         NetMsg netMsg = new NetMsg
         {
@@ -124,7 +125,10 @@ public class StageManager : Singleton<StageManager>
                 roleID = NetManager.Instance.roldID,
                 account = NetManager.Instance.account,
                 PosX = targetPos.x,
-                PosZ = targetPos.z
+                PosZ = targetPos.z,
+                dirX = targetDir.x,
+                dirY = targetDir.y,
+                dirZ = targetDir.z
             }
         };
         NetManager.Instance.SendMsg(netMsg);

@@ -1666,7 +1666,7 @@ NavMeshAgent:
   m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 600
+  m_AngularSpeed: 5000
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -1689,7 +1689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   animator: {fileID: 0}
-  stopDistance: 0.7
+  stopDistance: 0
   moveSpeed: 5
   lookAtPoint: {fileID: 2520317794331007086}
   followPoint: {fileID: 4822794873420354361}
@@ -1707,6 +1707,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 83c3c38b3ba28c44b8db070b33a2b158, type: 2}
   - {fileID: 11400000, guid: 58719db6751462742a4c7d0f5612a836, type: 2}
   attackStaminaChange: -1
+  roleID: 0
 --- !u!1 &8548092400154594095
 GameObject:
   m_ObjectHideFlags: 0

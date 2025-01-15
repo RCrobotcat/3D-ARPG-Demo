@@ -63,6 +63,8 @@ public class Character : Singleton<Character>
         if (roleID != NetManager.Instance.roldID)
             return;
         movementSM.currentState.PhysicsUpdate();
+
+
     }
 
     #region Animation Events
