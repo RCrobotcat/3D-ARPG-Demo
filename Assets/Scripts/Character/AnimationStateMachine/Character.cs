@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.TextCore.Text;
 
 public class Character : Singleton<Character>
 {
@@ -33,6 +34,9 @@ public class Character : Singleton<Character>
     public RollState rollState; // ·­¹ö×´Ì¬
     public ComboState comboState; // ¹¥»÷×´Ì¬
 
+    // ÆäËûÍæ¼Ò×´Ì¬
+    public RemoteStandingState remoteStandingState;
+
     [HideInInspector] public int roleID; // ½ÇÉ«ID
 
     private void Start()
@@ -46,13 +50,21 @@ public class Character : Singleton<Character>
         rollState = new RollState(this, movementSM);
         comboState = new ComboState(this, movementSM);
 
-        movementSM.Initialize(standingState);
+        remoteStandingState = new RemoteStandingState(this, movementSM);
+
+        if (roleID != NetManager.Instance.roleID)
+        {
+            movementSM.Initialize(remoteStandingState);
+        }
+        else
+        {
+            movementSM.Initialize(standingState);
+            agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
+        }
     }
 
     private void Update()
     {
-        if (roleID != NetManager.Instance.roleID)
-            return;
         movementSM.currentState.HandleInput();
 
         movementSM.currentState.LogicUpdate();
@@ -60,15 +72,10 @@ public class Character : Singleton<Character>
 
     private void FixedUpdate()
     {
-        if (roleID != NetManager.Instance.roleID)
-            return;
         movementSM.currentState.PhysicsUpdate();
-
-
     }
 
     #region Animation Events
-
     public void RollingStaminaChangeAnimationEvent()
     {
         if (roleID != NetManager.Instance.roleID)

@@ -15,7 +15,7 @@ public class RemotePlayer
     public GameObject GameObject { get; private set; }
 
     // 插值参数
-    private float interpolationDuration = 0.1f; // 插值持续时间
+    private float interpolationDuration = 0.2f; // 插值持续时间
     private float interpolationProgress = 0f;
 
     public RemotePlayer(int roleID, string account, Vector3 initialPos, Vector3 initialDir, long timestamp, GameObject gameObject)

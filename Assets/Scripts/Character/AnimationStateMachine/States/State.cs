@@ -8,7 +8,6 @@ public class State
     protected Vector3 inputDirection;
     protected Vector2 input; // Íæ¼ÒÊäÈë
 
-
     public State(Character _character, StateMachine _stateMachine)
     {
         character = _character;
