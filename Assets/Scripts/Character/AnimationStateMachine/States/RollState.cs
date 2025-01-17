@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using RCProtocol;
 
 public class RollState : State
 {
@@ -58,6 +59,7 @@ public class RollState : State
         if (!character.isRolling && character.agent.velocity.magnitude > 0.1f)
         {
             character.StartCoroutine(Roll());
+            StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.Roll);
         }
     }
     IEnumerator Roll()
@@ -78,6 +80,7 @@ public class RollState : State
         character.agent.speed = character.moveSpeed;
         character.isRolling = false;
         rolling = false;
+        StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.None);
         character.isSprint = false;
     }
     #endregion

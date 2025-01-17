@@ -33,8 +33,4 @@ public class RemoteStandingState : State_remote
             character.animator.SetFloat("Speed", 0.0f);
         }
     }
-    public override void Exit()
-    {
-        base.Exit();
-    }
 }

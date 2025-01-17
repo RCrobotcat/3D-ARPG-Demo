@@ -1,4 +1,3 @@
-using RCProtocol;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -17,7 +16,6 @@ public class Character_remote : MonoBehaviour
     public float rollRange = 5f;
     public float rollTime = 0.3f;
     public float rollStaminaChange = -1.5f;
-    [HideInInspector] public bool isRolling = false;
 
     [Header("Sprint")]
     public float runSpeed = 7.5f;
@@ -29,9 +27,9 @@ public class Character_remote : MonoBehaviour
     public float attackStaminaChange = -1.0f;
 
     public StateMachine_remote movementSM; // 玩家动作状态机
-
     public RemoteStandingState remoteStandingState;
     public RemoteComboState remoteComboState;
+    public RemoteRollState remoteRollState;
 
     [HideInInspector] public int roleID; // 角色ID
 
@@ -44,6 +42,7 @@ public class Character_remote : MonoBehaviour
 
         remoteStandingState = new RemoteStandingState(this, movementSM);
         remoteComboState = new RemoteComboState(this, movementSM);
+        remoteRollState = new RemoteRollState(this, movementSM);
 
         movementSM.Initialize(remoteStandingState);
         agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;

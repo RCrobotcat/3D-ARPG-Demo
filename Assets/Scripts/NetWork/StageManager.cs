@@ -174,8 +174,16 @@ public class StageManager : Singleton<StageManager>
         // 处理其他玩家的动画状态同步
         SyncAnimationState syncAnimationState = msg.syncAnimationState;
         Character_remote character = remotePlayers[syncAnimationState.roleID].gameObject.GetComponent<Character_remote>();
-        character.movementSM.ChangeState(character.remoteComboState);
-        character.remoteComboState.animationState = syncAnimationState.animationStateEnum;
+        if (syncAnimationState.animationStateEnum == AnimationStateEnum.Roll)
+        {
+            character.movementSM.ChangeState(character.remoteRollState);
+            character.remoteRollState.IsRoll = true;
+        }
+        else
+        {
+            character.movementSM.ChangeState(character.remoteComboState);
+            character.remoteComboState.animationState = syncAnimationState.animationStateEnum;
+        }
     }
 
     /// <summary>

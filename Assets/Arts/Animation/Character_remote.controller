@@ -271,7 +271,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: adaa29981e8dd8d47b2f83c9bf7ec412, type: 2}
+  m_Motion: {fileID: 7400000, guid: d3c3e694772922541a28f0ef1c78e7a2, type: 2}
   m_Tag: NormalAttack
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -383,7 +383,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 27623ca04067ed7478e84d718d8b065b, type: 2}
+  m_Motion: {fileID: 7400000, guid: 0b9d38e929e379a4689c619df72db27d, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

@@ -34,10 +34,6 @@ public class Character : Singleton<Character>
     public RollState rollState; // ·­¹ö×´Ì¬
     public ComboState comboState; // ¹¥»÷×´Ì¬
 
-    // ÆäËûÍæ¼Ò×´Ì¬
-    public RemoteStandingState remoteStandingState;
-    public RemoteComboState remoteComboState;
-
     [HideInInspector] public int roleID; // ½ÇÉ«ID
 
     private void Start()

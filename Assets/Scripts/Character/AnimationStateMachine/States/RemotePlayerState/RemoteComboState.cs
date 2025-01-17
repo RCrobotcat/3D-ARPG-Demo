@@ -28,6 +28,11 @@ public class RemoteComboState : State_remote
             lastAnimationState = animationState; // 更新当前的动画状态
         }
 
+        if (animationState == AnimationStateEnum.None && lastAnimationState == AnimationStateEnum.None)
+        {
+            stateMachine.ChangeState(character.remoteStandingState);
+        }
+
         ExitAttack();
     }
 

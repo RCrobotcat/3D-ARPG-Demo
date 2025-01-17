@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba89276eaedfff34184e404796d497db, type: 3}
   m_Name: Attack2_remote
   m_EditorClassIdentifier: 
-  animatorOV: {fileID: 22100000, guid: 15bf3dd234bba124d9a269ecc68a61c1, type: 2}
+  animatorOV: {fileID: 22100000, guid: ac876ab6715e01a4eaf90ced9b497f52, type: 2}
   damage: 2
