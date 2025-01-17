@@ -1,7 +1,7 @@
+using RCProtocol;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.TextCore.Text;
 
 public class Character : Singleton<Character>
 {
@@ -36,6 +36,7 @@ public class Character : Singleton<Character>
 
     // 其他玩家状态
     public RemoteStandingState remoteStandingState;
+    public RemoteComboState remoteComboState;
 
     [HideInInspector] public int roleID; // 角色ID
 
@@ -50,17 +51,8 @@ public class Character : Singleton<Character>
         rollState = new RollState(this, movementSM);
         comboState = new ComboState(this, movementSM);
 
-        remoteStandingState = new RemoteStandingState(this, movementSM);
-
-        if (roleID != NetManager.Instance.roleID)
-        {
-            movementSM.Initialize(remoteStandingState);
-        }
-        else
-        {
-            movementSM.Initialize(standingState);
-            agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
-        }
+        movementSM.Initialize(standingState);
+        agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
     }
 
     private void Update()
@@ -92,6 +84,32 @@ public class Character : Singleton<Character>
             return;
 
         CharacterNumController.Instance.StaminaChange(attackStaminaChange);
+    }
+
+    public void SendRemoteAnimationState()
+    {
+        ComboStateEnum comboStateEnum = comboState.GetComboState();
+
+        switch (comboStateEnum)
+        {
+            case ComboStateEnum.Combo_1:
+                StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.Combo_1);
+                break;
+            case ComboStateEnum.Combo_2:
+                StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.Combo_2);
+                break;
+            case ComboStateEnum.Combo_3:
+                StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.Combo_3);
+                break;
+            case ComboStateEnum.Combo_4:
+                StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.Combo_4);
+                break;
+            case ComboStateEnum.Combo_5:
+                StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.Combo_5);
+                break;
+            default:
+                break;
+        }
     }
     #endregion
 }

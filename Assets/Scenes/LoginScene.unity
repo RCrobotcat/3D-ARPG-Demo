@@ -998,6 +998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rolePrefab: {fileID: 8533253696199008074, guid: d3b55743e5d4d784395dd3552a5fe0c1, type: 3}
+  rolePrefab_remote: {fileID: 8533253696199008074, guid: daf20bca0e3821e41aba4024c017f377, type: 3}
 --- !u!1 &1195363715
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class StageManager : Singleton<StageManager>
 {
     public GameObject rolePrefab;
+    public GameObject rolePrefab_remote;
 
     AsyncOperation ao;
     private List<NetMsg> pendingInstantiateMsgs = new List<NetMsg>();
@@ -20,6 +21,7 @@ public class StageManager : Singleton<StageManager>
         NetManager.Instance.RegisterNtfHandler(CMD.NtfEnterStage, ntfEnterStage);
         NetManager.Instance.RegisterNtfHandler(CMD.InstantiateRole, InstantiateRole);
         NetManager.Instance.RegisterNtfHandler(CMD.SyncMovePos, SyncMovePos);
+        NetManager.Instance.RegisterNtfHandler(CMD.SyncAnimationState, SyncAnimationState);
         NetManager.Instance.RegisterNtfHandler(CMD.RemoveEntity, RemoveEntity);
 
         DontDestroyOnLoad(this);
@@ -113,7 +115,6 @@ public class StageManager : Singleton<StageManager>
         // 处理其他玩家的位置同步
         OnReceiveSyncMovePos(msg.syncMovePos);
     }
-
     /// <summary>
     /// 接收服务器同步消息
     /// </summary>
@@ -125,8 +126,8 @@ public class StageManager : Singleton<StageManager>
         if (!remotePlayers.ContainsKey(syncMovePos.roleID))
         {
             // 创建新的远程玩家实体
-            GameObject go = Instantiate(rolePrefab, new Vector3(syncMovePos.PosX, 0, syncMovePos.PosZ), Quaternion.identity);
-            Character character = go.GetComponent<Character>();
+            GameObject go = Instantiate(rolePrefab_remote, new Vector3(syncMovePos.PosX, 0, syncMovePos.PosZ), Quaternion.identity);
+            Character_remote character = go.GetComponent<Character_remote>();
             character.roleID = syncMovePos.roleID;
 
             RemotePlayer newPlayer = new RemotePlayer(
@@ -150,17 +151,31 @@ public class StageManager : Singleton<StageManager>
             );
         }
     }
-
     /// <summary>
     /// 更新实体的显示
     /// </summary>
     private void UpdatePlayerEntity(RemotePlayer player)
     {
-        if (player.GameObject != null)
+        if (player.gameObject != null)
         {
-            player.GameObject.transform.position = player.CurrentPos;
-            player.GameObject.transform.forward = player.CurrentDir;
+            player.gameObject.transform.position = player.CurrentPos;
+            player.gameObject.transform.forward = player.CurrentDir;
         }
+    }
+
+    /// <summary>
+    /// 同步动画状态
+    /// </summary>
+    void SyncAnimationState(NetMsg msg)
+    {
+        if (msg.syncAnimationState.roleID == NetManager.Instance.roleID)
+            return;
+
+        // 处理其他玩家的动画状态同步
+        SyncAnimationState syncAnimationState = msg.syncAnimationState;
+        Character_remote character = remotePlayers[syncAnimationState.roleID].gameObject.GetComponent<Character_remote>();
+        character.movementSM.ChangeState(character.remoteComboState);
+        character.remoteComboState.animationState = syncAnimationState.animationStateEnum;
     }
 
     /// <summary>
@@ -187,6 +202,24 @@ public class StageManager : Singleton<StageManager>
     }
 
     /// <summary>
+    /// 发送同步动画状态
+    /// </summary>
+    public void SendSyncAnimationState(AnimationStateEnum animState)
+    {
+        NetMsg netMsg = new NetMsg
+        {
+            cmd = CMD.SyncAnimationState,
+            syncAnimationState = new SyncAnimationState
+            {
+                roleID = NetManager.Instance.roleID,
+                account = NetManager.Instance.account,
+                animationStateEnum = animState
+            }
+        };
+        NetManager.Instance.SendMsg(netMsg);
+    }
+
+    /// <summary>
     /// 移除实体
     /// </summary>
     void RemoveEntity(NetMsg msg)
@@ -195,9 +228,9 @@ public class StageManager : Singleton<StageManager>
         {
             RemotePlayer player = remotePlayers[msg.removeEntity.roleID];
             remotePlayers.Remove(msg.removeEntity.roleID);
-            if (player.GameObject != null)
+            if (player.gameObject != null)
             {
-                Destroy(player.GameObject);
+                Destroy(player.gameObject);
             }
         }
     }

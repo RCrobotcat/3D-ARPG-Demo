@@ -12,10 +12,10 @@ public class RemotePlayer
     public Vector3 CurrentDir { get; private set; }
     public Vector3 TargetDir { get; private set; }
     public long LastUpdateTime { get; private set; }
-    public GameObject GameObject { get; private set; }
+    public GameObject gameObject { get; private set; }
 
     // 插值参数
-    private float interpolationDuration = 0.2f; // 插值持续时间
+    private float interpolationDuration = 0.1f; // 插值持续时间
     private float interpolationProgress = 0f;
 
     public RemotePlayer(int roleID, string account, Vector3 initialPos, Vector3 initialDir, long timestamp, GameObject gameObject)
@@ -27,7 +27,7 @@ public class RemotePlayer
         CurrentDir = initialDir;
         TargetDir = initialDir;
         LastUpdateTime = timestamp;
-        GameObject = gameObject;
+        this.gameObject = gameObject;
     }
 
     /// <summary>

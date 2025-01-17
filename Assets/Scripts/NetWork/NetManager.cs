@@ -199,6 +199,9 @@ public class NetManager : Singleton<NetManager>
             case CMD.SyncMovePos:
                 gameNet?.token?.SendMsg(msg);
                 break;
+            case CMD.SyncAnimationState:
+                gameNet?.token?.SendMsg(msg);
+                break;
             case CMD.ExitGame:
                 gameNet?.token?.SendMsg(msg);
                 break;

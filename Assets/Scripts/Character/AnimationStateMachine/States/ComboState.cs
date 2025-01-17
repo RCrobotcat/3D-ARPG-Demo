@@ -1,7 +1,19 @@
+using RCProtocol;
 using UnityEngine;
+
+public enum ComboStateEnum
+{
+    Combo_1,
+    Combo_2,
+    Combo_3,
+    Combo_4,
+    Combo_5,
+}
 
 public class ComboState : State
 {
+    ComboStateEnum comboStateEnum = ComboStateEnum.Combo_1;
+
     float lastClickedTime;
     float lastComboEnd;
     int comboCounter; // 连击计数器
@@ -20,6 +32,8 @@ public class ComboState : State
 
         comboCounter = 0;
         inputLeftKey = false;
+
+        comboStateEnum = ComboStateEnum.Combo_1;
     }
 
     public override void HandleInput()
@@ -46,6 +60,7 @@ public class ComboState : State
         base.Exit();
 
         inputLeftKey = false;
+        StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.None);
         EndCombo();
 
         character.isSprint = false;
@@ -70,6 +85,7 @@ public class ComboState : State
             {
                 // 设置当前使用的动画控制器
                 character.animator.runtimeAnimatorController = character.combo[comboCounter].animatorOV;
+                comboStateEnum = (ComboStateEnum)comboCounter;
 
                 character.animator.Play("NormalAttack", 0, 0);
 
@@ -88,6 +104,7 @@ public class ComboState : State
         if (CharacterNumController.Instance.mModel.PlayerStamina.Value < 1f)
         {
             // character.Invoke("EndCombo", 0.8f);
+            StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.None);
             EndCombo();
             stateMachine.ChangeState(character.standingState);
         }
@@ -103,6 +120,7 @@ public class ComboState : State
             && character.animator.GetCurrentAnimatorStateInfo(0).IsTag("NormalAttack"))
         {
             // character.Invoke("EndCombo", 0.8f);
+            StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.None);
             EndCombo();
             stateMachine.ChangeState(character.standingState);
         }
@@ -115,6 +133,14 @@ public class ComboState : State
     {
         comboCounter = 0;
         lastComboEnd = Time.time;
+    }
+
+    /// <summary>
+    /// 获取连击计数器
+    /// </summary>
+    public ComboStateEnum GetComboState()
+    {
+        return comboStateEnum;
     }
     #endregion
 }
