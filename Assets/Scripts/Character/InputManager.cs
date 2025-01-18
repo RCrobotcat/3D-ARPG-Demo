@@ -17,6 +17,8 @@ public class InputManager : Singleton<InputManager>
     public bool inputSlash;
     public Action onSlash;
 
+    public bool inputOpenInventory;
+
     protected override void Awake()
     {
         base.Awake();
@@ -61,6 +63,14 @@ public class InputManager : Singleton<InputManager>
             inputSlash = false;
         }
     }
+
+    public void OnOpenInventory(InputAction.CallbackContext value)
+    {
+        if (value.performed)
+        {
+            OpenInventoryInput();
+        }
+    }
 #endif
 
     public void MoveInput(Vector2 newMoveDirection)
@@ -77,5 +87,10 @@ public class InputManager : Singleton<InputManager>
     {
         inputSlash = false;
         inputRoll = newRoll;
+    }
+
+    public void OpenInventoryInput()
+    {
+        inputOpenInventory = !inputOpenInventory;
     }
 }

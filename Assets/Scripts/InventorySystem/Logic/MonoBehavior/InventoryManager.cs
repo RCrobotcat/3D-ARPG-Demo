@@ -39,7 +39,8 @@ public class InventoryManager : Singleton<InventoryManager>
     [Header("Tooltip")]
     public ItemTooltip itemTooltip;
 
-    bool isOpen = false;
+    // bool isOpen = false;
+    bool isAnimating = false;
 
     protected override void Awake()
     {
@@ -60,17 +61,41 @@ public class InventoryManager : Singleton<InventoryManager>
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (!isAnimating)
         {
-            isOpen = !isOpen;
-            BagPanel.SetActive(isOpen);
-            EquipmentPanel.SetActive(isOpen);
+            isAnimating = true;
+
+            if (InputManager.Instance.inputOpenInventory)
+            {
+                BagPanel.SetActive(true);
+                EquipmentPanel.SetActive(true);
+
+                BagPanel.transform.localPosition.rc_To(new Vector3(500, 0, 0), 0.3f,
+                    (Vector3 pos) => BagPanel.transform.localPosition = pos,
+                    () => { isAnimating = false; });
+
+                EquipmentPanel.transform.localPosition.rc_To(new Vector3(-500, 0, 0), 0.3f,
+                    (Vector3 pos) => EquipmentPanel.transform.localPosition = pos,
+                    () => { isAnimating = false; });
+            }
+
+            if (!InputManager.Instance.inputOpenInventory)
+            {
+                BagPanel.transform.localPosition.rc_To(new Vector3(1500, 0, 0), 0.3f,
+                    (Vector3 pos) => BagPanel.transform.localPosition = pos,
+                    () => { BagPanel.SetActive(false); isAnimating = false; });
+
+                EquipmentPanel.transform.localPosition.rc_To(new Vector3(-1500, 0, 0), 0.3f,
+                    (Vector3 pos) => EquipmentPanel.transform.localPosition = pos,
+                    () => { EquipmentPanel.SetActive(false); isAnimating = false; });
+            }
         }
 
-        /*UpdateStatusText(GameManager.Instance.playerStatus.currentHealth,
-            GameManager.Instance.playerStatus.attackData.minDamage,
-            GameManager.Instance.playerStatus.attackData.maxDamage,
-            GameManager.Instance.playerStatus.currentDefence);*/
+        /*if (CharacterNumController.Instance != null)
+        {
+            UpdateStatusText((int)CharacterNumController.Instance.mModel.PlayerHealth.Value,
+                (int)CharacterNumController.Instance.mModel.PlayerStamina.Value);
+        }*/
     }
 
     public void SaveData()
@@ -79,7 +104,6 @@ public class InventoryManager : Singleton<InventoryManager>
         SaveManager.Instance.Save(actionData, actionData.name);
         SaveManager.Instance.Save(equipmentData, equipmentData.name);*/
     }
-
     public void LoadData()
     {
         /*SaveManager.Instance.Load(inventoryData, inventoryData.name);
@@ -87,11 +111,10 @@ public class InventoryManager : Singleton<InventoryManager>
         SaveManager.Instance.Load(equipmentData, equipmentData.name);*/
     }
 
-    public void UpdateStatusText(int health, int min, int max, int defence)
+    public void UpdateStatusText(int health, int stamina)
     {
         healthText.text = health.ToString("00");
-        attackText.text = min + " - " + max;
-        DefenceText.text = defence.ToString("00");
+        staminaText.text = stamina.ToString("00");
     }
 
     #region Judge the item being dragged is inside the range of the target slot
