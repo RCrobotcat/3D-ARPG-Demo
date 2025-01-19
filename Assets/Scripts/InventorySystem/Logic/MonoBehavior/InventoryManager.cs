@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -91,11 +92,11 @@ public class InventoryManager : Singleton<InventoryManager>
             }
         }
 
-        /*if (CharacterNumController.Instance != null)
+        if (CharacterNumController.Instance != null)
         {
-            UpdateStatusText((int)CharacterNumController.Instance.mModel.PlayerHealth.Value,
-                (int)CharacterNumController.Instance.mModel.PlayerStamina.Value);
-        }*/
+            UpdateStatusText(CharacterNumController.Instance.mModel.PlayerHealth.Value,
+                CharacterNumController.Instance.mModel.PlayerStamina.Value);
+        }
     }
 
     public void SaveData()
@@ -111,11 +112,31 @@ public class InventoryManager : Singleton<InventoryManager>
         SaveManager.Instance.Load(equipmentData, equipmentData.name);*/
     }
 
-    public void UpdateStatusText(int health, int stamina)
+    public void UpdateStatusText(float health, float stamina)
     {
-        healthText.text = health.ToString("00");
-        staminaText.text = stamina.ToString("00");
+        healthText.text = health.ToString("F1");
+        staminaText.text = stamina.ToString("F1");
     }
+
+    #region Equipments Logic
+    public void SwitchWeapon(ItemData_SO itemData)
+    {
+        GameObject go = Instantiate(itemData.WeaponPrefab, Character.Instance.weaponTrans);
+
+        Character.Instance.combo = itemData.weaponAttackCombo;
+    }
+    public void UnEquipWeapon()
+    {
+        Character.Instance.combo = Character.Instance.originalCombo;
+
+        foreach (Transform child in Character.Instance.weaponTrans)
+        {
+            Destroy(child.gameObject);
+        }
+    }
+    public void SwitchArmor(ItemData_SO itemData) { }
+    public void UnEquipArmor() { }
+    #endregion
 
     #region Judge the item being dragged is inside the range of the target slot
     public bool CheckInInventoryUI(Vector3 position)
@@ -164,5 +185,4 @@ public class InventoryManager : Singleton<InventoryManager>
     {
         return inventoryData.items.Find(i => i.itemData == questItem);
     }
-
 }

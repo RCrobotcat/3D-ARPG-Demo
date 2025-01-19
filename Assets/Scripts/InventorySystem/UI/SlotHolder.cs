@@ -52,20 +52,24 @@ public class SlotHolder : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
             case SlotType.WEAPON:
                 itemUI.Bag = InventoryManager.Instance.equipmentData;
                 if (itemUI.Bag.items[itemUI.Index].itemData != null)
-                { }
-                // GameManager.Instance.playerStatus.SwitchWeapon(itemUI.Bag.items[itemUI.Index].itemData);
+                {
+                    InventoryManager.Instance.SwitchWeapon(itemUI.Bag.items[itemUI.Index].itemData);
+                }
                 else
-                { }
-                // GameManager.Instance.playerStatus.UnEquipWeapon();
+                {
+                    InventoryManager.Instance.UnEquipWeapon();
+                }
                 break;
             case SlotType.ARMOR:
                 itemUI.Bag = InventoryManager.Instance.equipmentData;
                 if (itemUI.Bag.items[itemUI.Index].itemData != null)
-                { }
-                // GameManager.Instance.playerStatus.SwitchArmor(itemUI.Bag.items[itemUI.Index].itemData);
+                {
+                    InventoryManager.Instance.SwitchArmor(itemUI.Bag.items[itemUI.Index].itemData);
+                }
                 else
-                { }
-                // GameManager.Instance.playerStatus.UnEquipArmor();
+                {
+                    InventoryManager.Instance.UnEquipArmor();
+                }
                 break;
         }
 

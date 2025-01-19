@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum ItemType { Usable, Weapon, Armor }
@@ -17,6 +18,7 @@ public class ItemData_SO : ScriptableObject
 
     [Header("Weapon")]
     public GameObject WeaponPrefab;
+    public List<AttackSO> weaponAttackCombo;
 
     [Header("Armor")]
     public GameObject ArmorPrefab;

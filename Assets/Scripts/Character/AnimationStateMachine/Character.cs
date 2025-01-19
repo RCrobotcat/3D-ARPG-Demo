@@ -25,8 +25,13 @@ public class Character : Singleton<Character>
     [HideInInspector] public bool restoringStamina; // 是否正在恢复精力(用尽精力之后)
 
     [Header("Attack")]
-    public List<AttackSO> combo; // 攻击组合
+    [HideInInspector] public List<AttackSO> combo; // 攻击组合
+    public List<AttackSO> originalCombo; // 原始攻击组合
     public float attackStaminaChange = -1.0f;
+
+    [Header("Weapon & Armor")]
+    public Transform weaponTrans;
+    public Transform armorTrans;
 
     public StateMachine movementSM; // 玩家动作状态机
     public StandingState standingState; // 站立状态

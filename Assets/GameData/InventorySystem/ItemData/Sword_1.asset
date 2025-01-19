@@ -19,7 +19,11 @@ MonoBehaviour:
   description: Normal Sword.
   stackable: 0
   WeaponPrefab: {fileID: 6303910933579484200, guid: ff84a244c3bb34b419a9dc0a984ae35b, type: 3}
-  WeaponAnimator: {fileID: 22100000, guid: 1705a8ca866c55c4a9b3404f5685c134, type: 2}
+  weaponAttackCombo:
+  - {fileID: 11400000, guid: 723157fae515afb4b851b9dc5e6de072, type: 2}
+  - {fileID: 11400000, guid: 83c3c38b3ba28c44b8db070b33a2b158, type: 2}
+  - {fileID: 11400000, guid: 723157fae515afb4b851b9dc5e6de072, type: 2}
+  - {fileID: 11400000, guid: 83c3c38b3ba28c44b8db070b33a2b158, type: 2}
+  - {fileID: 11400000, guid: 58719db6751462742a4c7d0f5612a836, type: 2}
   ArmorPrefab: {fileID: 0}
-  ArmorAnimator: {fileID: 0}
   usableItemData: {fileID: 0}
