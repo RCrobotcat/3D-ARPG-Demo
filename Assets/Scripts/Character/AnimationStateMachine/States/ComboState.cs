@@ -19,6 +19,7 @@ public class ComboState : State
     int comboCounter; // 连击计数器
 
     bool inputLeftKey = false;
+    bool openInventory = false;
 
     public ComboState(Character _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
@@ -32,6 +33,7 @@ public class ComboState : State
 
         comboCounter = 0;
         inputLeftKey = false;
+        openInventory = false;
 
         comboStateEnum = ComboStateEnum.Combo_1;
     }
@@ -41,15 +43,23 @@ public class ComboState : State
         base.HandleInput();
 
         inputLeftKey = InputManager.Instance.inputSlash;
+        openInventory = InputManager.Instance.inputOpenInventory;
     }
 
     public override void LogicUpdate()
     {
         base.LogicUpdate();
 
-        if (inputLeftKey)
+        if (inputLeftKey && !openInventory)
         {
             Attack();
+        }
+
+        if (openInventory)
+        {
+            StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.None);
+            EndCombo();
+            stateMachine.ChangeState(character.standingState);
         }
 
         ExitAttack();
@@ -60,6 +70,7 @@ public class ComboState : State
         base.Exit();
 
         inputLeftKey = false;
+        openInventory = false;
         StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.None);
         EndCombo();
 
@@ -85,6 +96,7 @@ public class ComboState : State
             {
                 // 设置当前使用的动画控制器
                 character.animator.runtimeAnimatorController = character.combo[comboCounter].animatorOV;
+                character.currentCombo = character.combo[comboCounter];
                 comboStateEnum = (ComboStateEnum)comboCounter;
 
                 character.animator.Play("NormalAttack", 0, 0);

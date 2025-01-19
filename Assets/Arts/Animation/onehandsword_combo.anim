@@ -102988,6 +102988,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.35
+    functionName: PlayVFX_1
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.38333333
     functionName: SlashingStaminaChangeAnimationEvent
     data: 
@@ -102995,8 +103002,22 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.71666664
+    functionName: PlayVFX_2
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.73333335
     functionName: SlashingStaminaChangeAnimationEvent
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.05
+    functionName: PlayVFX_1
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
     floatParameter: 0

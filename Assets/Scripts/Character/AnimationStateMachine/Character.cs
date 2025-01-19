@@ -2,6 +2,7 @@ using RCProtocol;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.VFX;
 
 public class Character : Singleton<Character>
 {
@@ -26,11 +27,16 @@ public class Character : Singleton<Character>
 
     [Header("Attack")]
     [HideInInspector] public List<AttackSO> combo; // 攻击组合
+    [HideInInspector] public AttackSO currentCombo; // 当前攻击
     public List<AttackSO> originalCombo; // 原始攻击组合
     public float attackStaminaChange = -1.0f;
 
+    List<VisualEffect> vfxs = new List<VisualEffect>();
+
     [Header("Weapon & Armor")]
     public Transform weaponTrans;
+    public Transform vfxTrans_left; // 特效位置
+    public Transform vfxTrans_right; // 特效位置
     public Transform armorTrans;
 
     public StateMachine movementSM; // 玩家动作状态机
@@ -110,6 +116,49 @@ public class Character : Singleton<Character>
                 break;
             default:
                 break;
+        }
+    }
+
+    public void PlayVFX_1()
+    {
+        List<VisualEffect> effects = currentCombo.attackVFXs;
+
+        if (weaponTrans.childCount >= 1)
+        {
+            if (effects.Count == 0)
+            {
+                return;
+            }
+            else if (effects.Count >= 1)
+            {
+                if (currentCombo.vfxType == VFXType.Left)
+                {
+                    effects[0].Spawn(vfxTrans_left, vfxTrans_left.position, effects[0].transform.rotation);
+                    vfxs.Add(effects[0]);
+                }
+                else if (currentCombo.vfxType == VFXType.Right)
+                {
+                    effects[0].Spawn(vfxTrans_right, vfxTrans_right.position, effects[0].transform.rotation);
+                    vfxs.Add(effects[0]);
+                }
+            }
+        }
+    }
+    public void PlayVFX_2()
+    {
+        List<VisualEffect> effects = currentCombo.attackVFXs;
+
+        if (weaponTrans.childCount >= 1)
+        {
+            if (effects.Count <= 1)
+            {
+                return;
+            }
+            else if (effects.Count >= 2)
+            {
+                effects[1].Spawn(vfxTrans_right, vfxTrans_right.position, effects[1].transform.rotation);
+                vfxs.Add(effects[1]);
+            }
         }
     }
     #endregion

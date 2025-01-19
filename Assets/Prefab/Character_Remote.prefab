@@ -1513,7 +1513,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 40
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &775554127293534459
 Transform:
   m_ObjectHideFlags: 0
@@ -1704,7 +1704,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3c54815dd60ba574aac13f792dcdb59a, type: 2}
   - {fileID: 11400000, guid: 378054bb07632f141a4f1bdc943d681b, type: 2}
   - {fileID: 11400000, guid: 3c54815dd60ba574aac13f792dcdb59a, type: 2}
-  - {fileID: 11400000, guid: 378054bb07632f141a4f1bdc943d681b, type: 2}
+  - {fileID: 11400000, guid: 7db39e7e774b8c141ac5b9a4cc8d256f, type: 2}
   attackStaminaChange: -1
   roleID: 0
 --- !u!1 &8548092400154594095
