@@ -102980,4 +102980,25 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.35
+    functionName: PlayVFX_1
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 16d5e74f4053dc343be609dda1fd7575, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.71666664
+    functionName: PlayVFX_2
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 16d5e74f4053dc343be609dda1fd7575, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.05
+    functionName: PlayVFX_1
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 16d5e74f4053dc343be609dda1fd7575, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

@@ -1,6 +1,7 @@
 using RCProtocol;
 using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -19,9 +20,13 @@ public class StageManager : Singleton<StageManager>
         NetManager.Instance.StartConnectToGame();
 
         NetManager.Instance.RegisterNtfHandler(CMD.NtfEnterStage, ntfEnterStage);
+
         NetManager.Instance.RegisterNtfHandler(CMD.InstantiateRole, InstantiateRole);
+        NetManager.Instance.RegisterNtfHandler(CMD.SwitchWeapon, SwitchWeapon);
+
         NetManager.Instance.RegisterNtfHandler(CMD.SyncMovePos, SyncMovePos);
         NetManager.Instance.RegisterNtfHandler(CMD.SyncAnimationState, SyncAnimationState);
+
         NetManager.Instance.RegisterNtfHandler(CMD.RemoveEntity, RemoveEntity);
 
         DontDestroyOnLoad(this);
@@ -102,6 +107,61 @@ public class StageManager : Singleton<StageManager>
             }
         };
         NetManager.Instance.SendMsg(netMsg);
+    }
+
+    /// <summary>
+    /// ÇÐ»»ÎäÆ÷
+    /// </summary>
+    void SwitchWeapon(NetMsg msg)
+    {
+        if (msg.switchWeapon.roleID == NetManager.Instance.roleID)
+            return;
+
+        RemotePlayer role = remotePlayers[msg.switchWeapon.roleID];
+        if (msg.switchWeapon.weaponName != "")
+        {
+            ItemData_SO weapon = GameManager.Instance.GetWeaponByName(msg.switchWeapon.weaponName);
+            role.gameObject.GetComponent<Character_remote>().SwitchWeapon(weapon);
+        }
+        else if (msg.switchWeapon.weaponName == "")
+        {
+            role.gameObject.GetComponent<Character_remote>().UnEquipWeapon();
+        }
+    }
+    /// <summary>
+    /// ·¢ËÍÇÐ»»ÎäÆ÷ÏûÏ¢
+    /// </summary>
+    public void SendSwitchWeapon(ItemData_SO weapon)
+    {
+        string weaponName = weapon.itemName;
+        NetMsg netMsg = new NetMsg
+        {
+            cmd = CMD.SwitchWeapon,
+            switchWeapon = new SwitchWeapon
+            {
+                roleID = NetManager.Instance.roleID,
+                account = NetManager.Instance.account,
+                weaponName = weaponName
+            }
+        };
+
+        NetManager.Instance.SendMsg(netMsg);
+    }
+    /// <summary>
+    /// Ð¶ÏÂÎäÆ÷
+    /// </summary>
+    public void SendUnEquipWeapon()
+    {
+        NetMsg msg = new NetMsg
+        {
+            cmd = CMD.UnEquipWeapon,
+            unEquipWeapon = new UnEquipWeapon
+            {
+                roleID = NetManager.Instance.roleID,
+                account = NetManager.Instance.account
+            }
+        };
+        NetManager.Instance.SendMsg(msg);
     }
 
     /// <summary>

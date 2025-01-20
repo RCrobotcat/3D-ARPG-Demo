@@ -58,22 +58,27 @@ public class RemoteComboState : State_remote
                 break;
             case AnimationStateEnum.Combo_1:
                 character.animator.runtimeAnimatorController = character.combo[0].animatorOV;
+                character.currentCombo = character.combo[0];
                 character.animator.Play("NormalAttack", 0, 0);
                 break;
             case AnimationStateEnum.Combo_2:
                 character.animator.runtimeAnimatorController = character.combo[1].animatorOV;
+                character.currentCombo = character.combo[1];
                 character.animator.Play("NormalAttack", 0, 0);
                 break;
             case AnimationStateEnum.Combo_3:
                 character.animator.runtimeAnimatorController = character.combo[2].animatorOV;
+                character.currentCombo = character.combo[2];
                 character.animator.Play("NormalAttack", 0, 0);
                 break;
             case AnimationStateEnum.Combo_4:
                 character.animator.runtimeAnimatorController = character.combo[3].animatorOV;
+                character.currentCombo = character.combo[3];
                 character.animator.Play("NormalAttack", 0, 0);
                 break;
             case AnimationStateEnum.Combo_5:
                 character.animator.runtimeAnimatorController = character.combo[4].animatorOV;
+                character.currentCombo = character.combo[4];
                 character.animator.Play("NormalAttack", 0, 0);
                 break;
             default:

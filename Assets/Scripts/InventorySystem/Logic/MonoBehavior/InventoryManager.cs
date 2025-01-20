@@ -42,6 +42,8 @@ public class InventoryManager : Singleton<InventoryManager>
     // bool isOpen = false;
     bool isAnimating = false;
 
+    public int roleID;
+
     protected override void Awake()
     {
         base.Awake();
@@ -120,9 +122,11 @@ public class InventoryManager : Singleton<InventoryManager>
     #region Equipments Logic
     public void SwitchWeapon(ItemData_SO itemData)
     {
-        GameObject go = Instantiate(itemData.WeaponPrefab, Character.Instance.weaponTrans);
+        Instantiate(itemData.WeaponPrefab, Character.Instance.weaponTrans);
 
         Character.Instance.combo = itemData.weaponAttackCombo;
+
+        StageManager.Instance.SendSwitchWeapon(itemData);
     }
     public void UnEquipWeapon()
     {
@@ -132,6 +136,8 @@ public class InventoryManager : Singleton<InventoryManager>
         {
             Destroy(child.gameObject);
         }
+
+        StageManager.Instance.SendUnEquipWeapon();
     }
     public void SwitchArmor(ItemData_SO itemData) { }
     public void UnEquipArmor() { }

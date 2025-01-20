@@ -31,8 +31,6 @@ public class Character : Singleton<Character>
     public List<AttackSO> originalCombo; // 原始攻击组合
     public float attackStaminaChange = -1.0f;
 
-    List<VisualEffect> vfxs = new List<VisualEffect>();
-
     [Header("Weapon & Armor")]
     public Transform weaponTrans;
     public Transform vfxTrans_left; // 特效位置
@@ -134,12 +132,10 @@ public class Character : Singleton<Character>
                 if (currentCombo.vfxType == VFXType.Left)
                 {
                     effects[0].Spawn(vfxTrans_left, vfxTrans_left.position, effects[0].transform.rotation);
-                    vfxs.Add(effects[0]);
                 }
                 else if (currentCombo.vfxType == VFXType.Right)
                 {
                     effects[0].Spawn(vfxTrans_right, vfxTrans_right.position, effects[0].transform.rotation);
-                    vfxs.Add(effects[0]);
                 }
             }
         }
@@ -157,7 +153,6 @@ public class Character : Singleton<Character>
             else if (effects.Count >= 2)
             {
                 effects[1].Spawn(vfxTrans_right, vfxTrans_right.position, effects[1].transform.rotation);
-                vfxs.Add(effects[1]);
             }
         }
     }

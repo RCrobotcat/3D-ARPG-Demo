@@ -202,6 +202,12 @@ public class NetManager : Singleton<NetManager>
             case CMD.SyncAnimationState:
                 gameNet?.token?.SendMsg(msg);
                 break;
+            case CMD.SwitchWeapon:
+                gameNet?.token?.SendMsg(msg);
+                break;
+            case CMD.UnEquipWeapon:
+                gameNet?.token?.SendMsg(msg);
+                break;
             case CMD.ExitGame:
                 gameNet?.token?.SendMsg(msg);
                 break;
