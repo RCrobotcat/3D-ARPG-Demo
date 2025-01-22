@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LoginScene.unity
     guid: 6f12b5f43edc59743954ebffedf402dd
   - enabled: 1
+    path: Assets/Scenes/RoleSelectScene.unity
+    guid: 38499177a5f9973438edc2243126314d
+  - enabled: 1
     path: Assets/Scenes/TestScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
