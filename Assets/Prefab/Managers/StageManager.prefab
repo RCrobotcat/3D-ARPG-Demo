@@ -44,5 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e20e9b1ba7266134283cec629c526587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rolePrefab: {fileID: 8533253696199008074, guid: d3b55743e5d4d784395dd3552a5fe0c1, type: 3}
-  rolePrefab_remote: {fileID: 8533253696199008074, guid: daf20bca0e3821e41aba4024c017f377, type: 3}
+  rolePrefabs:
+  - {fileID: 8533253696199008074, guid: d3b55743e5d4d784395dd3552a5fe0c1, type: 3}
+  - {fileID: 5971703881149365646, guid: 6f3aeb4dab52735408139320716da2d7, type: 3}
+  - {fileID: 5328697525270226791, guid: 8884172b0b6c7924999486492c17d267, type: 3}
+  - {fileID: 8508683058056435697, guid: c6211330353294e4f9475f37ca6a8cb1, type: 3}
+  rolePrefabs_Remote:
+  - {fileID: 8533253696199008074, guid: daf20bca0e3821e41aba4024c017f377, type: 3}
+  - {fileID: 5971703881149365646, guid: 119bb1520e0abc74d8f97d627faaef75, type: 3}
+  - {fileID: 5328697525270226791, guid: 9b285ba469d66294f969d252a5682607, type: 3}
+  - {fileID: 8508683058056435697, guid: a6384e05013ccb84e8f867d53a0a93a4, type: 3}
+  rolePrefabSelected: {fileID: 0}
+  rolePrefab_remoteSelected: {fileID: 0}
