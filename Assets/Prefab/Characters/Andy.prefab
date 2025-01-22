@@ -902,7 +902,7 @@ Transform:
   m_GameObject: {fileID: 1175170450491582153}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1479,6 +1479,7 @@ Transform:
   - {fileID: 5084043763792758124}
   - {fileID: 6866273163720134445}
   - {fileID: 639888405553791609}
+  - {fileID: 3746497763916824089}
   m_Father: {fileID: 7647527645391051659}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2230666371569084230
@@ -1578,6 +1579,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 5928229744542633551}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2473699870109822636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3746497763916824089}
+  m_Layer: 0
+  m_Name: RightHandWeaponSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3746497763916824089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2473699870109822636}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.23446314, y: 0.06871308, z: 0.7389033, w: 0.627955}
+  m_LocalPosition: {x: 0.0004613765, y: 0.0021980566, z: -0.0009950461}
+  m_LocalScale: {x: 0.02999999, y: 0.029999983, z: 0.030000003}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 4094028643633056280}
+  m_LocalEulerAnglesHint: {x: -166.063, y: -84.73901, z: 69.077}
 --- !u!1 &2498693027936118088
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,6 +3212,7 @@ Transform:
   - {fileID: 905863941932924986}
   - {fileID: 3922714514005209315}
   - {fileID: 2200663588356605514}
+  - {fileID: 2038809870146889582}
   m_Father: {fileID: 5040379344876667621}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4632812228231806259
@@ -3683,6 +3716,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 371154820186688254}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5189839456005107151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038809870146889582}
+  m_Layer: 0
+  m_Name: LeftHandWeaponSocket
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2038809870146889582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5189839456005107151}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6539244, y: 0.58925605, z: -0.41633418, w: 0.22765352}
+  m_LocalPosition: {x: -0.000049505332, y: 0.0014292763, z: -0.00018833039}
+  m_LocalScale: {x: 0.029999994, y: 0.029999992, z: 0.030000012}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 6263165139403582139}
+  m_LocalEulerAnglesHint: {x: -166.063, y: -84.73901, z: 69.077}
 --- !u!1 &5455197446971406843
 GameObject:
   m_ObjectHideFlags: 0
@@ -5184,7 +5248,7 @@ GameObject:
   - component: {fileID: -3033239309084558888}
   m_Layer: 0
   m_Name: Andy
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5216,8 +5280,8 @@ Transform:
   - {fileID: 6354549008615067452}
   - {fileID: 8288575834195822086}
   - {fileID: 6631322003269864106}
-  - {fileID: 3561880647059525956}
   - {fileID: 537172719161169200}
+  - {fileID: 3561880647059525956}
   - {fileID: 2099829320735380052}
   - {fileID: 8187936140063669147}
   - {fileID: 1669920765669817931}
@@ -5356,10 +5420,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 83c3c38b3ba28c44b8db070b33a2b158, type: 2}
   - {fileID: 11400000, guid: 723157fae515afb4b851b9dc5e6de072, type: 2}
   attackStaminaChange: -1
-  weaponTrans: {fileID: 6005410746331887379}
+  weaponTrans: {fileID: 3746497763916824089}
   vfxTrans_left: {fileID: 1669920765669817931}
   vfxTrans_right: {fileID: 8579112046147696191}
-  armorTrans: {fileID: 4360620100531158492}
+  armorTrans: {fileID: 2038809870146889582}
   roleID: 0
 --- !u!1 &8559784096335127707
 GameObject:

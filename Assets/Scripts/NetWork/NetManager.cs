@@ -193,6 +193,9 @@ public class NetManager : Singleton<NetManager>
             case CMD.ReqAccountLogin:
                 loginNet?.token?.SendMsg(msg);
                 break;
+            case CMD.ReqRoleEnter:
+                loginNet?.token?.SendMsg(msg);
+                break;
             case CMD.AffirmEnterStage:
                 gameNet?.token?.SendMsg(msg);
                 break;

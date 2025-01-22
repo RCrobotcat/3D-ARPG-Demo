@@ -565,8 +565,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnLogin: {fileID: 30910104}
-  AccountInput: {fileID: 0}
-  PasswordInput: {fileID: 0}
+  AccountInput: {fileID: 1504732824}
+  PasswordInput: {fileID: 67864180}
 --- !u!1001 &309483972
 PrefabInstance:
   m_ObjectHideFlags: 0

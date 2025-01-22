@@ -58,8 +58,15 @@ public class StageManager : Singleton<StageManager>
     /// </summary>
     void ntfEnterStage(NetMsg msg)
     {
-        ao = SceneManager.LoadSceneAsync(msg.ntfEnterStage.stageName);
-        ao.completed += OnSceneLoaded;
+        if (msg.ntfEnterStage.stageName == "TestScene")
+        {
+            ao = SceneManager.LoadSceneAsync(msg.ntfEnterStage.stageName);
+            ao.completed += OnSceneLoaded;
+        }
+        else if (msg.ntfEnterStage.stageName == "RoleSelectScene")
+        {
+            SceneManager.LoadSceneAsync(msg.ntfEnterStage.stageName);
+        }
     }
     /// <summary>
     /// 生成玩家角色
@@ -73,7 +80,10 @@ public class StageManager : Singleton<StageManager>
         foreach (var msg in pendingInstantiateMsgs)
         {
             Vector3 pos = new Vector3(msg.instantiateRole.PosX, 0, msg.instantiateRole.PosZ);
+
+            rolePrefabSelected = GetRoleByName(msg.instantiateRole.roleName);
             GameObject go = Instantiate(rolePrefabSelected, pos, Quaternion.identity);
+
             Character character = go.GetComponent<Character>();
             character.roleID = msg.instantiateRole.roleID;
 
@@ -87,6 +97,16 @@ public class StageManager : Singleton<StageManager>
         }
         pendingInstantiateMsgs.Clear();
     }
+    public GameObject GetRoleByName(string roleName)
+    {
+        foreach (var role in rolePrefabs)
+        {
+            if (role.name == roleName)
+                return role;
+        }
+        return null;
+    }
+
     /// <summary>
     /// 发送确认进入场景消息
     /// </summary>
@@ -102,6 +122,7 @@ public class StageManager : Singleton<StageManager>
                 mode = EnterStageMode.Login,
                 stageName = SceneManager.GetActiveScene().name,
                 roleID = msg.instantiateRole.roleID,
+                roleName = rolePrefabSelected.name,
                 account = msg.instantiateRole.account,
 
                 playerState = PlayerStateEnum.Online,
@@ -112,6 +133,7 @@ public class StageManager : Singleton<StageManager>
             }
         };
         NetManager.Instance.SendMsg(netMsg);
+        ao.completed -= OnSceneLoaded;
     }
 
     /// <summary>
@@ -191,6 +213,7 @@ public class StageManager : Singleton<StageManager>
         if (!remotePlayers.ContainsKey(syncMovePos.roleID))
         {
             // 创建新的远程玩家实体
+            rolePrefab_remoteSelected = GetRemoteRoleByName(syncMovePos.roleName);
             GameObject go = Instantiate(rolePrefab_remoteSelected, new Vector3(syncMovePos.PosX, 0, syncMovePos.PosZ), Quaternion.identity);
             Character_remote character = go.GetComponent<Character_remote>();
             character.roleID = syncMovePos.roleID;
@@ -226,6 +249,16 @@ public class StageManager : Singleton<StageManager>
             player.gameObject.transform.position = player.CurrentPos;
             player.gameObject.transform.forward = player.CurrentDir;
         }
+    }
+    public GameObject GetRemoteRoleByName(string roleName)
+    {
+        string roleName_Remote = roleName + "_Remote";
+        foreach (var role in rolePrefabs_Remote)
+        {
+            if (role.name == roleName_Remote)
+                return role;
+        }
+        return null;
     }
 
     /// <summary>

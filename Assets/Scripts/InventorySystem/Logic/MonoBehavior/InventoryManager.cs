@@ -42,8 +42,6 @@ public class InventoryManager : Singleton<InventoryManager>
     // bool isOpen = false;
     bool isAnimating = false;
 
-    public int roleID;
-
     protected override void Awake()
     {
         base.Awake();

@@ -1,3 +1,4 @@
+using RCProtocol;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -44,6 +45,16 @@ public class RoleManager : Singleton<RoleManager>
         }
     }
 
+    public GameObject GetRoleByRoleName(string roleName)
+    {
+        foreach (var role in allRoles)
+        {
+            if (role.name == roleName)
+                return role;
+        }
+        return null;
+    }
+
     void OnLeftBtnClick()
     {
         currentRoleIndex--;
@@ -66,5 +77,24 @@ public class RoleManager : Singleton<RoleManager>
     void OnSelectBtnClick()
     {
         Debug.Log("Selected Role：" + allRoles[currentRoleIndex].name);
+        SendSelectedRole(allRoles[currentRoleIndex].name);
+    }
+    /// <summary>
+    /// 发送选中的角色请求进入游戏
+    /// </summary>
+    /// <param name="roleName"></param>
+    void SendSelectedRole(string roleName)
+    {
+        NetMsg msg = new NetMsg
+        {
+            cmd = CMD.ReqRoleEnter,
+            reqRoleEnter = new ReqRoleEnter
+            {
+                roleID = NetManager.Instance.roleID,
+                account = NetManager.Instance.account,
+                selectedRoleName = roleName
+            }
+        };
+        NetManager.Instance.SendMsg(msg);
     }
 }
