@@ -2,27 +2,28 @@ using RCProtocol;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TestLogin : MonoBehaviour
+public class Login : MonoBehaviour
 {
     public Button btnLogin;
-    public InputField playerInput;
+    public InputField AccountInput;
+    public InputField PasswordInput;
 
     void Awake()
     {
         NetManager.Instance.StartConnectToLogin();
 
-        btnLogin.onClick.AddListener(Login);
+        btnLogin.onClick.AddListener(LoginBtnEvent);
     }
 
-    void Login()
+    void LoginBtnEvent()
     {
         NetMsg loginMsg = new NetMsg()
         {
             cmd = CMD.ReqAccountLogin,
             reqAccountLogin = new ReqAccountLogin()
             {
-                account = playerInput.text,
-                password = "123456"
+                account = AccountInput.text,
+                password = PasswordInput.text
             }
         };
 

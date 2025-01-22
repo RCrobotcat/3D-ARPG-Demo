@@ -1,14 +1,19 @@
 using RCProtocol;
 using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class StageManager : Singleton<StageManager>
 {
-    public GameObject rolePrefab;
-    public GameObject rolePrefab_remote;
+    /*public GameObject rolePrefab;
+    public GameObject rolePrefab_remote;*/
+
+    public List<GameObject> rolePrefabs;
+    public List<GameObject> rolePrefabs_Remote;
+
+    public GameObject rolePrefabSelected; // 选中的角色
+    public GameObject rolePrefab_remoteSelected;
 
     AsyncOperation ao;
     private List<NetMsg> pendingInstantiateMsgs = new List<NetMsg>();
@@ -68,7 +73,7 @@ public class StageManager : Singleton<StageManager>
         foreach (var msg in pendingInstantiateMsgs)
         {
             Vector3 pos = new Vector3(msg.instantiateRole.PosX, 0, msg.instantiateRole.PosZ);
-            GameObject go = Instantiate(rolePrefab, pos, Quaternion.identity);
+            GameObject go = Instantiate(rolePrefabSelected, pos, Quaternion.identity);
             Character character = go.GetComponent<Character>();
             character.roleID = msg.instantiateRole.roleID;
 
@@ -186,7 +191,7 @@ public class StageManager : Singleton<StageManager>
         if (!remotePlayers.ContainsKey(syncMovePos.roleID))
         {
             // 创建新的远程玩家实体
-            GameObject go = Instantiate(rolePrefab_remote, new Vector3(syncMovePos.PosX, 0, syncMovePos.PosZ), Quaternion.identity);
+            GameObject go = Instantiate(rolePrefab_remoteSelected, new Vector3(syncMovePos.PosX, 0, syncMovePos.PosZ), Quaternion.identity);
             Character_remote character = go.GetComponent<Character_remote>();
             character.roleID = syncMovePos.roleID;
 
