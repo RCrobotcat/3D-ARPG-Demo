@@ -216,6 +216,10 @@ public class StageManager : Singleton<StageManager>
             rolePrefab_remoteSelected = GetRemoteRoleByName(syncMovePos.roleName);
             GameObject go = Instantiate(rolePrefab_remoteSelected, new Vector3(syncMovePos.PosX, 0, syncMovePos.PosZ), Quaternion.identity);
             Character_remote character = go.GetComponent<Character_remote>();
+
+            if (syncMovePos.weaponName != "" && character.weaponTrans.childCount == 0)
+                character.SwitchWeapon(GameManager.Instance.GetWeaponByName(syncMovePos.weaponName));
+
             character.roleID = syncMovePos.roleID;
 
             RemotePlayer newPlayer = new RemotePlayer(
