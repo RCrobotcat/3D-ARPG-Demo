@@ -1258,6 +1258,7 @@ GameObject:
   - component: {fileID: 49190292744927280}
   - component: {fileID: 9154782389449814863}
   - component: {fileID: 6071202281345359677}
+  - component: {fileID: 4684781765053000036}
   m_Layer: 0
   m_Name: Emily
   m_TagString: Player
@@ -1423,6 +1424,18 @@ MonoBehaviour:
   vfxTrans_right: {fileID: 7976045599057813378}
   armorTrans: {fileID: 9085849560095750938}
   roleID: 0
+--- !u!114 &4684781765053000036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8533253696199008074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38e72be0e11cc614d8065c1880347b63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8548092400154594095
 GameObject:
   m_ObjectHideFlags: 0
