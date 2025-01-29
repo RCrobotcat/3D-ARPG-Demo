@@ -2081,13 +2081,9 @@ GameObject:
   - component: {fileID: 2550935751187727211}
   - component: {fileID: -4397187537527962636}
   - component: {fileID: 8102741943067621772}
-  - component: {fileID: -4034207633402354049}
-  - component: {fileID: 6984929660195179221}
-  - component: {fileID: 252530186430195503}
-  - component: {fileID: -5697674493105112217}
-  - component: {fileID: 6772007474818869643}
+  - component: {fileID: -6470848715021992952}
   m_Layer: 0
-  m_Name: Golem
+  m_Name: Golem_Remote
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2179,7 +2175,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4038976, y: 2.7596462, z: 1}
   m_Center: {x: -0.027679622, y: 1.4466442, z: 0}
---- !u!114 &-4034207633402354049
+--- !u!114 &-6470848715021992952
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2188,74 +2184,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 9137032837993464747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 527bf70f24019a04b91413addc09463f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxVelocity: 15
-  maxAcceleration: 170
-  turnSpeed: 10
-  targetRadius: 0.1
-  slowRadius: 1
-  timeToTarget: 0.1
---- !u!114 &6984929660195179221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137032837993464747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ad69542ae77ff443a4dc345f80ed649, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetChangeRange: {x: 7, y: 10}
-  wanderRadius: 20
-  targetHeight: 0
-  targetPosition: {x: 0, y: 0, z: 0}
---- !u!114 &252530186430195503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137032837993464747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e4f2246dd56f154885706eeb7d5baf0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxPredictionTime: 1
---- !u!114 &-5697674493105112217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137032837993464747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f58dde99356507746aca753bef0b5c01, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayStart: 1
-  rayLength: 30
-  rayCount: 36
-  collisionLayers:
-    serializedVersion: 2
-    m_Bits: 1
---- !u!114 &6772007474818869643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137032837993464747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e233d932867a633478f593cd66e696f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 807119ebf5edc9542b1d62b32d6d3e36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   viewRadius: 10
-  attackRadius: 2
-  attackPlayerTarget: {fileID: 0}
+  attackRadius: 1
+  monsterType: 0

@@ -19,6 +19,7 @@ public class StageManager : Singleton<StageManager>
     private List<NetMsg> pendingInstantiateMsgs = new List<NetMsg>();
 
     private Dictionary<int, RemotePlayer> remotePlayers = new Dictionary<int, RemotePlayer>(); // 其他玩家实体
+    private Dictionary<int, RemoteEnemy> remoteEnemies = new Dictionary<int, RemoteEnemy>(); // 其他怪物实体
 
     protected override void Awake()
     {

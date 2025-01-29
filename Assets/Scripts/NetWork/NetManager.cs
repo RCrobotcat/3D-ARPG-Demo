@@ -214,6 +214,9 @@ public class NetManager : Singleton<NetManager>
             case CMD.ExitGame:
                 gameNet?.token?.SendMsg(msg);
                 break;
+            case CMD.SyncMonsterMovePos:
+                gameNet?.token?.SendMsg(msg);
+                break;
             default:
                 // battleNet?.token?.SendMsg(msg);
                 break;

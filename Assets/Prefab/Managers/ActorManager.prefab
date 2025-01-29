@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5502e7684745034aa321de636c80169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monster_all:
+  - {fileID: 9137032837993464747, guid: 1d78f820f29c53a4abdb40f3ec8ca6f2, type: 3}
+  monsters_all_remote:
+  - {fileID: 9137032837993464747, guid: 1431c167f586fd2489c8f06cec99c993, type: 3}

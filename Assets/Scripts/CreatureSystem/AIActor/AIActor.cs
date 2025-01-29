@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using CleverCrow.Fluid.BTs.Trees;
+using RCProtocol;
 
 namespace AIActor_RC
 {
@@ -19,6 +20,9 @@ namespace AIActor_RC
 
         [SerializeField]
         protected BehaviorTree brain; // AIÐÐÎªÊ÷ AI Behavior tree
+
+        public int monsterID;
+        public MonstersEnum monsterType;
 
         protected override void Start()
         {

@@ -1,5 +1,7 @@
+using RCProtocol;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace AIActor_RC
 {
@@ -13,9 +15,17 @@ namespace AIActor_RC
     {
         List<Actor> actors = new List<Actor>();
 
+        public List<GameObject> monster_all = new List<GameObject>(); // 当前场景中的怪物列表
+        public List<GameObject> monsters_all_remote = new List<GameObject>(); // 当前场景中的怪物(远程)列表
+        Dictionary<int, GameObject> monsters_remote = new Dictionary<int, GameObject>(); // 远程怪物列表
+
         protected override void Awake()
         {
             base.Awake();
+
+            NetManager.Instance.RegisterNtfHandler(CMD.SyncMonsterMovePos, SyncMonsterMovePos);
+
+            NetManager.Instance.RegisterNtfHandler(CMD.CreateMonsters, CreateMonsters); // 第一次进入游戏的玩家创建怪物
 
             DontDestroyOnLoad(this);
         }
@@ -96,6 +106,66 @@ namespace AIActor_RC
                     typeActors.Add((T)actor);
             }
             return typeActors;
+        }
+
+        /// <summary>
+        /// 同步怪物移动位置(远程)回调
+        /// </summary>
+        void SyncMonsterMovePos(NetMsg msg)
+        {
+            if (SceneManager.GetActiveScene().name != "TestScene")
+                return;
+
+            SyncMonsterMovePos syncMonsterMovePos = msg.syncMonsterMovePos;
+            if (!monsters_remote.ContainsKey(syncMonsterMovePos.monsterID))
+            {
+                GameObject monster = GetMonsterGoByType_remote(syncMonsterMovePos.monsterType);
+                GameObject go = Instantiate(monster, new Vector3(syncMonsterMovePos.PosX, 0, syncMonsterMovePos.PosZ), Quaternion.identity);
+                monsters_remote.Add(syncMonsterMovePos.monsterID, go);
+            }
+            else
+            {
+                GameObject go = monsters_remote[syncMonsterMovePos.monsterID];
+                go.transform.position = new Vector3(syncMonsterMovePos.PosX, 0, syncMonsterMovePos.PosZ);
+                go.transform.forward = new Vector3(syncMonsterMovePos.dirX, syncMonsterMovePos.dirY, syncMonsterMovePos.dirZ);
+            }
+        }
+        /// <summary>
+        /// 根据怪物类型获取怪物GameObject
+        /// </summary>
+        GameObject GetMonsterGoByType_remote(MonstersEnum monsterType)
+        {
+            foreach (var monster in monsters_all_remote)
+            {
+                if (monster.GetComponent<AIActor>().monsterType == monsterType)
+                {
+                    return monster;
+                }
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// 创建怪物
+        /// </summary>
+        void CreateMonsters(NetMsg msg)
+        {
+            CreateMonsters createMonsters = msg.createMonsters;
+            GameObject monster = GetMosnterByType(createMonsters.monsterType);
+            monster.GetComponent<AIActor>().monsterID = createMonsters.monsterID;
+            GameObject go = Instantiate(monster, new Vector3(createMonsters.PosX, 0, createMonsters.PosZ), Quaternion.identity);
+            monster_all.Add(go);
+        }
+        GameObject GetMosnterByType(MonstersEnum monsterType)
+        {
+            foreach (var monster in monster_all)
+            {
+                if (monster.GetComponent<AIActor>().monsterType == monsterType)
+                {
+                    return monster;
+                }
+            }
+            return null;
         }
     }
 }

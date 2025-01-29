@@ -3,11 +3,15 @@ using CleverCrow.Fluid.BTs.Trees;
 using CleverCrow.Fluid.BTs.Tasks;
 using UnityEngine;
 using System.Collections.Generic;
+using RCProtocol;
+using System;
 
 public class Golem : AIActor
 {
     // public Actor attackTarget = null;
     public Actor attackPlayerTarget = null;
+
+    Vector3 lastPos = Vector3.zero;
 
     protected override void Start()
     {
@@ -28,6 +32,29 @@ public class Golem : AIActor
         base.FixedUpdate();
 
         brain.Tick();
+
+        // 发送怪物位置同步消息
+        if (lastPos != transform.position)
+        {
+            lastPos = transform.position;
+
+            NetMsg netMsg = new NetMsg()
+            {
+                cmd = CMD.SyncMonsterMovePos,
+                syncMonsterMovePos = new()
+                {
+                    monsterID = monsterID,
+                    monsterType = MonstersEnum.Golem,
+                    PosX = transform.position.x,
+                    PosZ = transform.position.z,
+                    dirX = transform.forward.x,
+                    dirY = transform.forward.y,
+                    dirZ = transform.forward.z,
+                    timestamp = DateTime.UtcNow.Ticks
+                }
+            };
+            NetManager.Instance.SendMsg(netMsg);
+        }
     }
 
     void InitAI()
