@@ -154,7 +154,6 @@ namespace AIActor_RC
             GameObject monster = GetMosnterByType(createMonsters.monsterType);
             monster.GetComponent<AIActor>().monsterID = createMonsters.monsterID;
             GameObject go = Instantiate(monster, new Vector3(createMonsters.PosX, 0, createMonsters.PosZ), Quaternion.identity);
-            monster_all.Add(go);
         }
         GameObject GetMosnterByType(MonstersEnum monsterType)
         {
