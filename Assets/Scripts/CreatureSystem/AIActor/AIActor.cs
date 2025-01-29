@@ -21,7 +21,7 @@ namespace AIActor_RC
         [SerializeField]
         protected BehaviorTree brain; // AIÐÐÎªÊ÷ AI Behavior tree
 
-        public int monsterID;
+        [HideInInspector] public int monsterID;
         public MonstersEnum monsterType;
 
         protected override void Start()

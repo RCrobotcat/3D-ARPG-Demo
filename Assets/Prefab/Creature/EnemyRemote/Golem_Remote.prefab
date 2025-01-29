@@ -2082,6 +2082,7 @@ GameObject:
   - component: {fileID: -4397187537527962636}
   - component: {fileID: 8102741943067621772}
   - component: {fileID: -6470848715021992952}
+  - component: {fileID: 4887048488614113118}
   m_Layer: 0
   m_Name: Golem_Remote
   m_TagString: Enemy
@@ -2184,9 +2185,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 9137032837993464747}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 807119ebf5edc9542b1d62b32d6d3e36, type: 3}
+  m_Script: {fileID: 11500000, guid: c02c5f84ce1f0464189d96c7db8efb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   viewRadius: 10
   attackRadius: 1
+  monsterID: 0
   monsterType: 0
+--- !u!114 &4887048488614113118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9137032837993464747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33386a1f4bfeb04468a66cf594795ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

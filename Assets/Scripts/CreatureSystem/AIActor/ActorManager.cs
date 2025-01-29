@@ -25,6 +25,7 @@ namespace AIActor_RC
             base.Awake();
 
             NetManager.Instance.RegisterNtfHandler(CMD.SyncMonsterMovePos, SyncMonsterMovePos);
+            NetManager.Instance.RegisterNtfHandler(CMD.SyncMonsterAnimationState, SyncMonsterAnimationState);
 
             NetManager.Instance.RegisterNtfHandler(CMD.CreateMonsters, CreateMonsters); // 第一次进入游戏的玩家创建怪物
 
@@ -146,7 +147,7 @@ namespace AIActor_RC
                 GameObject monster = GetMonsterGoByType_remote(syncMonsterMovePos.monsterType);
                 GameObject go = Instantiate(monster, new Vector3(syncMonsterMovePos.PosX, 0, syncMonsterMovePos.PosZ), Quaternion.identity);
 
-                RemoteEnemy remoteEnemy = go.AddComponent<RemoteEnemy>();
+                RemoteEnemy remoteEnemy = go.GetComponent<RemoteEnemy>();
                 remoteEnemy.monsterID = syncMonsterMovePos.monsterID;
                 remoteEnemy.CurrentPos = new Vector3(syncMonsterMovePos.PosX, 0, syncMonsterMovePos.PosZ);
                 remoteEnemy.TargetPos = new Vector3(syncMonsterMovePos.PosX, 0, syncMonsterMovePos.PosZ);
@@ -180,6 +181,27 @@ namespace AIActor_RC
                 }
             }
             return null;
+        }
+
+        /// <summary>
+        /// 同步怪物动画状态
+        /// </summary>
+        void SyncMonsterAnimationState(NetMsg msg)
+        {
+            SyncMonsterAnimationState syncMonsterAnimationState = msg.syncMonsterAnimationState;
+            if (monsters_remote.ContainsKey(syncMonsterAnimationState.monsterID))
+            {
+                RemoteEnemy remoteEnemy = monsters_remote[syncMonsterAnimationState.monsterID];
+                switch (syncMonsterAnimationState.monsterAnimationStateEnum)
+                {
+                    case MonsterAnimationStateEnum.Attack:
+                        remoteEnemy.go.GetComponent<RemoteEnemyControl>().animator.SetBool("Attack", true);
+                        break;
+                    default:
+                        remoteEnemy.go.GetComponent<RemoteEnemyControl>().animator.SetBool("Attack", false);
+                        break;
+                }
+            }
         }
 
         /// <summary>
