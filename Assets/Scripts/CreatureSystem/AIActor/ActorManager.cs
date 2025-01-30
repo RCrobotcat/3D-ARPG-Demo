@@ -20,6 +20,8 @@ namespace AIActor_RC
 
         Dictionary<int, RemoteEnemy> monsters_remote = new Dictionary<int, RemoteEnemy>(); // 远程怪物列表
 
+        List<int> removedMonsters = new List<int>(); // 移除的怪物列表
+
         protected override void Awake()
         {
             base.Awake();
@@ -28,6 +30,8 @@ namespace AIActor_RC
             NetManager.Instance.RegisterNtfHandler(CMD.SyncMonsterAnimationState, SyncMonsterAnimationState);
 
             NetManager.Instance.RegisterNtfHandler(CMD.CreateMonsters, CreateMonsters); // 第一次进入游戏的玩家创建怪物
+
+            NetManager.Instance.RegisterNtfHandler(CMD.RemoveMonster, RemoveMonster); // 移除怪物
 
             DontDestroyOnLoad(this);
         }
@@ -142,6 +146,10 @@ namespace AIActor_RC
                 return;
 
             SyncMonsterMovePos syncMonsterMovePos = msg.syncMonsterMovePos;
+
+            if (removedMonsters.Contains(syncMonsterMovePos.monsterID))
+                return;
+
             if (!monsters_remote.ContainsKey(syncMonsterMovePos.monsterID))
             {
                 GameObject monster = GetMonsterGoByType_remote(syncMonsterMovePos.monsterType);
@@ -224,6 +232,21 @@ namespace AIActor_RC
                 }
             }
             return null;
+        }
+
+        /// <summary>
+        /// 移除怪物
+        /// </summary>
+        void RemoveMonster(NetMsg msg)
+        {
+            RemoveMonster removeMonster = msg.removeMonster;
+            if (monsters_remote.ContainsKey(removeMonster.monsterID))
+            {
+                Destroy(monsters_remote[removeMonster.monsterID].go);
+                monsters_remote.Remove(removeMonster.monsterID);
+
+                removedMonsters.Add(removeMonster.monsterID);
+            }
         }
     }
 }

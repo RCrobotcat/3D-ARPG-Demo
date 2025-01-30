@@ -2204,3 +2204,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33386a1f4bfeb04468a66cf594795ac2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  syncTimeout: 0.5

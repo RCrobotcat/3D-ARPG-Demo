@@ -1,23 +1,26 @@
 ﻿using UnityEngine;
 
+// 远程怪物控制器
 public class RemoteEnemyControl : MonoBehaviour
 {
-    Vector3 lastPos;
+    private Vector3 lastPos;
     [HideInInspector] public Animator animator;
-    float speed;
+    private float speed;
+
+    RemoteEnemy remoteEnemy;
 
     void Awake()
     {
         animator = GetComponent<Animator>();
+        remoteEnemy = GetComponent<RemoteEnemy>();
         lastPos = transform.position;
     }
 
     void Update()
     {
-        // 计算速度
-        speed = (transform.position - lastPos).magnitude / Time.deltaTime * 1.5f;
-
+        speed = (transform.position - lastPos).magnitude / Time.deltaTime;
         animator.SetFloat("Speed", speed);
+
         lastPos = transform.position;
     }
 }
