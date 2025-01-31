@@ -682,7 +682,7 @@ Transform:
   m_GameObject: {fileID: 1092386128542262297}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0003148274, y: 0.74343413, z: -0.13045724, w: 0.6559623}
-  m_LocalPosition: {x: -0.4182508, y: 1.101, z: 0.53890204}
+  m_LocalPosition: {x: -0.4182508, y: 1.241, z: 0.335}
   m_LocalScale: {x: 0.030000003, y: 0.03, z: 0.029999997}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -4877,7 +4877,7 @@ Transform:
   m_GameObject: {fileID: 8095147695973493839}
   serializedVersion: 2
   m_LocalRotation: {x: 0.061126307, y: 0.96356845, z: -0.1152509, w: 0.2334882}
-  m_LocalPosition: {x: 0.12574922, y: 1.205, z: 0.59090203}
+  m_LocalPosition: {x: 0.12574922, y: 1.276, z: 0.408}
   m_LocalScale: {x: 0.030000001, y: 0.029999997, z: 0.030000003}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -5390,11 +5390,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7db39e7e774b8c141ac5b9a4cc8d256f, type: 2}
   currentCombo: {fileID: 0}
   originalCombo:
-  - {fileID: 11400000, guid: 378054bb07632f141a4f1bdc943d681b, type: 2}
-  - {fileID: 11400000, guid: 3c54815dd60ba574aac13f792dcdb59a, type: 2}
-  - {fileID: 11400000, guid: 378054bb07632f141a4f1bdc943d681b, type: 2}
-  - {fileID: 11400000, guid: 3c54815dd60ba574aac13f792dcdb59a, type: 2}
-  - {fileID: 11400000, guid: 378054bb07632f141a4f1bdc943d681b, type: 2}
+  - {fileID: 11400000, guid: dd98effde16c4f64d82e4b71a243a1a3, type: 2}
+  - {fileID: 11400000, guid: 6ecdfd0105065aa4fba5491d81592fd7, type: 2}
+  - {fileID: 11400000, guid: dd98effde16c4f64d82e4b71a243a1a3, type: 2}
+  - {fileID: 11400000, guid: 6ecdfd0105065aa4fba5491d81592fd7, type: 2}
+  - {fileID: 11400000, guid: 142070daf32a53c4fb6a675dc4f19de8, type: 2}
   attackStaminaChange: -1
   weaponTrans: {fileID: 3746497763916824089}
   vfxTrans_left: {fileID: 1669920765669817931}

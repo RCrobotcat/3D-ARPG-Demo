@@ -55,6 +55,8 @@ public class Character_remote : MonoBehaviour
 
         movementSM.Initialize(remoteStandingState);
         agent.obstacleAvoidanceType = ObstacleAvoidanceType.NoObstacleAvoidance;
+
+        combo = originalCombo;
     }
 
     private void Update()

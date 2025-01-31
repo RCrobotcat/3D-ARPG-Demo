@@ -2240,7 +2240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rayStart: 1
   rayLength: 30
-  rayCount: 36
+  rayCount: 72
   collisionLayers:
     serializedVersion: 2
     m_Bits: 1
@@ -2258,4 +2258,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewRadius: 10
   attackRadius: 2
+  monsterID: 0
+  monsterType: 0
   attackPlayerTarget: {fileID: 0}
