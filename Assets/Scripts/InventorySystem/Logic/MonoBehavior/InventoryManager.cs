@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -39,8 +40,12 @@ public class InventoryManager : Singleton<InventoryManager>
     [Header("Tooltip")]
     public ItemTooltip itemTooltip;
 
+    [Header("Pick Up Item Tip")]
+    public Text itemToPickUpTxt;
+    public Transform itemToPickUpTipTrans;
+
     // bool isOpen = false;
-    bool isAnimating = false;
+    bool isAnimating = false; // 背包UI动画是否正在播放
 
     protected override void Awake()
     {
@@ -187,5 +192,22 @@ public class InventoryManager : Singleton<InventoryManager>
     public InventoryItem QuestItemInBag(ItemData_SO questItem)
     {
         return inventoryData.items.Find(i => i.itemData == questItem);
+    }
+
+    /// <summary>
+    /// 显示捡起物品提示显示
+    /// </summary>
+    public void SetItemPickUpTip(string itemName, bool active)
+    {
+        itemToPickUpTxt.text = itemName;
+
+        if (active)
+        {
+            itemToPickUpTipTrans.DOScale(Vector3.one, 0.2f);
+        }
+        else if (!active)
+        {
+            itemToPickUpTipTrans.DOScale(Vector3.zero, 0.2f);
+        }
     }
 }
