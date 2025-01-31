@@ -251,4 +251,14 @@ public class Golem : AIActor
         };
         NetManager.Instance.SendMsg(netMsg);
     }
+
+    /// <summary>
+    /// 攻击动画事件
+    /// </summary>
+    public void AttackAnimationEvent()
+    {
+        CharacterActor player = attackPlayerTarget as CharacterActor;
+        int roleID = player.RoleID;
+        // TODO
+    }
 }
