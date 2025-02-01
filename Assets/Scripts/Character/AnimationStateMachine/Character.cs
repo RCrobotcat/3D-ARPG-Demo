@@ -13,6 +13,7 @@ public class Character : Singleton<Character>
     public float moveSpeed = 5f;
     public Transform lookAtPoint;
     public Transform followPoint;
+    [HideInInspector] public bool isDead = false;
 
     [Header("Roll")]
     public float rollRange = 5f;
@@ -115,6 +116,15 @@ public class Character : Singleton<Character>
             default:
                 break;
         }
+    }
+
+    public void SendGetHitAnimation()
+    {
+        StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.BeHit);
+    }
+    public void SendDeadAnimation()
+    {
+        StageManager.Instance.SendSyncAnimationState(AnimationStateEnum.Dead);
     }
 
     public void PlayVFX_1()

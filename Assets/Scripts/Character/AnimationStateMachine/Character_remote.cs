@@ -12,6 +12,7 @@ public class Character_remote : MonoBehaviour
     public float moveSpeed = 5f;
     public Transform lookAtPoint;
     public Transform followPoint;
+    [HideInInspector] public bool isDead = false;
 
     [Header("Roll")]
     public float rollRange = 5f;

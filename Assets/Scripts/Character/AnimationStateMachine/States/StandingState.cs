@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class StandingState : State
@@ -5,6 +6,8 @@ public class StandingState : State
     bool sprint;
     bool rolling;
     bool slash;
+    bool isDead;
+    public bool IsDead { get => isDead; set => isDead = value; }
 
     public StandingState(Character _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
@@ -18,6 +21,7 @@ public class StandingState : State
 
         sprint = false;
         rolling = false;
+        isDead = false;
 
         input = Vector2.zero;
 
@@ -48,6 +52,8 @@ public class StandingState : State
     {
         base.LogicUpdate();
 
+        if (isDead) return;
+
         character.animator.SetFloat("Speed", character.agent.velocity.magnitude);
 
         if (sprint)
@@ -65,11 +71,23 @@ public class StandingState : State
             character.agent.isStopped = true;
             stateMachine.ChangeState(character.comboState);
         }
+
+        if (character.isDead)
+        {
+            isDead = true;
+            character.animator.SetTrigger("Dead");
+        }
+        else if (!character.isDead)
+        {
+            isDead = false;
+        }
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+
+        if (isDead) return;
 
         if (inputDirection == Vector3.zero)
         {

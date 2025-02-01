@@ -7,7 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: PlayerPunchOV_3_remote
-  m_Controller: {fileID: 9100000, guid: 8858766f21bd66c439f3804ac626d94e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 229ce091a86c91143b724094e141b5cf, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: adaa29981e8dd8d47b2f83c9bf7ec412, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: d3c3e694772922541a28f0ef1c78e7a2, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: e967ac92f74936b4688a49432a8a78c2, type: 2}

@@ -13,6 +13,8 @@ public class Golem : AIActor
 
     Vector3 lastPos = Vector3.zero;
 
+    public float attackDamage = 2f; // 攻击伤害
+
     protected override void Start()
     {
         base.Start();
@@ -259,6 +261,19 @@ public class Golem : AIActor
     {
         CharacterActor player = attackPlayerTarget as CharacterActor;
         int roleID = player.RoleID;
-        // TODO
+        if (Vector3.Distance(transform.position, player.transform.position) < attackRadius)
+        {
+            NetMsg msg = new()
+            {
+                cmd = CMD.PlayerBeAttacked,
+                playerBeAttack = new()
+                {
+                    roleID = roleID,
+                    damage = attackDamage
+                }
+            };
+
+            NetManager.Instance.SendMsg(msg);
+        }
     }
 }

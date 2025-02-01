@@ -1,5 +1,6 @@
 using DG.Tweening;
 using QFramework;
+using RCProtocol;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,6 +28,8 @@ public class CharacterNumController : Singleton<CharacterNumController>, IContro
 
         HealthSlider = PlayerHealthBar.GetChild(0).GetComponent<Image>();
         StaminaSlider = PlayerStaminaBar.GetChild(0).GetComponent<Image>();
+
+        NetManager.Instance.RegisterNtfHandler(CMD.PlayerBeAttacked, PlayerBeAttack);
     }
 
     void Start()
@@ -93,6 +96,17 @@ public class CharacterNumController : Singleton<CharacterNumController>, IContro
         float SliderPercent = (float)mModel.PlayerStamina.Value / currentMaxStamina;
         StaminaSlider.DOFillAmount(SliderPercent, 0.3f);
         staminaTxt.text = mModel.PlayerStamina.Value.ToString("F1") + "/" + currentMaxStamina.ToString("F1");
+    }
+
+    /// <summary>
+    /// 玩家被攻击回调
+    /// </summary>
+    void PlayerBeAttack(NetMsg msg)
+    {
+        float attackDamage = msg.playerBeAttack.damage;
+        HealthChange(-attackDamage);
+
+        Character.Instance.animator.SetTrigger("BeHit");
     }
 
     public IArchitecture GetArchitecture()

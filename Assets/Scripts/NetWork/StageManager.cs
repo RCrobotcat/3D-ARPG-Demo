@@ -281,6 +281,15 @@ public class StageManager : Singleton<StageManager>
             character.movementSM.ChangeState(character.remoteRollState);
             character.remoteRollState.IsRoll = true;
         }
+        else if (syncAnimationState.animationStateEnum == AnimationStateEnum.BeHit)
+        {
+            character.animator.SetTrigger("BeHit");
+        }
+        else if (syncAnimationState.animationStateEnum == AnimationStateEnum.Dead)
+        {
+            character.isDead = true;
+            character.animator.SetTrigger("Dead");
+        }
         else
         {
             character.movementSM.ChangeState(character.remoteComboState);

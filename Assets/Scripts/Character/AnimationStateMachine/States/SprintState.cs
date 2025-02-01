@@ -7,6 +7,8 @@ public class SprintState : State
     bool rolling;
 
     bool slash;
+    bool isDead;
+    public bool IsDead { get => isDead; set => isDead = value; }
 
     public SprintState(Character _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
@@ -19,6 +21,7 @@ public class SprintState : State
         base.Enter();
 
         sprint = false;
+        isDead = false;
         input = Vector2.zero;
     }
 
@@ -67,6 +70,8 @@ public class SprintState : State
     {
         base.LogicUpdate();
 
+        if (isDead) return;
+
         if (sprint)
         {
             character.animator.SetBool("Running", true);
@@ -94,11 +99,23 @@ public class SprintState : State
             character.agent.isStopped = true;
             stateMachine.ChangeState(character.comboState);
         }
+
+        if (character.isDead)
+        {
+            isDead = true;
+            character.animator.SetTrigger("Dead");
+        }
+        else if (!character.isDead)
+        {
+            isDead = false;
+        }
     }
 
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+
+        if (isDead) return;
 
         if (sprint)
         {

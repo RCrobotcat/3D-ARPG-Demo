@@ -21,6 +21,9 @@ public class ComboState : State
     bool inputLeftKey = false;
     bool openInventory = false;
 
+    bool isDead = false;
+    public bool IsDead { get => isDead; set => isDead = value; }
+
     public ComboState(Character _character, StateMachine _stateMachine) : base(_character, _stateMachine)
     {
         character = _character;
@@ -34,6 +37,7 @@ public class ComboState : State
         comboCounter = 0;
         inputLeftKey = false;
         openInventory = false;
+        isDead = false;
 
         comboStateEnum = ComboStateEnum.Combo_1;
     }
@@ -50,6 +54,8 @@ public class ComboState : State
     {
         base.LogicUpdate();
 
+        if (isDead) return;
+
         if (inputLeftKey && !openInventory)
         {
             Attack();
@@ -63,6 +69,16 @@ public class ComboState : State
         }
 
         ExitAttack();
+
+        if (character.isDead)
+        {
+            isDead = true;
+            character.animator.SetTrigger("Dead");
+        }
+        else if (!character.isDead)
+        {
+            isDead = false;
+        }
     }
 
     public override void Exit()
