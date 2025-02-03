@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animatorOV: {fileID: 22100000, guid: b31d12baae158d345abced81b88872f4, type: 2}
   damage: 1
+  attackRange: 1.2
   attackVFXs: []
   vfxType: 0

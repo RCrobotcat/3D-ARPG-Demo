@@ -12,6 +12,8 @@ public class CharacterActor : Actor
     public int RoleID { get => roleID; }
     public DrivenType drivenType; // 驱动类型
 
+    public Actor attackTarget; // 攻击目标
+
     protected override void Start()
     {
         base.Start();

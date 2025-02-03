@@ -95,6 +95,8 @@ public class ComboState : State
 
         character.agent.isStopped = false;
         character.animator.SetBool("Running", false);
+
+        character.isAttacking = false;
     }
 
     #region Tool Functions
@@ -116,6 +118,7 @@ public class ComboState : State
                 comboStateEnum = (ComboStateEnum)comboCounter;
 
                 character.animator.Play("NormalAttack", 0, 0);
+                character.isAttacking = true;
 
                 // TODO: damage, vfx, etc.
 
@@ -125,6 +128,7 @@ public class ComboState : State
                 if (comboCounter >= character.combo.Count)
                 {
                     comboCounter = 0;
+                    character.isAttacking = false;
                 }
             }
         }
@@ -159,6 +163,7 @@ public class ComboState : State
     /// </summary>
     void EndCombo()
     {
+        character.isAttacking = false;
         comboCounter = 0;
         lastComboEnd = Time.time;
     }

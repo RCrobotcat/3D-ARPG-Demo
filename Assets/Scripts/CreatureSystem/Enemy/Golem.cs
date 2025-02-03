@@ -42,6 +42,8 @@ public class Golem : AIActor
     {
         base.FixedUpdate();
 
+        if (isDead) return;
+
         brain.Tick();
 
         // 发送怪物位置同步消息
@@ -260,20 +262,23 @@ public class Golem : AIActor
     public void AttackAnimationEvent()
     {
         CharacterActor player = attackPlayerTarget as CharacterActor;
-        int roleID = player.RoleID;
-        if (Vector3.Distance(transform.position, player.transform.position) < attackRadius)
+        if (player != null)
         {
-            NetMsg msg = new()
+            int roleID = player.RoleID;
+            if (Vector3.Distance(transform.position, player.transform.position) < attackRadius)
             {
-                cmd = CMD.PlayerBeAttacked,
-                playerBeAttack = new()
+                NetMsg msg = new()
                 {
-                    roleID = roleID,
-                    damage = attackDamage
-                }
-            };
+                    cmd = CMD.PlayerBeAttacked,
+                    playerBeAttack = new()
+                    {
+                        roleID = roleID,
+                        damage = attackDamage
+                    }
+                };
 
-            NetManager.Instance.SendMsg(msg);
+                NetManager.Instance.SendMsg(msg);
+            }
         }
     }
 }

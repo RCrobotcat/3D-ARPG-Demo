@@ -102995,8 +102995,29 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.36666667
+    functionName: StartAttacking
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.38333333
     functionName: SlashingStaminaChangeAnimationEvent
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.53333336
+    functionName: EndAttacking
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.6666667
+    functionName: StartAttacking
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
     floatParameter: 0
@@ -103016,6 +103037,13 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
+  - time: 0.8333333
+    functionName: EndAttacking
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 1.05
     functionName: PlayVFX_1
     data: 
@@ -103025,6 +103053,20 @@ AnimationClip:
     messageOptions: 0
   - time: 1.0666667
     functionName: SlashingStaminaChangeAnimationEvent
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.0666667
+    functionName: StartAttacking
+    data: 
+    objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.2666667
+    functionName: EndAttacking
     data: 
     objectReferenceParameter: {fileID: 11500000, guid: 476caea95fcee0c4e803d14072789a1e, type: 3}
     floatParameter: 0

@@ -2,6 +2,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using CleverCrow.Fluid.BTs.Trees;
 using RCProtocol;
+using UnityEngine.UI;
+using DG.Tweening;
 
 namespace AIActor_RC
 {
@@ -24,6 +26,17 @@ namespace AIActor_RC
         [HideInInspector] public int monsterID;
         public MonstersEnum monsterType;
 
+        public float maxHealth = 20f; // 最大生命值
+        float currentHealth; // 当前生命值
+        public float CurrentHealth { get => currentHealth; }
+
+        public Transform healthBar;
+        Image healthSlider;
+        Text healthText;
+
+        protected bool isDead; // 是否死亡
+        bool isDeadAnimated = false; // 是否已经播放死亡动画
+
         protected override void Start()
         {
             base.Start();
@@ -31,9 +44,23 @@ namespace AIActor_RC
             wanderBehaviors = GetComponent<WanderBehaviors>();
             pursueBehaviors = GetComponent<PursueBehaviors>();
             collisionSensor = GetComponent<CollisionSensor>();
+
+            currentHealth = maxHealth;
+            healthSlider = healthBar.GetChild(0).GetComponent<Image>();
+            healthText = healthBar.GetChild(1).GetComponent<Text>();
+            UpdateHealthBar();
         }
 
-        protected virtual void Update() { }
+        protected virtual void Update()
+        {
+            if (isDead && !isDeadAnimated)
+            {
+                animator.SetTrigger("Dead");
+                isDeadAnimated = true;
+                healthBar.gameObject.SetActive(false);
+                // Destroy(gameObject, 2f);
+            }
+        }
         protected virtual void FixedUpdate() { }
 
         /// <summary>
@@ -72,5 +99,29 @@ namespace AIActor_RC
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(transform.position, attackRadius);
         }*/
+
+
+        /// <summary>
+        /// 受到攻击
+        /// </summary>
+        public void BeAttack(float damage)
+        {
+            float health = currentHealth - damage;
+            currentHealth = Mathf.Clamp(health, 0, maxHealth);
+            animator.SetTrigger("BeHit");
+            // Debug.Log($"Monster {monsterType} be attacked, health: {currentHealth} -> {health}");
+            UpdateHealthBar();
+        }
+        void UpdateHealthBar()
+        {
+            float sliderPercentage = currentHealth / maxHealth;
+            healthSlider.DOFillAmount(sliderPercentage, 0.3f);
+            healthText.text = $"{currentHealth}/{maxHealth}";
+
+            if (currentHealth <= 0 && !isDead)
+            {
+                isDead = true;
+            }
+        }
     }
 }

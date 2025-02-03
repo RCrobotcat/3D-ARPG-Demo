@@ -1,5 +1,7 @@
+using AIActor_RC;
 using RCProtocol;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.VFX;
@@ -31,6 +33,7 @@ public class Character : Singleton<Character>
     [HideInInspector] public AttackSO currentCombo; // 当前攻击
     public List<AttackSO> originalCombo; // 原始攻击组合
     public float attackStaminaChange = -1.0f;
+    [HideInInspector] public bool isAttacking;
 
     [Header("Weapon & Armor")]
     public Transform weaponTrans;
@@ -165,6 +168,15 @@ public class Character : Singleton<Character>
                 effects[1].Spawn(vfxTrans_right, vfxTrans_right.position, effects[1].transform.rotation);
             }
         }
+    }
+
+    public void StartAttacking()
+    {
+        isAttacking = true;
+    }
+    public void EndAttacking()
+    {
+        isAttacking = false;
     }
     #endregion
 }

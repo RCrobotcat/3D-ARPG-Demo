@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Attack2_remote
   m_EditorClassIdentifier: 
   animatorOV: {fileID: 22100000, guid: ac876ab6715e01a4eaf90ced9b497f52, type: 2}
-  damage: 2
+  damage: 3
+  attackRange: 3.5
   attackVFXs:
   - {fileID: 7553902065389661572, guid: 2ac1d60bdceb74341a9f42b6053ed8ea, type: 3}
   vfxType: 2
