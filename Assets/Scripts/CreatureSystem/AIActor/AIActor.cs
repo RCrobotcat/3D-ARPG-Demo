@@ -23,7 +23,7 @@ namespace AIActor_RC
         [SerializeField]
         protected BehaviorTree brain; // AI行为树 AI Behavior tree
 
-        [HideInInspector] public int monsterID;
+        [HideInInspector] public int monsterID; // 怪物ID Monster ID
         public MonstersEnum monsterType;
 
         public float maxHealth = 20f; // 最大生命值
@@ -34,7 +34,7 @@ namespace AIActor_RC
         Image healthSlider;
         Text healthText;
 
-        protected bool isDead; // 是否死亡
+        [HideInInspector] public bool isDead; // 是否死亡
         bool isDeadAnimated = false; // 是否已经播放死亡动画
 
         protected override void Start()
@@ -58,7 +58,24 @@ namespace AIActor_RC
                 animator.SetTrigger("Dead");
                 isDeadAnimated = true;
                 healthBar.gameObject.SetActive(false);
+
+                // 禁用碰撞
+                Collider collider = GetComponent<Collider>();
+                if (collider != null)
+                {
+                    collider.enabled = false;
+                }
+
                 // Destroy(gameObject, 2f);
+            }
+
+            if (animator.GetBool("Attack"))
+            {
+                SendSyncAnimationState(MonsterAnimationStateEnum.Attack);
+            }
+            else if (!animator.GetBool("Attack"))
+            {
+                SendSyncAnimationState(MonsterAnimationStateEnum.None);
             }
         }
         protected virtual void FixedUpdate() { }
@@ -111,6 +128,16 @@ namespace AIActor_RC
             animator.SetTrigger("BeHit");
             // Debug.Log($"Monster {monsterType} be attacked, health: {currentHealth} -> {health}");
             UpdateHealthBar();
+
+            SendMonsterBeAttacked(damage);
+        }
+        public void BeAttackCb(float damage)
+        {
+            float health = currentHealth - damage;
+            currentHealth = Mathf.Clamp(health, 0, maxHealth);
+            animator.SetTrigger("BeHit");
+            // Debug.Log($"Monster {monsterType} be attacked, health: {currentHealth} -> {health}");
+            UpdateHealthBar();
         }
         void UpdateHealthBar()
         {
@@ -122,6 +149,48 @@ namespace AIActor_RC
             {
                 isDead = true;
             }
+        }
+        /// <summary>
+        /// 发送怪物被攻击消息
+        /// </summary>
+        void SendMonsterBeAttacked(float d)
+        {
+            NetMsg msg = new NetMsg
+            {
+                cmd = CMD.MonsterBeAttacked,
+                monsterBeAttacked = new()
+                {
+                    monsterID = monsterID,
+                    damage = d
+                }
+            };
+            NetManager.Instance.SendMsg(msg);
+        }
+
+        /// <summary>
+        /// 发送怪物动画状态同步消息
+        /// </summary>
+        void SendSyncAnimationState(MonsterAnimationStateEnum animationState)
+        {
+            NetMsg netMsg = new NetMsg()
+            {
+                cmd = CMD.SyncMonsterAnimationState,
+                syncMonsterAnimationState = new()
+                {
+                    monsterID = monsterID,
+                    monsterAnimationStateEnum = animationState,
+                }
+            };
+            NetManager.Instance.SendMsg(netMsg);
+        }
+        public void BeHitAnimationEvent()
+        {
+            SendSyncAnimationState(MonsterAnimationStateEnum.BeHit);
+        }
+
+        public void DeadAnimationEvent()
+        {
+            SendSyncAnimationState(MonsterAnimationStateEnum.Dead);
         }
     }
 }

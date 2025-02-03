@@ -224,6 +224,9 @@ public class NetManager : Singleton<NetManager>
             case CMD.PlayerBeAttacked:
                 gameNet?.token?.SendMsg(msg);
                 break;
+            case CMD.MonsterBeAttacked:
+                gameNet?.token?.SendMsg(msg);
+                break;
             default:
                 // battleNet?.token?.SendMsg(msg);
                 break;

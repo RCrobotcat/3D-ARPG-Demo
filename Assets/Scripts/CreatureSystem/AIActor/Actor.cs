@@ -5,7 +5,7 @@ namespace AIActor_RC
 {
     public class Actor : MonoBehaviour
     {
-        protected Animator animator;
+        [HideInInspector] public Animator animator;
         protected Rigidbody rb;
 
         protected virtual void Start() { }

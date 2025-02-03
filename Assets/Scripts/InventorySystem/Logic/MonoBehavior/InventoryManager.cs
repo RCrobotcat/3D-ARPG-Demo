@@ -82,6 +82,13 @@ public class InventoryManager : Singleton<InventoryManager>
                 EquipmentPanel.transform.localPosition.rc_To(new Vector3(-500, 0, 0), 0.3f,
                     (Vector3 pos) => EquipmentPanel.transform.localPosition = pos,
                     () => { isAnimating = false; });
+
+                // 禁用摄像机旋转
+                if (CameraManager.Instance.FreeLookCam != null)
+                {
+                    CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName = "";
+                    CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName = "";
+                }
             }
 
             if (!InputManager.Instance.inputOpenInventory)
@@ -93,6 +100,15 @@ public class InventoryManager : Singleton<InventoryManager>
                 EquipmentPanel.transform.localPosition.rc_To(new Vector3(-1500, 0, 0), 0.3f,
                     (Vector3 pos) => EquipmentPanel.transform.localPosition = pos,
                     () => { EquipmentPanel.SetActive(false); isAnimating = false; });
+
+                // 恢复摄像机旋转
+                if (CameraManager.Instance.FreeLookCam != null
+                    && CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName == ""
+                    && CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName == "")
+                {
+                    CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName = "Mouse X";
+                    CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName = "Mouse Y";
+                }
             }
         }
 

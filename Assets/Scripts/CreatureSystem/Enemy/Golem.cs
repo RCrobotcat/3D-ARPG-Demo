@@ -26,15 +26,6 @@ public class Golem : AIActor
     {
         base.Update();
 
-        if (animator.GetBool("Attack"))
-        {
-            SendSyncAnimationState(MonsterAnimationStateEnum.Attack);
-        }
-        else if (!animator.GetBool("Attack"))
-        {
-            SendSyncAnimationState(MonsterAnimationStateEnum.None);
-        }
-
         UpdateAttackTarget();
     }
 
@@ -239,23 +230,9 @@ public class Golem : AIActor
         return actors[0];
     }
 
-    /// <summary>
-    /// 发送怪物动画状态同步消息
-    /// </summary>
-    void SendSyncAnimationState(MonsterAnimationStateEnum animationState)
-    {
-        NetMsg netMsg = new NetMsg()
-        {
-            cmd = CMD.SyncMonsterAnimationState,
-            syncMonsterAnimationState = new()
-            {
-                monsterID = monsterID,
-                monsterAnimationStateEnum = animationState,
-            }
-        };
-        NetManager.Instance.SendMsg(netMsg);
-    }
+    
 
+    #region Animation Events
     /// <summary>
     /// 攻击动画事件
     /// </summary>
@@ -281,4 +258,5 @@ public class Golem : AIActor
             }
         }
     }
+    #endregion
 }

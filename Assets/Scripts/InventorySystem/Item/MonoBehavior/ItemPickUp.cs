@@ -12,6 +12,7 @@ public class ItemPickUp : MonoBehaviour
         {
             InventoryManager.Instance.SetItemPickUpTip(itemData.itemName, true);
 
+            // TODO: ¸ÄÎªInputManager
             if (Input.GetKeyDown(KeyCode.E))
             {
                 PickUpItem();

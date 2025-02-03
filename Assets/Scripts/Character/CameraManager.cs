@@ -1,8 +1,10 @@
 using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class CameraManager : Singleton<CameraManager>
 {
     CinemachineFreeLook freeLookCam;
+    public CinemachineFreeLook FreeLookCam { get => freeLookCam; }
 
     protected override void Awake()
     {

@@ -16,8 +16,9 @@ namespace AIActor_RC
         List<Actor> actors = new List<Actor>();
 
         public List<GameObject> monster_all = new List<GameObject>(); // 当前场景中的怪物列表
-        public List<GameObject> monsters_all_remote = new List<GameObject>(); // 当前场景中的怪物(远程)列表
+        public List<GameObject> monsters_all_remote = new List<GameObject>(); // 当前场景中所有的怪物(远程)列表
 
+        Dictionary<int, GameObject> monsters_created_first = new Dictionary<int, GameObject>(); // 第一次创建的怪物列表
         Dictionary<int, RemoteEnemy> monsters_remote = new Dictionary<int, RemoteEnemy>(); // 远程怪物列表
 
         List<int> removedMonsters = new List<int>(); // 移除的怪物列表
@@ -30,6 +31,8 @@ namespace AIActor_RC
             NetManager.Instance.RegisterNtfHandler(CMD.SyncMonsterAnimationState, SyncMonsterAnimationState);
 
             NetManager.Instance.RegisterNtfHandler(CMD.CreateMonsters, CreateMonsters); // 第一次进入游戏的玩家创建怪物
+
+            NetManager.Instance.RegisterNtfHandler(CMD.MonsterBeAttacked, MonsterBeAttacked); // 怪物被攻击
 
             NetManager.Instance.RegisterNtfHandler(CMD.RemoveMonster, RemoveMonster); // 移除怪物
 
@@ -45,6 +48,8 @@ namespace AIActor_RC
                 // 更新实体的显示
                 UpdateMonsterEntity(monster);
             }
+
+
         }
         /// <summary>
         /// 更新怪物位置同步状态
@@ -197,17 +202,51 @@ namespace AIActor_RC
         void SyncMonsterAnimationState(NetMsg msg)
         {
             SyncMonsterAnimationState syncMonsterAnimationState = msg.syncMonsterAnimationState;
-            if (monsters_remote.ContainsKey(syncMonsterAnimationState.monsterID))
+            if (monsters_remote.Count > 0)
             {
-                RemoteEnemy remoteEnemy = monsters_remote[syncMonsterAnimationState.monsterID];
-                switch (syncMonsterAnimationState.monsterAnimationStateEnum)
+                if (monsters_remote.ContainsKey(syncMonsterAnimationState.monsterID))
                 {
-                    case MonsterAnimationStateEnum.Attack:
-                        remoteEnemy.go.GetComponent<RemoteEnemyControl>().animator.SetBool("Attack", true);
-                        break;
-                    default:
-                        remoteEnemy.go.GetComponent<RemoteEnemyControl>().animator.SetBool("Attack", false);
-                        break;
+                    RemoteEnemy remoteEnemy = monsters_remote[syncMonsterAnimationState.monsterID];
+                    switch (syncMonsterAnimationState.monsterAnimationStateEnum)
+                    {
+                        case MonsterAnimationStateEnum.Attack:
+                            remoteEnemy.go.GetComponent<RemoteEnemyControl>().animator.SetBool("Attack", true);
+                            break;
+                        case MonsterAnimationStateEnum.BeHit:
+                            remoteEnemy.go.GetComponent<RemoteEnemyControl>().animator.SetBool("Attack", false);
+                            remoteEnemy.go.GetComponent<RemoteEnemyControl>().animator.SetTrigger("BeHit");
+                            break;
+                        case MonsterAnimationStateEnum.Dead:
+                            remoteEnemy.go.GetComponent<RemoteEnemyControl>().animator.SetBool("Attack", false);
+                            remoteEnemy.go.GetComponent<RemoteEnemyControl>().animator.SetTrigger("Dead");
+                            break;
+                        default:
+                            remoteEnemy.go.GetComponent<RemoteEnemyControl>().animator.SetBool("Attack", false);
+                            break;
+                    }
+                }
+            }
+            else if (monsters_created_first.Count > 0)
+            {
+                if (monsters_created_first.ContainsKey(syncMonsterAnimationState.monsterID))
+                {
+                    GameObject go = monsters_created_first[syncMonsterAnimationState.monsterID];
+                    switch (syncMonsterAnimationState.monsterAnimationStateEnum)
+                    {
+                        case MonsterAnimationStateEnum.Attack:
+                            go.GetComponent<AIActor>().animator.SetBool("Attack", true);
+                            break;
+                        case MonsterAnimationStateEnum.BeHit:
+                            go.GetComponent<AIActor>().animator.SetBool("Attack", false);
+                            go.GetComponent<AIActor>().animator.SetTrigger("BeHit");
+                            break;
+                        case MonsterAnimationStateEnum.Dead:
+                            go.GetComponent<AIActor>().isDead = true;
+                            break;
+                        default:
+                            go.GetComponent<AIActor>().animator.SetBool("Attack", false);
+                            break;
+                    }
                 }
             }
         }
@@ -221,6 +260,9 @@ namespace AIActor_RC
             GameObject monster = GetMosnterByType(createMonsters.monsterType);
             monster.GetComponent<AIActor>().monsterID = createMonsters.monsterID;
             GameObject go = Instantiate(monster, new Vector3(createMonsters.PosX, 0, createMonsters.PosZ), Quaternion.identity);
+
+            monsters_created_first.Add(createMonsters.monsterID, go);
+            monsters_remote.Clear();
         }
         GameObject GetMosnterByType(MonstersEnum monsterType)
         {
@@ -232,6 +274,30 @@ namespace AIActor_RC
                 }
             }
             return null;
+        }
+
+        /// <summary>
+        /// 怪物被攻击
+        /// </summary>
+        void MonsterBeAttacked(NetMsg msg)
+        {
+            MonsterBeAttacked monsterBeAttacked = msg.monsterBeAttacked;
+            if (monsters_created_first.Count > 0)
+            {
+                if (monsters_created_first.ContainsKey(monsterBeAttacked.monsterID))
+                {
+                    monsters_created_first[monsterBeAttacked.monsterID].GetComponent<AIActor>()
+                        .BeAttackCb(monsterBeAttacked.damage);
+                }
+            }
+            else if (monsters_remote.Count > 0)
+            {
+                if (monsters_remote.ContainsKey(monsterBeAttacked.monsterID))
+                {
+                    monsters_remote[monsterBeAttacked.monsterID].GetComponent<AIActor>()
+                        .BeAttackCb(monsterBeAttacked.damage);
+                }
+            }
         }
 
         /// <summary>
