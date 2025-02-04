@@ -147,7 +147,7 @@ namespace AIActor_RC
         /// </summary>
         void SyncMonsterMovePos(NetMsg msg)
         {
-            if (SceneManager.GetActiveScene().name != "TestScene")
+            if (SceneManager.GetActiveScene().name != "GameScene")
                 return;
 
             SyncMonsterMovePos syncMonsterMovePos = msg.syncMonsterMovePos;

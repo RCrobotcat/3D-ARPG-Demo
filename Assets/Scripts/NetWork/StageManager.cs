@@ -58,7 +58,7 @@ public class StageManager : Singleton<StageManager>
     /// </summary>
     void ntfEnterStage(NetMsg msg)
     {
-        if (msg.ntfEnterStage.stageName == "TestScene")
+        if (msg.ntfEnterStage.stageName == "GameScene")
         {
             ao = SceneManager.LoadSceneAsync(msg.ntfEnterStage.stageName);
             ao.completed += OnSceneLoaded;
