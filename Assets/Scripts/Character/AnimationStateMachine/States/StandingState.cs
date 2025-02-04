@@ -106,6 +106,8 @@ public class StandingState : State
     {
         base.Exit();
         slash = false;
+
+        AudioManager.Instance.footStepSource.Stop();
     }
 
     #region Tool Functions
@@ -124,6 +126,7 @@ public class StandingState : State
 
         if (!AudioManager.Instance.footStepSource.isPlaying)
         {
+            AudioManager.Instance.footStepSource.pitch = 0.8f;
             AudioManager.Instance.PlayFootStep(AudioManager.Instance.PlayerWalk_solid);
         }
     }

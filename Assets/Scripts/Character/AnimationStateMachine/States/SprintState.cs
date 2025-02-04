@@ -144,6 +144,8 @@ public class SprintState : State
         sprint = false;
         character.isSprint = false;
         slash = false;
+
+        AudioManager.Instance.footStepSource.Stop();
     }
 
     #region Tool Functions
@@ -155,6 +157,11 @@ public class SprintState : State
         StageManager.Instance.SendSyncMovePos(character.transform.position, direction);
 
         MoveToTarget(targetPosition);
+        if (!AudioManager.Instance.footStepSource.isPlaying)
+        {
+            AudioManager.Instance.footStepSource.pitch = 1.0f;
+            AudioManager.Instance.PlayFootStep(AudioManager.Instance.PlayerRun_solid);
+        }
     }
     public void MoveToTarget(Vector3 target)
     {

@@ -148,6 +148,8 @@ namespace AIActor_RC
             {
                 isDead = true;
             }
+
+            AudioManager.Instance.PlaySfx(AudioManager.Instance.hitRock);
         }
         /// <summary>
         /// 发送怪物被攻击消息

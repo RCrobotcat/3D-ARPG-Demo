@@ -11,6 +11,8 @@ public class AudioManager : Singleton<AudioManager>
     public AudioClip PlayerSlash;
     public AudioClip PlayerSlash_target;
 
+    public AudioClip hitRock;
+
     protected override void Awake()
     {
         base.Awake();

@@ -93,6 +93,8 @@ public class Character : Singleton<Character>
             return;
 
         CharacterNumController.Instance.StaminaChange(attackStaminaChange);
+        if (InventoryManager.Instance.equipmentData.items[0].itemData != null)
+            AudioManager.Instance.PlaySfx(AudioManager.Instance.PlayerSlash);
     }
 
     public void SendRemoteAnimationState()
