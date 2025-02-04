@@ -4,7 +4,6 @@ using RCProtocol;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 
 public class NetManager : Singleton<NetManager>
 {
@@ -225,6 +224,9 @@ public class NetManager : Singleton<NetManager>
                 gameNet?.token?.SendMsg(msg);
                 break;
             case CMD.MonsterBeAttacked:
+                gameNet?.token?.SendMsg(msg);
+                break;
+            case CMD.SyncAliveState:
                 gameNet?.token?.SendMsg(msg);
                 break;
             default:

@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using RCProtocol;
 
 public class GameOver : Singleton<GameOver>
 {
@@ -34,6 +35,15 @@ public class GameOver : Singleton<GameOver>
         Character.Instance.sprintState.IsDead = false;
         Character.Instance.comboState.IsDead = false;
         Character.Instance.animator.SetTrigger("Alive");
-        Character.Instance.transform.position = new Vector3(1, 0, 1);
+        Character.Instance.transform.position = new Vector3(10, 0, 10);
+
+        NetManager.Instance.SendMsg(new NetMsg
+        {
+            cmd = CMD.SyncAliveState,
+            syncAliveState = new SyncAliveState
+            {
+                roleID = Character.Instance.roleID,
+            }
+        });
     }
 }

@@ -31,6 +31,7 @@ public class StageManager : Singleton<StageManager>
 
         NetManager.Instance.RegisterNtfHandler(CMD.SyncMovePos, SyncMovePos);
         NetManager.Instance.RegisterNtfHandler(CMD.SyncAnimationState, SyncAnimationState);
+        NetManager.Instance.RegisterNtfHandler(CMD.SyncAliveState, SyncAliveState);
 
         NetManager.Instance.RegisterNtfHandler(CMD.RemoveEntity, RemoveEntity);
 
@@ -352,5 +353,14 @@ public class StageManager : Singleton<StageManager>
                 Destroy(player.gameObject);
             }
         }
+    }
+
+    /// <summary>
+    /// Í¬²½¸´»î×´Ì¬
+    /// </summary>
+    void SyncAliveState(NetMsg msg)
+    {
+        RemotePlayer remotePlayer = remotePlayers[msg.syncAliveState.roleID];
+        remotePlayer.gameObject.GetComponent<Animator>().SetTrigger("Alive");
     }
 }

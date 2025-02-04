@@ -117,7 +117,6 @@ namespace AIActor_RC
             Gizmos.DrawWireSphere(transform.position, attackRadius);
         }*/
 
-
         /// <summary>
         /// Κάµ½Ή¥»χ
         /// </summary>
