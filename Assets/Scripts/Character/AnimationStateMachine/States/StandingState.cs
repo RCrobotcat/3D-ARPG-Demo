@@ -55,6 +55,8 @@ public class StandingState : State
         if (isDead) return;
 
         character.animator.SetFloat("Speed", character.agent.velocity.magnitude);
+        if (character.agent.velocity.magnitude < 0.1f)
+            AudioManager.Instance.footStepSource.Stop();
 
         if (sprint)
         {
@@ -119,6 +121,11 @@ public class StandingState : State
         StageManager.Instance.SendSyncMovePos(character.transform.position, direction);
 
         MoveToTarget(targetPosition);
+
+        if (!AudioManager.Instance.footStepSource.isPlaying)
+        {
+            AudioManager.Instance.PlayFootStep(AudioManager.Instance.PlayerWalk_solid);
+        }
     }
     public void MoveToTarget(Vector3 target)
     {

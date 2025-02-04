@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2729905212566728411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazinePistolARK9_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1770313759281421542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71,7 +71,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4676371308179263301}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortI3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -102,7 +102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5543883005756197797}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraid4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7121877376582902214}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongA5_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6406050460894021763}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1014727082650087796}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortE2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5565078544364002182}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail28_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -260,7 +260,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7203785392433375367}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail23_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4378521214946534074}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongA2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -324,7 +324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5147060863929274362}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortB1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -356,7 +356,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3816976076572270856}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA6_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5000720120230854910}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortH2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1559545006357910351}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -452,7 +452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5815823837735892917}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortN1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -484,7 +484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1134068533736783490}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2226112105833454577}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongB4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -547,7 +547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8192042798454223869}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptyOldPistol_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1673569596462638045}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongD1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,7 +610,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7627604818021653063}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -642,7 +642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 377586780871137098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pointer2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -674,7 +674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1028274548683609377}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineBoltActionRifle_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -705,7 +705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3177455642417093544}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pinky2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -737,7 +737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 638414571892313418}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunCrossbow_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -768,7 +768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3558656530101332671}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -800,7 +800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 238309407072999248}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLong7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -832,7 +832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7268225746909988364}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraid3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,7 +865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8586453154958990796}
   - component: {fileID: 3239098990901001213}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BodyMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1337,7 +1337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2679633881868137102}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1369,7 +1369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 434802509834221895}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pointer1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1401,7 +1401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2582208621554135714}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraid3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1433,7 +1433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6212623718951187342}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortL3R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1464,7 +1464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7810592357730079378}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF5_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1496,7 +1496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5984322095235965476}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firearm_SocketPistol_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1527,7 +1527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7624472441936139706}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bow_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1558,7 +1558,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4612680716774937900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MinesExplosives_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1589,7 +1589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1289614141144713820}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firearm_SocketRifleOld_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1620,7 +1620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7641797501902767575}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Toe1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1651,7 +1651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 752243120967904415}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortJ1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1683,7 +1683,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5424506387831083362}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1714,7 +1714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6378207982267944802}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FirearmMagazine_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1745,7 +1745,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 862238710844080676}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongH1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1777,7 +1777,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8496619231122893398}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptyRifleOld_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1808,7 +1808,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3280508414684103069}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cThigh_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1840,7 +1840,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1187962745013562720}
   - component: {fileID: 7565698676330500931}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AsunaHair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2233,7 +2233,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3973286292337909774}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC6_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2264,7 +2264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2868581860046051588}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineRifle_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2295,7 +2295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6395787884083376805}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortM3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2326,7 +2326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6316911351876909113}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortK2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2358,7 +2358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7081135791636447401}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA7_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2389,7 +2389,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3874721859175735952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firearm_SocketRifle_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2420,7 +2420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2614838215519538407}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2452,7 +2452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5216034130835509053}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongD2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2484,7 +2484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7245909514590850793}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2515,7 +2515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2972064570236356734}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Middle2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2547,7 +2547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5823429053651679833}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortJ4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2578,7 +2578,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9027468663646224392}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptySniperRifle_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2609,7 +2609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4990513431210633000}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongC4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2640,7 +2640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7298340415478673755}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongD4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2671,7 +2671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 520954991454671575}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2703,7 +2703,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3997395732020745216}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortL3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2734,7 +2734,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 517087452343702193}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Middle1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2766,7 +2766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7011915616783923808}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortJ4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2797,7 +2797,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4466735053120807694}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongA5_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2828,7 +2828,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4324841038150957605}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongD4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2859,7 +2859,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 754924981670727557}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LookAtPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2890,7 +2890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2145191971484240430}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2924,7 +2924,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6750211607918580672}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail24_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2956,7 +2956,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5076777186429744065}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pinky3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2987,7 +2987,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1558102436275884723}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortE1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3019,7 +3019,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3550651623047668801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortB2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3051,7 +3051,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1198225616435600189}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3083,7 +3083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2871320223808901088}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF6_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3114,7 +3114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8860725635453266538}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3146,7 +3146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9183226692879310680}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Reload12Gauge_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3177,7 +3177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1749330695960226952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortG1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3209,7 +3209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5782183000793893316}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairStrandFront5_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3240,7 +3240,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5824547036611781470}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3272,7 +3272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5404865302696366431}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cWrist_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3303,7 +3303,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3024821038445539472}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptyShotgunKL228_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3334,7 +3334,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5131192911449046237}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortI2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3366,7 +3366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7952308953676509935}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortM2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3398,7 +3398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8399236641259848066}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3430,7 +3430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 215707444260078079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairStrandFront2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3462,7 +3462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3409081669237352834}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongA1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3494,7 +3494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4073870883147501194}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairStrandFront1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3526,7 +3526,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4576054617844367358}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMG&MinigunMagazineEmpty_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3557,7 +3557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7761711274619846863}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongH4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3588,7 +3588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5827241808958682361}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortM2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3620,7 +3620,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3814771318240381368}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB7_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3651,7 +3651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 936189766775518000}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3682,7 +3682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 869391976753065111}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongE5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3714,7 +3714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8299916970062916901}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3747,7 +3747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1306197222952685325}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongH2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3779,7 +3779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8749182953869490311}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortG2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3811,7 +3811,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8770210038614734425}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortN2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3843,7 +3843,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7464413942249391511}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3875,7 +3875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2230947112565584602}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ElbowArmor_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3906,7 +3906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4359899418982359166}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightHandWeaponSocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3937,7 +3937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6694404616633733910}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shin_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3970,7 +3970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7994182215727576885}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pinky1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4002,7 +4002,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3350650644325141338}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortF1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4034,7 +4034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2220619907973234744}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongH2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4066,7 +4066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8075990385106866905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4098,7 +4098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1320614663568374319}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ElbowArmor_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4129,7 +4129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8661808895456073553}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Toe1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4160,7 +4160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7435188225499360531}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortL2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4192,7 +4192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3818753918796425492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail27_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4224,7 +4224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3346278433799319763}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortK3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4255,7 +4255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3222584471178309256}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thumb1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4287,7 +4287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7018494012200432359}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4319,7 +4319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3982992999822044623}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortK1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4351,7 +4351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6990195075856313205}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Middle2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4383,7 +4383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2026834464044775712}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortK2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4415,7 +4415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 492921738304694578}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazinePistol_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4446,7 +4446,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2217994770200072230}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairStrandFront2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4478,7 +4478,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 756104796118640490}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortG3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4509,7 +4509,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 390416679556793952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortC2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4541,7 +4541,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3482187405151743663}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB6_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4573,7 +4573,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2185265198432684888}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spine2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4605,7 +4605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7399723110721669336}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShoulderArmor_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4636,7 +4636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9047636115929100994}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortF2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4668,7 +4668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5418628003868723894}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortB3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4699,7 +4699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8637289628740971027}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail21_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4731,7 +4731,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7911163050551692483}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF5_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4763,7 +4763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2657681221200524986}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraidSingle3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4795,7 +4795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1621594652621087033}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4827,7 +4827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8672066223817451859}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraid5_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4858,7 +4858,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8218807467300696974}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4890,7 +4890,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3476098181969630196}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4922,7 +4922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7658538856339226584}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongE3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4954,7 +4954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7914067321267055525}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraid4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4986,7 +4986,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8315721466246487960}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 1HMeleeHolsterBack_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5017,7 +5017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5834005548703349204}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pinky1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5049,7 +5049,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7099521796590411704}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongB2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5081,7 +5081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8376214048816711079}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5113,7 +5113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6980863138073834098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spine1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5153,7 +5153,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8648462376767342774}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: KneeArmor_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5184,7 +5184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7058385005401899396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BowHolster_Socket_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5215,7 +5215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7731077434920527454}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongD3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5247,7 +5247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8238448306036213993}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5279,7 +5279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8012932363289604306}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pointer3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5310,7 +5310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8734966087913160201}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptySniperRifleOld_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5341,7 +5341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6491953544692218892}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ring2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5373,7 +5373,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5668073860217942794}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB5_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5405,7 +5405,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3076540906404500584}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineSniperRifleOld_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5436,7 +5436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7525690633677316649}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Middle3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5467,7 +5467,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 333838515545003402}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortJ3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5499,7 +5499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1335787475021783806}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongB1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5531,7 +5531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7874741168697695780}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spine0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5563,7 +5563,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 758410261485348725}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5595,7 +5595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6724043365242298423}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5626,7 +5626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4268840745640230320}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5658,7 +5658,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7442617406663134107}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: KneeArmor_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5689,7 +5689,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5666424676322120088}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA5_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5721,7 +5721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3640477312943078820}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5753,7 +5753,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 133350249775166862}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firearm_SocketBoltActionRifleMagazine_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5784,7 +5784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3587679975017501737}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortN3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5816,7 +5816,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3310311796959715076}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Foot_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5848,7 +5848,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5149173296690825560}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pinky2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5880,7 +5880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3378797945410502510}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5912,7 +5912,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5909383594989052134}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Middle3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5943,7 +5943,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8548410564025062645}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cShrugger_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5976,7 +5976,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8780513933202570028}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLong6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6008,7 +6008,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2363856106877514015}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Eye_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6039,7 +6039,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2048015324578424496}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortL1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6071,7 +6071,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3788013921136222338}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortN4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6102,7 +6102,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1207332278925637348}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongD3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6134,7 +6134,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1347379916185909906}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6166,7 +6166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5438532529248544009}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraid5_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6198,7 +6198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 713802391660412004}
   - component: {fileID: 265020597746650090}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AsunaHairTie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6591,7 +6591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 902057593742852157}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6623,7 +6623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3629438803576821774}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cHip_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6654,7 +6654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6192320906203377312}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Melee_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6685,7 +6685,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2294322298186815366}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thumb2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6717,7 +6717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9069161167693415093}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongA3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6749,7 +6749,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4758056083635402813}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6781,7 +6781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 95881504836692189}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6813,7 +6813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 845169288811794742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongG2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6844,7 +6844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3861383255961698890}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongH4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6875,7 +6875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3645865732153994052}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Foot_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6907,7 +6907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2952049732287333657}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF6_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6938,7 +6938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1787273156148237786}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pinky3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6969,7 +6969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8487112046978460266}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftHandWeaponSocket
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7000,7 +7000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2149262073489214042}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7032,7 +7032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8152533930627785083}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail25_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7064,7 +7064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7263949337855424733}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongH3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7096,7 +7096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8536323737217410563}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7128,7 +7128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8376769264150172537}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7160,7 +7160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7793817835078906048}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pointer2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7192,7 +7192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2558119113929914036}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineShotgunKL228_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7223,7 +7223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7920668322805698459}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairStrandFront3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7255,7 +7255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5888533222713836844}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7287,7 +7287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8195601428258588749}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MinigunHolster_Socket_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7318,7 +7318,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9136453442075291661}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortL1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7350,7 +7350,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 847950812286593785}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vfxPos_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7381,7 +7381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8282760760198615809}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShotgunCrossbowHolster_Socket_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7412,7 +7412,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3701662002313718280}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7444,7 +7444,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 554619989261821479}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7529,7 +7529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8816158218980940442}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongA2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7561,7 +7561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5308561020492210808}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 1HMeleeHolsterLeg_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7592,7 +7592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7301506145761854129}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cButt_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7623,7 +7623,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5491262396961537574}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Arrow_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7654,7 +7654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 815810170223854519}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Middle1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7687,7 +7687,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2980951506506238623}
   - component: {fileID: 9102748724076586056}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AsunaBoots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8080,7 +8080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2862768777798828267}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HandGrenade_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8111,7 +8111,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8726722291682572552}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortM3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8142,7 +8142,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8243520776593537519}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8174,7 +8174,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3356847593188667040}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8206,7 +8206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2464794682191300075}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortH1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8238,7 +8238,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2681434312184507154}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8270,7 +8270,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8183811686488853396}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptyBoltActionRifle_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8301,7 +8301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6634904861335230019}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLong8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8332,7 +8332,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4659251418718118331}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortH3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8363,7 +8363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2664632207712738188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8395,7 +8395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1703915048066838748}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hand_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8463,7 +8463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 40661664255032297}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail27_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8501,7 +8501,7 @@ GameObject:
   - component: {fileID: 5533391776700238610}
   - component: {fileID: 6564770587712953737}
   - component: {fileID: 36417773880544260}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Asuna
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -8645,6 +8645,7 @@ MonoBehaviour:
   moveSpeed: 5
   lookAtPoint: {fileID: 754924981670727557}
   followPoint: {fileID: 6870793250037725959}
+  isDead: 0
   rollRange: 5
   rollTime: 0.3
   rollStaminaChange: -1.8
@@ -8666,6 +8667,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 365486dd9d0e05040be5e0f3ad35ebc6, type: 2}
   - {fileID: 11400000, guid: 3f31398ad05fcdf4fb02b6795da6f977, type: 2}
   attackStaminaChange: -1
+  isAttacking: 0
   weaponTrans: {fileID: 4359899418982359166}
   vfxTrans_left: {fileID: 847950812286593785}
   vfxTrans_right: {fileID: 2461725918298290032}
@@ -8683,6 +8685,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38e72be0e11cc614d8065c1880347b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  drivenType: 0
+  attackTarget: {fileID: 0}
 --- !u!1 &5363544300272854153
 GameObject:
   m_ObjectHideFlags: 0
@@ -8692,7 +8697,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8234276524085090215}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortK3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8723,7 +8728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2078067378857626632}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptyRifle_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8754,7 +8759,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1987033274510639506}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongD1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8786,7 +8791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6421294370385957017}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8817,7 +8822,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6790193558472526172}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail17_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8849,7 +8854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2791466194171580319}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortK1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8881,7 +8886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7139397295108091884}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortM1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8913,7 +8918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2428430889956554826}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8945,7 +8950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8467709865179649152}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraid1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8977,7 +8982,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7547791043736411018}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Melee_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9008,7 +9013,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5523202988609047536}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLong1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9040,7 +9045,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6514150683545261018}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail19_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9072,7 +9077,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4418305590117742453}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cHip_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9103,7 +9108,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2365288904889618616}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9135,7 +9140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2733894192910551992}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineSMG_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9166,7 +9171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5530384760935274742}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cButt_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9197,7 +9202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5741325606221528343}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongG1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9229,7 +9234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1372857111455706930}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairStrandFront5_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9260,7 +9265,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7557956299861182532}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail24_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9292,7 +9297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5613264942491451743}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongH3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9324,7 +9329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3898415080615208175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 1HMeleeHolsterBack_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9355,7 +9360,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7786981390695755598}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraidSingle1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9387,7 +9392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1879297469862641294}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thumb3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9418,7 +9423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3241078457837845768}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortM1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9450,7 +9455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1707002205665792029}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cThigh_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9481,7 +9486,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3735710448122254022}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pointer3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9512,7 +9517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7618195034934296919}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA7_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9543,7 +9548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2770723206458154127}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shoulder_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9575,7 +9580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1043690732759169833}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ring3_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9606,7 +9611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3337046313281599597}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ArrowQuiver_Socket_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9637,7 +9642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8122743691827311223}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLong3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9669,7 +9674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7239523433126340979}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortN2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9701,7 +9706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7855804576062532175}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cShrugger_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9734,7 +9739,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8946138501516476601}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongE1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9766,7 +9771,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3877974202936959765}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongC1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9798,7 +9803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7282321528191780539}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ring2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9830,7 +9835,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1931490725926138399}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9862,7 +9867,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3074832926561325217}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraid2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9894,7 +9899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8236449259488212213}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairStrandFront3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9926,7 +9931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2058451161212793366}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairStrandFront4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9958,7 +9963,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 257076595441005185}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boob_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9989,7 +9994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4893309369172563093}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMG&MinigunMagazine_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10020,7 +10025,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1339121231337941128}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bicep_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10053,7 +10058,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8650399891743887040}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10085,7 +10090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 874324449254108440}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10117,7 +10122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1793037288147196940}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLong4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10149,7 +10154,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6870793250037725959}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FollowPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10180,7 +10185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 858506267149841573}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cMainH
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10212,7 +10217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6293176625548702929}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RifleHolster_Socket_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10243,7 +10248,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7083721052589922118}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadFlamerTank_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10274,7 +10279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9177417576276858882}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongC2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10306,7 +10311,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1775987290726693581}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongG1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10338,7 +10343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4758167661052315377}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLong5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10370,7 +10375,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5992046388205253096}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortJ2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10402,7 +10407,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1225758357684112571}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortJ2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10434,7 +10439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2526035166416610686}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEnergyOld_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10465,7 +10470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5460911716252816767}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineGRL45_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10496,7 +10501,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3010410380874741214}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairStrandFront4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10528,7 +10533,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4691886271125666256}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongH1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10560,7 +10565,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8825595719798277976}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA5_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10592,7 +10597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5087879996794960458}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineSniperRifle_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10623,7 +10628,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3255811680752306700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Spine3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10668,7 +10673,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 712859291371512208}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail26_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10700,7 +10705,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3938359425357358887}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10732,7 +10737,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8972457536234613611}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firearm_SocketPNT34_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10763,7 +10768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1946196271723234679}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortI1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10795,7 +10800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3083097380787341001}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail28_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10826,7 +10831,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3507160139044600629}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail20_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10858,7 +10863,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5734675830665560177}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB7_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10889,7 +10894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5148966194788065674}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA6_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10921,7 +10926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5042551594294298370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10953,7 +10958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1631897377989979568}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MissileLauncherHolster_Socket_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10984,7 +10989,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2518383885372054187}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraidSingle4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11015,7 +11020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5318947172084882918}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongA4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11047,7 +11052,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4308770967404723360}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptySMG_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11078,7 +11083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 728510822243953540}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11110,7 +11115,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3890897242993986655}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptyGRL45_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11141,7 +11146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5963917337874531492}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongA4_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11173,7 +11178,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4824932157508034089}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongD4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11204,7 +11209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 309768182306247529}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraidSingle2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11236,7 +11241,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7856619145248760898}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Pointer1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11268,7 +11273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1740017314683427402}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11300,7 +11305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2010842906776071336}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 4arm_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11335,7 +11340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5349502755799928713}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptyPistol_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11366,7 +11371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8037247563621109490}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineRifleOld_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11397,7 +11402,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8292181690181310939}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortN4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11428,7 +11433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5330435425924957454}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firearm_SocketNKK27_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11459,7 +11464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 916582541187189397}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11491,7 +11496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6434510782209757126}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11523,7 +11528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4636986604165626352}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shoulder_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11555,7 +11560,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8178343395586324802}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Neck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11587,7 +11592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 372199701718351237}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLong2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11619,7 +11624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2298883409533562206}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB6_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11651,7 +11656,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7744044359232490304}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortE3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11682,7 +11687,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 844260440506361571}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongA3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11714,7 +11719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3956215091212538711}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PistolHolster_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11745,7 +11750,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 136529914129103489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortC3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11776,7 +11781,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2125994688716641062}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongF1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11808,7 +11813,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6838105703238733328}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptyPistolARK9_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11839,7 +11844,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8216475269286150370}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraid2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11871,7 +11876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8222236173627916422}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairStrandFront1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11903,7 +11908,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3164307319636203788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineEmptyMissileLauncher_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11934,7 +11939,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7093670866557225516}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC5_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11966,7 +11971,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1048454374695457004}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongC3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11998,7 +12003,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 785432845127953750}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongB5_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12030,7 +12035,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1448529382395939115}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC6_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12061,7 +12066,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 935272643917771935}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongE4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12093,7 +12098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1353878795361980939}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thumb3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12124,7 +12129,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 700108110368367804}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortF3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12155,7 +12160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6244703642575613575}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12187,7 +12192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5945115223569369185}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail25_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12219,7 +12224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7774707069874731818}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ring3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12250,7 +12255,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9133294502762440858}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12282,7 +12287,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6418616469102157866}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12314,7 +12319,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 308140222761517302}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongA1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12346,7 +12351,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2331809197941700788}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 4arm_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12380,7 +12385,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6890115428526362223}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thumb2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12412,7 +12417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3072512699300852240}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongE2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12444,7 +12449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8455155111806801721}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail26_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12476,7 +12481,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6434263003262195072}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail23_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12508,7 +12513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5617541245463483888}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortA2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12540,7 +12545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5585017075456491113}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firearm_SocketBoltActionRifle_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12571,7 +12576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 859589247406473157}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cWrist_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12602,7 +12607,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 32912610079094677}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongE6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12633,7 +12638,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1543073536300026249}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongD2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12665,7 +12670,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1967431641795786470}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineOldPistol_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12696,7 +12701,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1197297006636647990}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cBicep_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12727,7 +12732,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6087403134016871755}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBraid1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12759,7 +12764,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1859604382056183344}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Boob_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12790,7 +12795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2518981107912444422}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 2HMeleeHolster_Socket_Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12821,7 +12826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7218699090266740828}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bicep_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12855,7 +12860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5360064154792392314}
   - component: {fileID: 935189378625114252}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EyeballRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13249,7 +13254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5235729666110809228}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortN3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13281,7 +13286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5605892203501375180}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortA3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13312,7 +13317,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5136833272977524363}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13344,7 +13349,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3544800046709220840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortC1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13376,7 +13381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6738416464116911756}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Hand_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13428,7 +13433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 844211342344684261}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ReloadMagazineMissileLauncher_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13459,7 +13464,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5549577372663986993}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Thumb1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13491,7 +13496,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3333552034117851040}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongG2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13522,7 +13527,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8819288691617430087}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC5_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13554,7 +13559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2634739662231914387}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13586,7 +13591,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2461725918298290032}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: vfxPos_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13617,7 +13622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8726998692828728981}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortA1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13649,7 +13654,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7818341932763810401}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortJ1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13681,7 +13686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6364017402547173960}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Minigun_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13712,7 +13717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7790471868965772966}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shield_Socket_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13743,7 +13748,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7785222994657088860}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ShoulderArmor_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13774,7 +13779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6204870328318484114}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 1HMeleeHolsterLeg_Socket_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13805,7 +13810,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8685627799909549314}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortJ3_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13837,7 +13842,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1507218500049860022}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cMainV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13869,7 +13874,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1606682435663553437}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairFrontLongB3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13901,7 +13906,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6102749610443794158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongA2_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13933,7 +13938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5035205870593894098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Firearm_SocketARK9_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13964,7 +13969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1290305857068934275}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail22_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13995,7 +14000,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8754696651522787879}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairBackLongC4_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14027,7 +14032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5634025648112031935}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ring1_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14059,7 +14064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4162397380341868025}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortN1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14091,7 +14096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6767583852008539157}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ring1_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14123,7 +14128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4429995071770726424}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cBicep_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14154,7 +14159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3191907004618886786}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Shin_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14187,7 +14192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5691217171817777363}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HairShortL2_R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14219,7 +14224,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3077090169909042840}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tail18_L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14252,7 +14257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2198960063586575491}
   - component: {fileID: 1502246476211791905}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EyeballLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
