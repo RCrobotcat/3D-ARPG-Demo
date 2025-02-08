@@ -19,6 +19,8 @@ public class InputManager : Singleton<InputManager>
 
     public bool inputOpenInventory;
 
+    public bool inputOpenQuest;
+
     protected override void Awake()
     {
         base.Awake();
@@ -71,6 +73,14 @@ public class InputManager : Singleton<InputManager>
             OpenInventoryInput();
         }
     }
+
+    public void OnOpenQuest(InputAction.CallbackContext value)
+    {
+        if (value.performed)
+        {
+            OpenQuestInput();
+        }
+    }
 #endif
 
     public void MoveInput(Vector2 newMoveDirection)
@@ -92,5 +102,10 @@ public class InputManager : Singleton<InputManager>
     public void OpenInventoryInput()
     {
         inputOpenInventory = !inputOpenInventory;
+    }
+
+    public void OpenQuestInput()
+    {
+        inputOpenQuest = !inputOpenQuest;
     }
 }

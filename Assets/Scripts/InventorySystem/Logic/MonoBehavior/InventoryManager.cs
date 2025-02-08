@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class InventoryManager : Singleton<InventoryManager>
 {
     // use to store the original holder and parent of the item being dragged
-    // convienient to return the item to its original slot
+    // convenient to return the item to its original slot
     public class DragData
     {
         public SlotHolder originalHolder;
@@ -46,6 +46,7 @@ public class InventoryManager : Singleton<InventoryManager>
 
     // bool isOpen = false;
     bool isAnimating = false; // 背包UI动画是否正在播放
+    [HideInInspector] public bool isOpenInventory = false;
 
     protected override void Awake()
     {
@@ -72,43 +73,16 @@ public class InventoryManager : Singleton<InventoryManager>
 
             if (InputManager.Instance.inputOpenInventory)
             {
-                BagPanel.SetActive(true);
-                EquipmentPanel.SetActive(true);
-
-                BagPanel.transform.localPosition.rc_To(new Vector3(500, 0, 0), 0.3f,
-                    (Vector3 pos) => BagPanel.transform.localPosition = pos,
-                    () => { isAnimating = false; });
-
-                EquipmentPanel.transform.localPosition.rc_To(new Vector3(-500, 0, 0), 0.3f,
-                    (Vector3 pos) => EquipmentPanel.transform.localPosition = pos,
-                    () => { isAnimating = false; });
-
-                // 禁用摄像机旋转
-                if (CameraManager.Instance.FreeLookCam != null)
+                OpenInventoryUI();
+                if (QuestUI.Instance.isOpenQuest)
                 {
-                    CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName = "";
-                    CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName = "";
+                    InputManager.Instance.inputOpenQuest = false;
+                    QuestUI.Instance.CloseQuestUI();
                 }
             }
-
-            if (!InputManager.Instance.inputOpenInventory)
+            else if (!InputManager.Instance.inputOpenInventory)
             {
-                BagPanel.transform.localPosition.rc_To(new Vector3(1500, 0, 0), 0.3f,
-                    (Vector3 pos) => BagPanel.transform.localPosition = pos,
-                    () => { BagPanel.SetActive(false); isAnimating = false; });
-
-                EquipmentPanel.transform.localPosition.rc_To(new Vector3(-1500, 0, 0), 0.3f,
-                    (Vector3 pos) => EquipmentPanel.transform.localPosition = pos,
-                    () => { EquipmentPanel.SetActive(false); isAnimating = false; });
-
-                // 恢复摄像机旋转
-                if (CameraManager.Instance.FreeLookCam != null
-                    && CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName == ""
-                    && CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName == "")
-                {
-                    CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName = "Mouse X";
-                    CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName = "Mouse Y";
-                }
+                CloseInventoryUI();
             }
         }
 
@@ -224,6 +198,50 @@ public class InventoryManager : Singleton<InventoryManager>
         else if (!active)
         {
             itemToPickUpTipTrans.DOScale(Vector3.zero, 0.2f);
+        }
+    }
+
+    public void OpenInventoryUI()
+    {
+        isOpenInventory = true;
+
+        BagPanel.SetActive(true);
+        EquipmentPanel.SetActive(true);
+
+        BagPanel.transform.localPosition.rc_To(new Vector3(500, 0, 0), 0.3f,
+            (Vector3 pos) => BagPanel.transform.localPosition = pos,
+            () => { isAnimating = false; });
+
+        EquipmentPanel.transform.localPosition.rc_To(new Vector3(-500, 0, 0), 0.3f,
+            (Vector3 pos) => EquipmentPanel.transform.localPosition = pos,
+            () => { isAnimating = false; });
+
+        // 禁用摄像机旋转
+        if (CameraManager.Instance.FreeLookCam != null)
+        {
+            CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName = "";
+            CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName = "";
+        }
+    }
+    public void CloseInventoryUI()
+    {
+        isOpenInventory = false;
+
+        BagPanel.transform.localPosition.rc_To(new Vector3(1500, 0, 0), 0.3f,
+                    (Vector3 pos) => BagPanel.transform.localPosition = pos,
+                    () => { BagPanel.SetActive(false); isAnimating = false; });
+
+        EquipmentPanel.transform.localPosition.rc_To(new Vector3(-1500, 0, 0), 0.3f,
+            (Vector3 pos) => EquipmentPanel.transform.localPosition = pos,
+            () => { EquipmentPanel.SetActive(false); isAnimating = false; });
+
+        // 恢复摄像机旋转
+        if (CameraManager.Instance.FreeLookCam != null
+            && CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName == ""
+            && CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName == "")
+        {
+            CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName = "Mouse X";
+            CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName = "Mouse Y";
         }
     }
 }

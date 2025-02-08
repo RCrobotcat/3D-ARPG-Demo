@@ -51,6 +51,7 @@ MonoBehaviour:
   inputRoll: 0
   inputSlash: 0
   inputOpenInventory: 0
+  inputOpenQuest: 0
 --- !u!114 &839088244215636616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +157,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: edd1331c-6713-4f7c-b284-e8edcf6e62b0
     m_ActionName: Player/OpenInventory[/Keyboard/i]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8700427813691766324}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: OnOpenQuest
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a07ef308-de56-4349-b5d2-43de14df057e
+    m_ActionName: Player/OpenQuest[/Keyboard/h]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
