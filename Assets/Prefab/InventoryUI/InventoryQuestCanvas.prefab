@@ -622,12 +622,12 @@ RectTransform:
   - {fileID: 6488287412073158255}
   - {fileID: 96795133065466296}
   - {fileID: 9221570930250916718}
-  - {fileID: 3821261832286223306}
   - {fileID: 1763388547798816885}
   - {fileID: 6669000460320648494}
   - {fileID: 2894908421384869887}
   - {fileID: 5973245615895047916}
   - {fileID: 361057369362618611}
+  - {fileID: 3821261832286223306}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -719,8 +719,6 @@ MonoBehaviour:
   dragCanvas: {fileID: 5596265905902239830}
   BagPanel: {fileID: 5914627171515882286}
   EquipmentPanel: {fileID: 7930216700175536582}
-  inventoryBtn: {fileID: 0}
-  questBtn: {fileID: 0}
   healthText: {fileID: 1345171500639052993}
   staminaText: {fileID: 8963683905211114068}
   attackText: {fileID: 9067227986034210686}
@@ -745,6 +743,8 @@ MonoBehaviour:
   questContentPanel: {fileID: 5651988756630314876}
   rewardPanel: {fileID: 6118141064868375823}
   itemTooltip: {fileID: 8246805925436952196}
+  unfinishedBtn: {fileID: 878319205447837410}
+  finishedBtn: {fileID: 8001304212542135363}
   questListTransform: {fileID: 7247884968017586609}
   questNameBtn: {fileID: 4721988565153069325, guid: 6b766555bedb0534580acf4115e9d55d, type: 3}
   questContentTxt: {fileID: 1307165934709797725}
@@ -977,7 +977,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00002476573, y: 0.000043408938}
+  m_AnchoredPosition: {x: 0.00002476573, y: -0.00030645117}
   m_SizeDelta: {x: 0, y: 720}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1894393126361808703
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8432758243481791743}
   m_Direction: 2
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.99999833
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4499,7 +4499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729534297305873183, guid: 5ccf976bb6e63ac4aa70e0d4b44f91f2, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2729534297305873183, guid: 5ccf976bb6e63ac4aa70e0d4b44f91f2, type: 3}
       propertyPath: m_AnchorMin.x
@@ -4507,15 +4507,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729534297305873183, guid: 5ccf976bb6e63ac4aa70e0d4b44f91f2, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2729534297305873183, guid: 5ccf976bb6e63ac4aa70e0d4b44f91f2, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2729534297305873183, guid: 5ccf976bb6e63ac4aa70e0d4b44f91f2, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2729534297305873183, guid: 5ccf976bb6e63ac4aa70e0d4b44f91f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4547,7 +4547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2729534297305873183, guid: 5ccf976bb6e63ac4aa70e0d4b44f91f2, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2729534297305873183, guid: 5ccf976bb6e63ac4aa70e0d4b44f91f2, type: 3}
       propertyPath: m_AnchoredPosition.y

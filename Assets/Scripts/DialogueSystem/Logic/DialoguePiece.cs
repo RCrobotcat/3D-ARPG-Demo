@@ -5,7 +5,8 @@ using UnityEngine;
 public class DialoguePiece
 {
     public string ID;
-    public Sprite image;
+    // public Sprite image;
+    public string talkerName;
 
     [TextArea]
     public string text;

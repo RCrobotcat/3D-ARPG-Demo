@@ -93,18 +93,18 @@ public class InventoryManager : Singleton<InventoryManager>
         }
     }
 
-    public void SaveData()
+    /*public void SaveData()
     {
-        /*SaveManager.Instance.Save(inventoryData, inventoryData.name);
+        SaveManager.Instance.Save(inventoryData, inventoryData.name);
         SaveManager.Instance.Save(actionData, actionData.name);
-        SaveManager.Instance.Save(equipmentData, equipmentData.name);*/
+        SaveManager.Instance.Save(equipmentData, equipmentData.name);
     }
     public void LoadData()
     {
-        /*SaveManager.Instance.Load(inventoryData, inventoryData.name);
+        SaveManager.Instance.Load(inventoryData, inventoryData.name);
         SaveManager.Instance.Load(actionData, actionData.name);
-        SaveManager.Instance.Load(equipmentData, equipmentData.name);*/
-    }
+        SaveManager.Instance.Load(equipmentData, equipmentData.name);
+    }*/
 
     public void UpdateStatusText(float health, float stamina)
     {
@@ -172,7 +172,7 @@ public class InventoryManager : Singleton<InventoryManager>
             if (item.itemData != null)
             {
                 if (item.itemData.itemName == questItemName) { }
-                // QuestManager.Instance.UpdateQuestProgress(questItemName, item.amount);
+                QuestManager.Instance.UpdateQuestProgress(questItemName, item.amount);
             }
         }
     }
@@ -238,7 +238,9 @@ public class InventoryManager : Singleton<InventoryManager>
         // »Ö¸´ÉãÏñ»úÐý×ª
         if (CameraManager.Instance.FreeLookCam != null
             && CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName == ""
-            && CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName == "")
+            && CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName == ""
+            && !QuestUI.Instance.isOpenQuest
+            && !DialogueUI.Instance.isTalking)
         {
             CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName = "Mouse X";
             CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName = "Mouse Y";

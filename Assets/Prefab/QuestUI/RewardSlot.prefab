@@ -183,6 +183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2729534297305873183}
   - component: {fileID: 3962460598140638989}
+  - component: {fileID: 5610361374957544758}
   m_Layer: 5
   m_Name: RewardSlot
   m_TagString: Untagged
@@ -225,3 +226,15 @@ MonoBehaviour:
   icon: {fileID: 8599661395415325568}
   amount: {fileID: 8595247208372363296}
   currentItemData: {fileID: 0}
+--- !u!114 &5610361374957544758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6922704786565858471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d139a777b1c02db4fbbc372d78d26684, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

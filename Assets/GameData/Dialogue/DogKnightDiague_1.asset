@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea8ec9fa7699e14985b87990a2cd57b, type: 3}
+  m_Name: DogKnightDiague_1
+  m_EditorClassIdentifier: 
+  dialoguePieces:
+  - ID: D1
+    talkerName: Dog Knight
+    text: Hello! My Friend! It seems you are new in here!
+    questData: {fileID: 0}
+    dialogueOption:
+    - text: Hello! Nice to meet ya!
+      targetID: D2
+      takeQuest: 0
+      followPlayer: 0
+    - text: (Go away)
+      targetID: 
+      takeQuest: 0
+      followPlayer: 0
+  - ID: D2
+    talkerName: Dog Knight
+    text: Would you like to offer me some help? I would really appreciate of it!
+    questData: {fileID: 0}
+    dialogueOption:
+    - text: OK! Go ahead!
+      targetID: D3
+      takeQuest: 0
+      followPlayer: 0
+    - text: (Go away)
+      targetID: 
+      takeQuest: 0
+      followPlayer: 0
+  - ID: D3
+    talkerName: Dog Knight
+    text: Help me kill 3 GOLEMS! Big thank to you! You wil be rewarded!
+    questData: {fileID: 11400000, guid: 702a830dafe1766429da673613a754b3, type: 2}
+    dialogueOption:
+    - text: Alright!
+      targetID: 
+      takeQuest: 1
+      followPlayer: 0
+    - text: (Go away)
+      targetID: 
+      takeQuest: 0
+      followPlayer: 0

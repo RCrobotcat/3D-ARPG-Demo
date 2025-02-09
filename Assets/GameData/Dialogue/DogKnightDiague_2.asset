@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea8ec9fa7699e14985b87990a2cd57b, type: 3}
+  m_Name: DogKnightDiague_2
+  m_EditorClassIdentifier: 
+  dialoguePieces:
+  - ID: D1
+    talkerName: Dog Knight
+    text: Help me kill 3 golems! Thank you!
+    questData: {fileID: 11400000, guid: 702a830dafe1766429da673613a754b3, type: 2}
+    dialogueOption:
+    - text: Ok! On my way
+      targetID: 
+      takeQuest: 0
+      followPlayer: 0
+    - text: (Go away)
+      targetID: 
+      takeQuest: 0
+      followPlayer: 0

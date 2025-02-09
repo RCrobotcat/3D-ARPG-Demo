@@ -2627,5 +2627,6 @@ MonoBehaviour:
   maxHealth: 20
   healthBar: {fileID: 7814332348122288653}
   isDead: 0
+  monsterName: Golem
   attackPlayerTarget: {fileID: 0}
   attackDamage: 2

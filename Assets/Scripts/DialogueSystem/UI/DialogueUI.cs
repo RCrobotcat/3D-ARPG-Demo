@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
@@ -7,7 +5,8 @@ using DG.Tweening;
 public class DialogueUI : Singleton<DialogueUI>
 {
     [Header("Basic Elements")]
-    public Image icon;
+    // public Image icon;
+    public Text talkerName;
     public Text MainText;
     public Button NextBtn;
     public GameObject dialoguePanel;
@@ -19,6 +18,8 @@ public class DialogueUI : Singleton<DialogueUI>
     [Header("Data")]
     public DialogueData_SO currentDialogue;
     int currentIndex = 0;
+
+    [HideInInspector] public bool isTalking = false;
 
     protected override void Awake()
     {
@@ -44,12 +45,16 @@ public class DialogueUI : Singleton<DialogueUI>
         dialoguePanel.SetActive(true);
         currentIndex++;
 
-        if (piece.image != null)
+        /*if (piece.image != null)
         {
             icon.enabled = true;
             icon.sprite = piece.image;
         }
-        else icon.enabled = false;
+        else icon.enabled = false;*/
+
+        if (piece.talkerName != "")
+            talkerName.text = piece.talkerName;
+        else talkerName.text = "???";
 
         MainText.text = "";
         // MainText.text = piece.text;

@@ -36,6 +36,7 @@ namespace AIActor_RC
 
         [HideInInspector] public bool isDead; // 是否死亡
         bool isDeadAnimated = false; // 是否已经播放死亡动画
+        public string monsterName;
 
         protected override void Start()
         {
@@ -67,6 +68,8 @@ namespace AIActor_RC
                 }
 
                 // Destroy(gameObject, 2f);
+
+                QuestManager.Instance.UpdateQuestProgress(monsterName, 1);
             }
 
             if (animator.GetBool("Attack"))

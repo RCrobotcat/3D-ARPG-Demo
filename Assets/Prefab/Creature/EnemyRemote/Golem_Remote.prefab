@@ -2559,6 +2559,7 @@ MonoBehaviour:
   maxHealth: 20
   healthBar: {fileID: 207085126538458049}
   isDead: 0
+  monsterName: Golem
 --- !u!114 &4887048488614113118
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3,12 +3,15 @@ using UnityEngine;
 public class DialogueController : MonoBehaviour
 {
     public DialogueData_SO currentDialogue;
-    bool canTalk = false;
+    [HideInInspector] public bool canTalk = false;
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && currentDialogue != null)
+        {
             canTalk = true;
+            DialogueUI.Instance.isTalking = true;
+        }
     }
 
     void OnTriggerExit(Collider other)
@@ -17,6 +20,7 @@ public class DialogueController : MonoBehaviour
         {
             canTalk = false;
             DialogueUI.Instance.dialoguePanel.SetActive(false);
+            DialogueUI.Instance.isTalking = false;
         }
     }
 
@@ -25,6 +29,12 @@ public class DialogueController : MonoBehaviour
         if (canTalk && Input.GetKeyDown(KeyCode.X))
         {
             OpenDialogue();
+            // ½ûÓÃÉãÏñ»úÐý×ª
+            if (CameraManager.Instance.FreeLookCam != null)
+            {
+                CameraManager.Instance.FreeLookCam.m_XAxis.m_InputAxisName = "";
+                CameraManager.Instance.FreeLookCam.m_YAxis.m_InputAxisName = "";
+            }
         }
     }
 

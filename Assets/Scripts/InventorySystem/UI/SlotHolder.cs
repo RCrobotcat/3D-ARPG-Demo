@@ -34,12 +34,12 @@ public class SlotHolder : MonoBehaviour, IPointerClickHandler, IPointerEnterHand
         if (itemUI.GetItem() != null)
             if (itemUI.GetItem().itemType == ItemType.Usable && itemUI.Bag.items[itemUI.Index].amount > 0)
             {
-                // GameManager.Instance.playerStatus.ApplyHealth(itemUI.GetItem().usableItemData.RestoreHealthPoint);
                 itemUI.Bag.items[itemUI.Index].amount--; // decrease the amount by 1
+                CharacterNumController.Instance.HealthChange(itemUI.GetItem().usableItemData.RestoreHealthPoint);
             }
         UpdateItem();
 
-        // QuestManager.Instance.UpdateQuestProgress(itemUI.GetItem().itemName, -1);
+        QuestManager.Instance.UpdateQuestProgress(itemUI.GetItem().itemName, -1);
     }
 
     public void UpdateItem()
