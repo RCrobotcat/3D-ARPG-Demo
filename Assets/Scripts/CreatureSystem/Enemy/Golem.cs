@@ -214,7 +214,7 @@ public class Golem : AIActor
     /// </summary>
     Actor GetNearestAttackPlayerTargetInView()
     {
-        ActorTypeFilter filter = (actor) => actor is AIActor;
+        ActorTypeFilter filter = (actor) => actor is CharacterActor;
 
         List<Actor> actors = GetActorsInView(filter);
 

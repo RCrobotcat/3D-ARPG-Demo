@@ -1,5 +1,4 @@
 using Cinemachine;
-using UnityEngine.SceneManagement;
 
 public class CameraManager : Singleton<CameraManager>
 {
