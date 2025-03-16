@@ -1259,6 +1259,7 @@ GameObject:
   - component: {fileID: 9154782389449814863}
   - component: {fileID: 6071202281345359677}
   - component: {fileID: 4684781765053000036}
+  - component: {fileID: 209801600443565496}
   m_Layer: 7
   m_Name: Emily
   m_TagString: Player
@@ -1440,7 +1441,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   drivenType: 0
-  attackTarget: {fileID: 0}
+  lockTarget: {fileID: 0}
+  viewRadius: 20
+--- !u!114 &209801600443565496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8533253696199008074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a274f9c563a8441190fc2cf06aab2330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  enemyTarget_Locator: {fileID: 0}
+  cinemachineAnimator: {fileID: 0}
+  zeroVert_Look: 0
+  noticeZone: 10
+  lookAtSmoothing: 2
+  maxNoticeAngle: 60
+  crossHair_Scale: 0.1
+  lockOnCanvas: {fileID: 0}
+  clampAxis: {x: 60, y: 60}
+  follow_smoothing: 5
+  rotate_Smoothing: 5
+  senstivity: 60
 --- !u!1 &8548092400154594095
 GameObject:
   m_ObjectHideFlags: 0

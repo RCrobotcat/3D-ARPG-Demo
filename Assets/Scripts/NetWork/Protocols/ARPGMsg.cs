@@ -1,4 +1,6 @@
 ﻿// 战斗进程网络协议
+// Battle Process Network Protocol
+
 namespace RCProtocol
 {
     public class ReqTokenAccess
