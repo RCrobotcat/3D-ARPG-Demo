@@ -22,7 +22,7 @@ public class TargetLockOn : MonoBehaviour
     [SerializeField] float crossHair_Scale = 0.1f;
 
     Transform cam;
-    [HideInInspector] public bool enemyLocked;
+    [HideInInspector] public bool enemyLocked = false;
     float currentYOffset;
     Vector3 pos;
 
@@ -62,8 +62,7 @@ public class TargetLockOn : MonoBehaviour
                 return;
             }
 
-            currentTarget = ScanNearBy();
-            if (currentTarget)
+            if (currentTarget = ScanNearBy())
             {
                 FoundTarget();
                 characterActor.lockTarget = currentTarget.GetComponent<Actor>();
@@ -77,8 +76,8 @@ public class TargetLockOn : MonoBehaviour
                 ResetTarget();
             LookAtTarget();
         }
-        
-        if(Input.GetKeyDown(KeyCode.S))
+
+        if (Input.GetKeyDown(KeyCode.S))
             ResetTarget();
     }
 
@@ -148,9 +147,9 @@ public class TargetLockOn : MonoBehaviour
 
     bool TargetOnRange()
     {
-        float dis = (transform.position - pos).magnitude;
+        float dis = (transform.position - currentTarget.position).magnitude;
         if (dis / 2 > noticeZone) return false;
-        else return true;
+        return true;
     }
 
     private void LookAtTarget()
