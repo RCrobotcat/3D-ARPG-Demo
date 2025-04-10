@@ -1,4 +1,5 @@
 ﻿using AIActor_RC;
+using Cinemachine;
 using UnityEngine;
 
 public class TargetLockOn : MonoBehaviour
@@ -8,6 +9,7 @@ public class TargetLockOn : MonoBehaviour
 
     [SerializeField] LayerMask targetLayers;
     [SerializeField] Transform enemyTarget_Locator;
+    public Transform EnemyTarget_Locator => enemyTarget_Locator;
 
     [Tooltip("StateDrivenMethod for Switching Cameras")] [SerializeField]
     Animator cinemachineAnimator;
@@ -45,13 +47,28 @@ public class TargetLockOn : MonoBehaviour
         // defMovement = GetComponent<DefMovement>();
         // anim = GetComponent<Animator>();
         cam = Camera.main.transform;
-        lockOnCanvas.gameObject.SetActive(false);
+
+        if (SimpleLockOn.Instance != null)
+        {
+            lockOnCanvas = SimpleLockOn.Instance.transform;
+            lockOnCanvas.gameObject.SetActive(false);
+        }
     }
 
     void Update()
     {
         // camFollow.lockedTarget = enemyLocked;
         // defMovement.lockMovement = enemyLocked;
+
+        if (enemyTarget_Locator == null)
+        {
+            Transform locator = GameObject.Find("EnemyTargetLocator")?.transform;
+            if (locator != null)
+                enemyTarget_Locator = locator;
+        }
+
+        if (cinemachineAnimator == null)
+            cinemachineAnimator = FindObjectOfType<CinemachineStateDrivenCamera>().GetComponent<Animator>();
 
         if (Input.GetKeyDown(KeyCode.Mouse2))
         {

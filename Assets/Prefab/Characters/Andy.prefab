@@ -5247,6 +5247,7 @@ GameObject:
   - component: {fileID: 1398627802223961556}
   - component: {fileID: -3033239309084558888}
   - component: {fileID: 3608571571492456137}
+  - component: {fileID: 3824841973425889617}
   m_Layer: 7
   m_Name: Andy
   m_TagString: Player
@@ -5442,7 +5443,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   drivenType: 0
-  attackTarget: {fileID: 0}
+  lockTarget: {fileID: 0}
+  viewRadius: 20
+--- !u!114 &3824841973425889617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8508683058056435697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a274f9c563a8441190fc2cf06aab2330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  enemyTarget_Locator: {fileID: 0}
+  cinemachineAnimator: {fileID: 0}
+  zeroVert_Look: 0
+  noticeZone: 10
+  lookAtSmoothing: 2
+  maxNoticeAngle: 60
+  crossHair_Scale: 0.1
+  enemyLocked: 0
+  lockOnCanvas: {fileID: 0}
+  clampAxis: {x: 60, y: 60}
+  follow_smoothing: 5
+  rotate_Smoothing: 5
+  senstivity: 60
 --- !u!1 &8559784096335127707
 GameObject:
   m_ObjectHideFlags: 0

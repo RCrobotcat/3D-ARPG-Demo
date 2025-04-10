@@ -3,7 +3,7 @@ using UnityEngine;
 
 // Object look at the given target
 // default target is Camera.main
-public class SimpleLockOn : MonoBehaviour
+public class SimpleLockOn : Singleton<SimpleLockOn>
 {
     [SerializeField] Transform target;
 
@@ -15,7 +15,7 @@ public class SimpleLockOn : MonoBehaviour
 
     private IEnumerator LookAtTarget()
     {
-        while (this.gameObject.activeInHierarchy)
+        while (gameObject.activeInHierarchy)
         {
             Vector3 _dir = target.position - transform.position;
             //_dir.y = 0;
